@@ -35459,7 +35459,7 @@
  )
  (!pair  "free_saved_scope"
   (!type already_seen 1951)
-  (!srcfileloc  "cp/name-lookup.cc" 8301)
+  (!srcfileloc  "cp/name-lookup.cc" 8316)
   (!options 
    (!option deletable string  "")
   )
@@ -35628,11 +35628,11 @@
   nil )
  (!pair  "start_cleanup_cnt"
   (!type already_seen 2)
-  (!srcfileloc  "cp/decl.cc" 9305)
+  (!srcfileloc  "cp/decl.cc" 9315)
   nil )
  (!pair  "decomp_type_table"
   (!type already_seen 930)
-  (!srcfileloc  "cp/decl.cc" 8758)
+  (!srcfileloc  "cp/decl.cc" 8768)
   (!options 
    (!option cache string  "")
   )

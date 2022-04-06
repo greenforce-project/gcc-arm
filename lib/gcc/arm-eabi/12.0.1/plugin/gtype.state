@@ -1669,8 +1669,8 @@
                                    (!type struct 83 
                                     (!type already_seen 82)
                                     gc_pointed_to "cp_binding_level"
-                                    (!srcfileloc  "cp/name-lookup.h" 313)
-                                    (!fields 16 
+                                    (!srcfileloc  "cp/name-lookup.h" 316)
+                                    (!fields 17 
                                      (!pair  "names"
                                       (!type already_seen 23)
                                       (!srcfileloc  "cp/name-lookup.h" 250)
@@ -1814,6 +1814,10 @@
                                      (!pair  "immediate_fn_ctx_p"
                                       (!type already_seen 2)
                                       (!srcfileloc  "cp/name-lookup.h" 310)
+                                      nil )
+                                     (!pair  "requires_expression"
+                                      (!type already_seen 2)
+                                      (!srcfileloc  "cp/name-lookup.h" 313)
                                       nil )
                                     )
                                     nil 516 nil nil )
@@ -28293,7 +28297,7 @@
    (!type already_seen 2014)
   )
   gc_pointed_to "cp_parser"
-  (!srcfileloc  "cp/parser.cc" 47556)
+  (!srcfileloc  "cp/parser.cc" 47557)
   (!fields 39 
    (!pair  "lexer"
     (!type already_seen 2000)
@@ -29613,7 +29617,7 @@
   nil 0 nil nil )
  
  (!type undefined 2179 nil  gc_unused "class_to_loc_map_t::iterator"
-  (!srcfileloc  "cp/parser.cc" 33767)
+  (!srcfileloc  "cp/parser.cc" 33768)
  )
  
  (!type struct 2180 
@@ -30874,15 +30878,15 @@
   nil )
  (!pair  "cp_parser"
   (!type already_seen 2014)
-  (!srcfileloc  "cp/parser.cc" 47556)
+  (!srcfileloc  "cp/parser.cc" 47557)
   nil )
  (!pair  "iter_t"
   (!type already_seen 2179)
-  (!srcfileloc  "cp/parser.cc" 33767)
+  (!srcfileloc  "cp/parser.cc" 33768)
   nil )
  (!pair  "class_to_loc_map_t::iterator"
   (!type already_seen 2179)
-  (!srcfileloc  "cp/parser.cc" 33767)
+  (!srcfileloc  "cp/parser.cc" 33768)
   nil )
  (!pair  "cp_parser_expression_stack"
   (!type array 2305 nil  gc_unused "NUM_PREC_VALUES" 
@@ -35444,11 +35448,11 @@
   nil )
  (!pair  "generic_parm_count"
   (!type already_seen 2)
-  (!srcfileloc  "cp/parser.cc" 48068)
+  (!srcfileloc  "cp/parser.cc" 48069)
   nil )
  (!pair  "the_parser"
   (!type already_seen 2015)
-  (!srcfileloc  "cp/parser.cc" 47556)
+  (!srcfileloc  "cp/parser.cc" 47557)
   nil )
  (!pair  "cp_parser_decl_specs_attrs"
   (!type already_seen 84)

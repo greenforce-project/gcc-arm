@@ -405,13 +405,19 @@
 #endif
 
 
+/* Define if your assembler supports eh_frame pcrel encoding. */
+#ifndef USED_FOR_TARGET
+/* #undef HAVE_AS_EH_FRAME_PCREL_ENCODING_SUPPORT */
+#endif
+
+
 /* Define if your assembler supports the R_PPC64_ENTRY relocation. */
 #ifndef USED_FOR_TARGET
 /* #undef HAVE_AS_ENTRY_MARKERS */
 #endif
 
 
-/* Define if your assembler supports explicit relocations. */
+/* Define if your assembler supports explicit relocation. */
 #ifndef USED_FOR_TARGET
 /* #undef HAVE_AS_EXPLICIT_RELOCS */
 #endif
@@ -431,7 +437,7 @@
 
 /* Define if your assembler supports the --gdwarf-5 option. */
 #ifndef USED_FOR_TARGET
-/* #undef HAVE_AS_GDWARF_5_DEBUG_FLAG */
+#define HAVE_AS_GDWARF_5_DEBUG_FLAG 1
 #endif
 
 
@@ -444,12 +450,6 @@
 /* Define true if the assembler supports '.long foo@GOTOFF'. */
 #ifndef USED_FOR_TARGET
 /* #undef HAVE_AS_GOTOFF_IN_DATA */
-#endif
-
-
-/* Define if your assembler supports the --gstabs option. */
-#ifndef USED_FOR_TARGET
-#define HAVE_AS_GSTABS_DEBUG_FLAG 1
 #endif
 
 
@@ -738,12 +738,6 @@
    against hidden symbols. */
 #ifndef USED_FOR_TARGET
 /* #undef HAVE_AS_SPARC_UA_PCREL_HIDDEN */
-#endif
-
-
-/* Define if your assembler supports .stabs. */
-#ifndef USED_FOR_TARGET
-#define HAVE_AS_STABS_DIRECTIVE 1
 #endif
 
 
@@ -1060,7 +1054,7 @@
 /* Define to 1 if we found a declaration for 'mallinfo2', otherwise define to
    0. */
 #ifndef USED_FOR_TARGET
-#define HAVE_DECL_MALLINFO2 0
+#define HAVE_DECL_MALLINFO2 1
 #endif
 
 
@@ -1421,14 +1415,14 @@
 
 /* Define 0/1 if your assembler supports 'o' flag in .section directive. */
 #ifndef USED_FOR_TARGET
-#define HAVE_GAS_SECTION_LINK_ORDER 0
+#define HAVE_GAS_SECTION_LINK_ORDER 1
 #endif
 
 
 /* Define 0/1 if your assembler supports marking sections with SHF_GNU_RETAIN
    flag. */
 #ifndef USED_FOR_TARGET
-#define HAVE_GAS_SHF_GNU_RETAIN 0
+#define HAVE_GAS_SHF_GNU_RETAIN 1
 #endif
 
 
@@ -1455,6 +1449,12 @@
 /* Define if your assembler supports .weakref. */
 #ifndef USED_FOR_TARGET
 #define HAVE_GAS_WEAKREF 1
+#endif
+
+
+/* Define to 1 if you have the `getauxval' function. */
+#ifndef USED_FOR_TARGET
+#define HAVE_GETAUXVAL 1
 #endif
 
 
@@ -1490,7 +1490,7 @@
 
 /* Define to 1 if using GNU as. */
 #ifndef USED_FOR_TARGET
-#define HAVE_GNU_AS 0
+#define HAVE_GNU_AS 1
 #endif
 
 
@@ -1502,7 +1502,7 @@
 
 /* Define to 1 if using GNU ld. */
 #ifndef USED_FOR_TARGET
-#define HAVE_GNU_LD 0
+#define HAVE_GNU_LD 1
 #endif
 
 
@@ -1628,13 +1628,13 @@
 
 /* Define to the level of your linker's compressed debug section support. */
 #ifndef USED_FOR_TARGET
-#define HAVE_LD_COMPRESS_DEBUG 3
+#define HAVE_LD_COMPRESS_DEBUG 2
 #endif
 
 
 /* Define if your linker supports --demangle option. */
 #ifndef USED_FOR_TARGET
-/* #undef HAVE_LD_DEMANGLE */
+#define HAVE_LD_DEMANGLE 1
 #endif
 
 
@@ -1779,7 +1779,7 @@
 
 /* Define to 1 if you have the `mallinfo2' function. */
 #ifndef USED_FOR_TARGET
-/* #undef HAVE_MALLINFO2 */
+#define HAVE_MALLINFO2 1
 #endif
 
 
@@ -1943,6 +1943,12 @@
 /* Define to 1 if you have the `sysconf' function. */
 #ifndef USED_FOR_TARGET
 #define HAVE_SYSCONF 1
+#endif
+
+
+/* Define to 1 if you have the <sys/auxv.h> header file. */
+#ifndef USED_FOR_TARGET
+#define HAVE_SYS_AUXV_H 1
 #endif
 
 
@@ -2115,7 +2121,7 @@
 
 /* Define if you have a working <zstd.h> header file. */
 #ifndef USED_FOR_TARGET
-/* #undef HAVE_ZSTD_H */
+#define HAVE_ZSTD_H 1
 #endif
 
 
@@ -2140,6 +2146,12 @@
 /* Define if O_CLOEXEC supported by fcntl. */
 #ifndef USED_FOR_TARGET
 #define HOST_HAS_O_CLOEXEC 1
+#endif
+
+
+/* Define if O_NONBLOCK supported by fcntl. */
+#ifndef USED_FOR_TARGET
+#define HOST_HAS_O_NONBLOCK 1
 #endif
 
 
@@ -2211,7 +2223,7 @@
 
 /* The linker hash style */
 #ifndef USED_FOR_TARGET
-/* #undef LINKER_HASH_STYLE */
+#define LINKER_HASH_STYLE "gnu"
 #endif
 
 

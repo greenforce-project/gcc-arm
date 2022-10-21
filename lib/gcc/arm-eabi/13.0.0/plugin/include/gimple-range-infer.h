@@ -40,6 +40,7 @@ public:
   void add_range (tree name, vrange &range);
   void add_nonzero (tree name);
 private:
+  void check_assume_func (gcall *call);
   unsigned num_args;
   static const int size_limit = 10;
   tree m_names[size_limit];
@@ -78,7 +79,7 @@ private:
   bitmap m_seen;
   bitmap_obstack m_bitmaps;
   struct obstack m_list_obstack;
-  vrange_allocator m_range_allocator;
+  class obstack_vrange_allocator *m_range_allocator;
 };
 
 #endif // GCC_GIMPLE_RANGE_SIDE_H

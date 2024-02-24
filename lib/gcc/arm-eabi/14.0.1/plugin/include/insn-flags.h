@@ -5214,9 +5214,9 @@
 #define HAVE_cbranchv2si4 (TARGET_NEON)
 #define HAVE_cbranchv4si4 (TARGET_NEON)
 #define HAVE_cbranchv2di4 (TARGET_NEON)
-#define HAVE_divv2sf3 (TARGET_NEON && !optimize_size \
+#define HAVE_divv2sf3 (ARM_HAVE_NEON_V2SF_ARITH && !optimize_size \
    && flag_reciprocal_math)
-#define HAVE_divv4sf3 (TARGET_NEON && !optimize_size \
+#define HAVE_divv4sf3 (ARM_HAVE_NEON_V4SF_ARITH && !optimize_size \
    && flag_reciprocal_math)
 #define HAVE_ceilv2sf2 (TARGET_NEON && TARGET_VFP5 && flag_unsafe_math_optimizations)
 #define HAVE_btruncv2sf2 (TARGET_NEON && TARGET_VFP5 && flag_unsafe_math_optimizations)

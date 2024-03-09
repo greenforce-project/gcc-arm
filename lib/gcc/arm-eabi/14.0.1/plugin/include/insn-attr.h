@@ -62,6 +62,11 @@ extern enum attr_fpu get_attr_fpu (void);
 #define HAVE_ATTR_predicated 1
 extern enum attr_predicated get_attr_predicated (rtx_insn *);
 
+#define HAVE_ATTR_mve_unpredicated_insn 1
+extern int get_attr_mve_unpredicated_insn (rtx_insn *);
+#define HAVE_ATTR_mve_safe_imp_xlane_pred 1
+extern enum attr_mve_safe_imp_xlane_pred get_attr_mve_safe_imp_xlane_pred (rtx_insn *);
+
 #define HAVE_ATTR_length 1
 extern int get_attr_length (rtx_insn *);
 extern void shorten_branches (rtx_insn *);

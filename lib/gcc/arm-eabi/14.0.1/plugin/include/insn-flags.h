@@ -2594,6 +2594,21 @@
 #define HAVE_ussubuha3 (TARGET_INT_SIMD)
 #define HAVE_arm_ssatsihi_shift (TARGET_32BIT && arm_arch6 && !ARM_Q_BIT_READ)
 #define HAVE_arm_usatsihi (TARGET_INT_SIMD && !ARM_Q_BIT_READ)
+#define HAVE_mve_movv16qi (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_movv8hi (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_movv4si (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_movv2di (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_movti (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_movv8hf (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_movv4sf (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_movv2df (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_vdupv16qi (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_vdupv8hi (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_vdupv4si (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_vdupv2di (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_vdupv8hf (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_vdupv4sf (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
+#define HAVE_mve_vdupv2df (TARGET_HAVE_MVE || TARGET_HAVE_MVE_FLOAT)
 #define HAVE_mve_vst4qv16qi (TARGET_HAVE_MVE)
 #define HAVE_mve_vst4qv8hi (TARGET_HAVE_MVE)
 #define HAVE_mve_vst4qv4si (TARGET_HAVE_MVE)
@@ -4496,6 +4511,36 @@
 #define HAVE_arm_vcx2qa_p_v16qi (TARGET_CDE && TARGET_HAVE_MVE)
 #define HAVE_arm_vcx3q_p_v16qi (TARGET_CDE && TARGET_HAVE_MVE)
 #define HAVE_arm_vcx3qa_p_v16qi (TARGET_CDE && TARGET_HAVE_MVE)
+#define HAVE_movmisalignv16qi_mve_store (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V16QImode)) \
+    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V16QImode))) \
+   && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv8hi_mve_store (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V8HImode)) \
+    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V8HImode))) \
+   && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv4si_mve_store (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V4SImode)) \
+    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V4SImode))) \
+   && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv8hf_mve_store (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V8HFmode)) \
+    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V8HFmode))) \
+   && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv4sf_mve_store (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V4SFmode)) \
+    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V4SFmode))) \
+   && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv16qi_mve_load (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V16QImode)) \
+    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V16QImode))) \
+   && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv8hi_mve_load (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V8HImode)) \
+    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V8HImode))) \
+   && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv4si_mve_load (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V4SImode)) \
+    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V4SImode))) \
+   && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv8hf_mve_load (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V8HFmode)) \
+    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V8HFmode))) \
+   && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv4sf_mve_load (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V4SFmode)) \
+    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V4SFmode))) \
+   && !BYTES_BIG_ENDIAN && unaligned_access)
 #define HAVE_adddi3 1
 #define HAVE_addvsi4 (TARGET_32BIT)
 #define HAVE_addvdi4 (TARGET_32BIT)
@@ -8646,6 +8691,21 @@ extern rtx        gen_ussubv2uha3                                    (rtx, rtx, 
 extern rtx        gen_ussubuha3                                      (rtx, rtx, rtx);
 extern rtx        gen_arm_ssatsihi_shift                             (rtx, rtx, rtx, rtx);
 extern rtx        gen_arm_usatsihi                                   (rtx, rtx);
+extern rtx        gen_mve_movv16qi                                   (rtx, rtx);
+extern rtx        gen_mve_movv8hi                                    (rtx, rtx);
+extern rtx        gen_mve_movv4si                                    (rtx, rtx);
+extern rtx        gen_mve_movv2di                                    (rtx, rtx);
+extern rtx        gen_mve_movti                                      (rtx, rtx);
+extern rtx        gen_mve_movv8hf                                    (rtx, rtx);
+extern rtx        gen_mve_movv4sf                                    (rtx, rtx);
+extern rtx        gen_mve_movv2df                                    (rtx, rtx);
+extern rtx        gen_mve_vdupv16qi                                  (rtx, rtx);
+extern rtx        gen_mve_vdupv8hi                                   (rtx, rtx);
+extern rtx        gen_mve_vdupv4si                                   (rtx, rtx);
+extern rtx        gen_mve_vdupv2di                                   (rtx, rtx);
+extern rtx        gen_mve_vdupv8hf                                   (rtx, rtx);
+extern rtx        gen_mve_vdupv4sf                                   (rtx, rtx);
+extern rtx        gen_mve_vdupv2df                                   (rtx, rtx);
 extern rtx        gen_mve_vst4qv16qi                                 (rtx, rtx);
 extern rtx        gen_mve_vst4qv8hi                                  (rtx, rtx);
 extern rtx        gen_mve_vst4qv4si                                  (rtx, rtx);
@@ -10523,6 +10583,16 @@ extern rtx        gen_arm_vcx2q_p_v16qi                              (rtx, rtx, 
 extern rtx        gen_arm_vcx2qa_p_v16qi                             (rtx, rtx, rtx, rtx, rtx, rtx);
 extern rtx        gen_arm_vcx3q_p_v16qi                              (rtx, rtx, rtx, rtx, rtx, rtx, rtx);
 extern rtx        gen_arm_vcx3qa_p_v16qi                             (rtx, rtx, rtx, rtx, rtx, rtx, rtx);
+extern rtx        gen_movmisalignv16qi_mve_store                     (rtx, rtx);
+extern rtx        gen_movmisalignv8hi_mve_store                      (rtx, rtx);
+extern rtx        gen_movmisalignv4si_mve_store                      (rtx, rtx);
+extern rtx        gen_movmisalignv8hf_mve_store                      (rtx, rtx);
+extern rtx        gen_movmisalignv4sf_mve_store                      (rtx, rtx);
+extern rtx        gen_movmisalignv16qi_mve_load                      (rtx, rtx);
+extern rtx        gen_movmisalignv8hi_mve_load                       (rtx, rtx);
+extern rtx        gen_movmisalignv4si_mve_load                       (rtx, rtx);
+extern rtx        gen_movmisalignv8hf_mve_load                       (rtx, rtx);
+extern rtx        gen_movmisalignv4sf_mve_load                       (rtx, rtx);
 extern rtx        gen_adddi3                                         (rtx, rtx, rtx);
 extern rtx        gen_addvsi4                                        (rtx, rtx, rtx, rtx);
 extern rtx        gen_addvdi4                                        (rtx, rtx, rtx, rtx);

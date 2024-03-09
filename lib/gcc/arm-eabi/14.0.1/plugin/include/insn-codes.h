@@ -2496,6 +2496,21 @@ enum insn_code {
   CODE_FOR_ussubuha3 = 3214,
   CODE_FOR_arm_ssatsihi_shift = 3225,
   CODE_FOR_arm_usatsihi = 3226,
+  CODE_FOR_mve_movv16qi = 3227,
+  CODE_FOR_mve_movv8hi = 3228,
+  CODE_FOR_mve_movv4si = 3229,
+  CODE_FOR_mve_movv2di = 3230,
+  CODE_FOR_mve_movti = 3231,
+  CODE_FOR_mve_movv8hf = 3232,
+  CODE_FOR_mve_movv4sf = 3233,
+  CODE_FOR_mve_movv2df = 3234,
+  CODE_FOR_mve_vdupv16qi = 3235,
+  CODE_FOR_mve_vdupv8hi = 3236,
+  CODE_FOR_mve_vdupv4si = 3237,
+  CODE_FOR_mve_vdupv2di = 3238,
+  CODE_FOR_mve_vdupv8hf = 3239,
+  CODE_FOR_mve_vdupv4sf = 3240,
+  CODE_FOR_mve_vdupv2df = 3241,
   CODE_FOR_mve_vst4qv16qi = 3242,
   CODE_FOR_mve_vst4qv8hi = 3243,
   CODE_FOR_mve_vst4qv4si = 3244,
@@ -4373,6 +4388,16 @@ enum insn_code {
   CODE_FOR_arm_vcx2qa_p_v16qi = 5122,
   CODE_FOR_arm_vcx3q_p_v16qi = 5123,
   CODE_FOR_arm_vcx3qa_p_v16qi = 5124,
+  CODE_FOR_movmisalignv16qi_mve_store = 5125,
+  CODE_FOR_movmisalignv8hi_mve_store = 5126,
+  CODE_FOR_movmisalignv4si_mve_store = 5127,
+  CODE_FOR_movmisalignv8hf_mve_store = 5128,
+  CODE_FOR_movmisalignv4sf_mve_store = 5129,
+  CODE_FOR_movmisalignv16qi_mve_load = 5130,
+  CODE_FOR_movmisalignv8hi_mve_load = 5131,
+  CODE_FOR_movmisalignv4si_mve_load = 5132,
+  CODE_FOR_movmisalignv8hf_mve_load = 5133,
+  CODE_FOR_movmisalignv4sf_mve_load = 5134,
   CODE_FOR_adddi3 = 5135,
   CODE_FOR_addvsi4 = 5136,
   CODE_FOR_addvdi4 = 5137,
@@ -5823,5 +5848,5 @@ enum insn_code {
   CODE_FOR_arm_mve_reinterpretv2df = 6582
 };
 
-const unsigned int NUM_INSN_CODES = 7248;
+const unsigned int NUM_INSN_CODES = 7252;
 #endif /* GCC_INSN_CODES_H */

@@ -1481,6 +1481,10 @@ extern void gt_ggc_mx_rtenode (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_vec_rtenode__va_gc_ (X);\
   } while (0)
 extern void gt_ggc_mx_vec_rtenode__va_gc_ (void *);
+#define gt_ggc_m_35vec_builtin_macro_definition_va_gc_(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_vec_builtin_macro_definition_va_gc_ (X);\
+  } while (0)
+extern void gt_ggc_mx_vec_builtin_macro_definition_va_gc_ (void *);
 #define gt_ggc_m_18struct_constructor(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_struct_constructor (X);\
   } while (0)
@@ -3054,6 +3058,10 @@ extern void gt_pch_nx_rtenode (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_vec_rtenode__va_gc_ (X);\
   } while (0)
 extern void gt_pch_nx_vec_rtenode__va_gc_ (void *);
+#define gt_pch_n_35vec_builtin_macro_definition_va_gc_(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_vec_builtin_macro_definition_va_gc_ (X);\
+  } while (0)
+extern void gt_pch_nx_vec_builtin_macro_definition_va_gc_ (void *);
 #define gt_pch_n_18struct_constructor(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_struct_constructor (X);\
   } while (0)
@@ -4016,6 +4024,8 @@ extern void gt_pch_p_30hash_table_module_decl_hasher_
 extern void gt_pch_p_7rtenode
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_19vec_rtenode__va_gc_
+    (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_35vec_builtin_macro_definition_va_gc_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_18struct_constructor
     (void *, void *, gt_pointer_operator, void *);

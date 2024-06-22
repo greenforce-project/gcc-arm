@@ -4541,6 +4541,14 @@
 #define HAVE_movmisalignv4sf_mve_load (((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V4SFmode)) \
     || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V4SFmode))) \
    && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_predicated_doloop_end_internal16 (TARGET_HAVE_MVE)
+#define HAVE_predicated_doloop_end_internal8 (TARGET_HAVE_MVE)
+#define HAVE_predicated_doloop_end_internal4 (TARGET_HAVE_MVE)
+#define HAVE_predicated_doloop_end_internal2 (TARGET_HAVE_MVE)
+#define HAVE_dlstp8_insn (TARGET_HAVE_MVE)
+#define HAVE_dlstp16_insn (TARGET_HAVE_MVE)
+#define HAVE_dlstp32_insn (TARGET_HAVE_MVE)
+#define HAVE_dlstp64_insn (TARGET_HAVE_MVE)
 #define HAVE_adddi3 1
 #define HAVE_addvsi4 (TARGET_32BIT)
 #define HAVE_addvdi4 (TARGET_32BIT)
@@ -10593,6 +10601,14 @@ extern rtx        gen_movmisalignv8hi_mve_load                       (rtx, rtx);
 extern rtx        gen_movmisalignv4si_mve_load                       (rtx, rtx);
 extern rtx        gen_movmisalignv8hf_mve_load                       (rtx, rtx);
 extern rtx        gen_movmisalignv4sf_mve_load                       (rtx, rtx);
+extern rtx        gen_predicated_doloop_end_internal16               (rtx);
+extern rtx        gen_predicated_doloop_end_internal8                (rtx);
+extern rtx        gen_predicated_doloop_end_internal4                (rtx);
+extern rtx        gen_predicated_doloop_end_internal2                (rtx);
+extern rtx        gen_dlstp8_insn                                    (rtx);
+extern rtx        gen_dlstp16_insn                                   (rtx);
+extern rtx        gen_dlstp32_insn                                   (rtx);
+extern rtx        gen_dlstp64_insn                                   (rtx);
 extern rtx        gen_adddi3                                         (rtx, rtx, rtx);
 extern rtx        gen_addvsi4                                        (rtx, rtx, rtx, rtx);
 extern rtx        gen_addvdi4                                        (rtx, rtx, rtx, rtx);

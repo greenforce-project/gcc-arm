@@ -701,6 +701,10 @@ extern void gt_ggc_mx_inline_entry_data (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_hash_table_inline_entry_data_hasher_ (X);\
   } while (0)
 extern void gt_ggc_mx_hash_table_inline_entry_data_hasher_ (void *);
+#define gt_ggc_m_9ctf_dtdef(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_dtdef (X);\
+  } while (0)
+extern void gt_ggc_mx_ctf_dtdef (void *);
 #define gt_ggc_m_10ctf_string(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_string (X);\
   } while (0)
@@ -713,10 +717,6 @@ extern void gt_ggc_mx_ctf_dmdef (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_func_arg (X);\
   } while (0)
 extern void gt_ggc_mx_ctf_func_arg (void *);
-#define gt_ggc_m_9ctf_dtdef(X) do { \
-  if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_dtdef (X);\
-  } while (0)
-extern void gt_ggc_mx_ctf_dtdef (void *);
 #define gt_ggc_m_9ctf_dvdef(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_dvdef (X);\
   } while (0)
@@ -733,14 +733,18 @@ extern void gt_ggc_mx_hash_table_ctfc_dvd_hasher_ (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_container (X);\
   } while (0)
 extern void gt_ggc_mx_ctf_container (void *);
-#define gt_ggc_m_32hash_map_ctf_dvdef_ref_unsigned_(X) do { \
-  if ((intptr_t)(X) != 0) gt_ggc_mx_hash_map_ctf_dvdef_ref_unsigned_ (X);\
-  } while (0)
-extern void gt_ggc_mx_hash_map_ctf_dvdef_ref_unsigned_ (void *);
 #define gt_ggc_m_24vec_ctf_dtdef_ref_va_gc_(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_vec_ctf_dtdef_ref_va_gc_ (X);\
   } while (0)
 extern void gt_ggc_mx_vec_ctf_dtdef_ref_va_gc_ (void *);
+#define gt_ggc_m_37hash_map_ctf_dtdef_ref_ctf_dtdef_ref_(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_hash_map_ctf_dtdef_ref_ctf_dtdef_ref_ (X);\
+  } while (0)
+extern void gt_ggc_mx_hash_map_ctf_dtdef_ref_ctf_dtdef_ref_ (void *);
+#define gt_ggc_m_23hash_set_ctf_dtdef_ref_(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_hash_set_ctf_dtdef_ref_ (X);\
+  } while (0)
+extern void gt_ggc_mx_hash_set_ctf_dtdef_ref_ (void *);
 #define gt_ggc_m_9temp_slot(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_temp_slot (X);\
   } while (0)
@@ -1117,6 +1121,14 @@ extern void gt_ggc_mx_pad_type_hash (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_hash_table_pad_type_hasher_ (X);\
   } while (0)
 extern void gt_ggc_mx_hash_table_pad_type_hasher_ (void *);
+#define gt_ggc_m_15sized_type_hash(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_sized_type_hash (X);\
+  } while (0)
+extern void gt_ggc_mx_sized_type_hash (void *);
+#define gt_ggc_m_29hash_table_sized_type_hasher_(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_hash_table_sized_type_hasher_ (X);\
+  } while (0)
+extern void gt_ggc_mx_hash_table_sized_type_hasher_ (void *);
 #define gt_ggc_m_12c_label_vars(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_c_label_vars (X);\
   } while (0)
@@ -2278,6 +2290,10 @@ extern void gt_pch_nx_inline_entry_data (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_hash_table_inline_entry_data_hasher_ (X);\
   } while (0)
 extern void gt_pch_nx_hash_table_inline_entry_data_hasher_ (void *);
+#define gt_pch_n_9ctf_dtdef(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_ctf_dtdef (X);\
+  } while (0)
+extern void gt_pch_nx_ctf_dtdef (void *);
 #define gt_pch_n_10ctf_string(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_ctf_string (X);\
   } while (0)
@@ -2290,10 +2306,6 @@ extern void gt_pch_nx_ctf_dmdef (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_ctf_func_arg (X);\
   } while (0)
 extern void gt_pch_nx_ctf_func_arg (void *);
-#define gt_pch_n_9ctf_dtdef(X) do { \
-  if ((intptr_t)(X) != 0) gt_pch_nx_ctf_dtdef (X);\
-  } while (0)
-extern void gt_pch_nx_ctf_dtdef (void *);
 #define gt_pch_n_9ctf_dvdef(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_ctf_dvdef (X);\
   } while (0)
@@ -2310,14 +2322,18 @@ extern void gt_pch_nx_hash_table_ctfc_dvd_hasher_ (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_ctf_container (X);\
   } while (0)
 extern void gt_pch_nx_ctf_container (void *);
-#define gt_pch_n_32hash_map_ctf_dvdef_ref_unsigned_(X) do { \
-  if ((intptr_t)(X) != 0) gt_pch_nx_hash_map_ctf_dvdef_ref_unsigned_ (X);\
-  } while (0)
-extern void gt_pch_nx_hash_map_ctf_dvdef_ref_unsigned_ (void *);
 #define gt_pch_n_24vec_ctf_dtdef_ref_va_gc_(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_vec_ctf_dtdef_ref_va_gc_ (X);\
   } while (0)
 extern void gt_pch_nx_vec_ctf_dtdef_ref_va_gc_ (void *);
+#define gt_pch_n_37hash_map_ctf_dtdef_ref_ctf_dtdef_ref_(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_hash_map_ctf_dtdef_ref_ctf_dtdef_ref_ (X);\
+  } while (0)
+extern void gt_pch_nx_hash_map_ctf_dtdef_ref_ctf_dtdef_ref_ (void *);
+#define gt_pch_n_23hash_set_ctf_dtdef_ref_(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_hash_set_ctf_dtdef_ref_ (X);\
+  } while (0)
+extern void gt_pch_nx_hash_set_ctf_dtdef_ref_ (void *);
 #define gt_pch_n_9temp_slot(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_temp_slot (X);\
   } while (0)
@@ -2694,6 +2710,14 @@ extern void gt_pch_nx_pad_type_hash (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_hash_table_pad_type_hasher_ (X);\
   } while (0)
 extern void gt_pch_nx_hash_table_pad_type_hasher_ (void *);
+#define gt_pch_n_15sized_type_hash(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_sized_type_hash (X);\
+  } while (0)
+extern void gt_pch_nx_sized_type_hash (void *);
+#define gt_pch_n_29hash_table_sized_type_hasher_(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_hash_table_sized_type_hasher_ (X);\
+  } while (0)
+extern void gt_pch_nx_hash_table_sized_type_hasher_ (void *);
 #define gt_pch_n_12c_label_vars(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_c_label_vars (X);\
   } while (0)
@@ -3603,13 +3627,13 @@ extern void gt_pch_p_17inline_entry_data
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_36hash_table_inline_entry_data_hasher_
     (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_9ctf_dtdef
+    (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_10ctf_string
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_9ctf_dmdef
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_12ctf_func_arg
-    (void *, void *, gt_pointer_operator, void *);
-extern void gt_pch_p_9ctf_dtdef
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_9ctf_dvdef
     (void *, void *, gt_pointer_operator, void *);
@@ -3619,9 +3643,11 @@ extern void gt_pch_p_27hash_table_ctfc_dvd_hasher_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_13ctf_container
     (void *, void *, gt_pointer_operator, void *);
-extern void gt_pch_p_32hash_map_ctf_dvdef_ref_unsigned_
-    (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_24vec_ctf_dtdef_ref_va_gc_
+    (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_37hash_map_ctf_dtdef_ref_ctf_dtdef_ref_
+    (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_23hash_set_ctf_dtdef_ref_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_9temp_slot
     (void *, void *, gt_pointer_operator, void *);
@@ -3842,6 +3868,10 @@ extern void gt_pch_p_32hash_table_packable_type_hasher_
 extern void gt_pch_p_13pad_type_hash
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_27hash_table_pad_type_hasher_
+    (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_15sized_type_hash
+    (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_29hash_table_sized_type_hasher_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_12c_label_vars
     (void *, void *, gt_pointer_operator, void *);

@@ -165,6 +165,7 @@ extern bool mem_noofs_operand (rtx, machine_mode);
 extern bool call_insn_operand (rtx, machine_mode);
 extern bool aligned_operand (rtx, machine_mode);
 extern bool arm_any_register_operand (rtx, machine_mode);
+extern bool mem_and_no_t1_wback_op (rtx, machine_mode);
 #endif /* HAVE_MACHINE_MODES */
 
 #ifdef GCC_HARD_REG_SET_H

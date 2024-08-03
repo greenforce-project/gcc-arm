@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "15.0.0 20240727 (Gf Cross v15)")
+(!version  "15.0.0 20240803 (Gf Cross v15)")
 (!srcdir  "/__w/gcc_build/gcc_build/gcc/gcc")
 (!languages 12 ada c cp d fortran go jit lto m2 objc objcp rust)
 (!fileslist 254 0
@@ -31309,8 +31309,8 @@
   nil 0 nil nil )
  
  (!type struct 2238 nil  gc_pointed_to "coroutine_info"
-  (!srcfileloc  "cp/coroutines.cc" 100)
-  (!fields 12 
+  (!srcfileloc  "cp/coroutines.cc" 102)
+  (!fields 14 
    (!pair  "function_decl"
     (!type already_seen 23)
     (!srcfileloc  "cp/coroutines.cc" 84)
@@ -31327,37 +31327,45 @@
     (!type already_seen 23)
     (!srcfileloc  "cp/coroutines.cc" 87)
     nil )
-   (!pair  "handle_type"
+   (!pair  "traits_type"
     (!type already_seen 23)
     (!srcfileloc  "cp/coroutines.cc" 88)
     nil )
-   (!pair  "self_h_proxy"
+   (!pair  "handle_type"
     (!type already_seen 23)
     (!srcfileloc  "cp/coroutines.cc" 89)
     nil )
-   (!pair  "promise_proxy"
+   (!pair  "self_h_proxy"
     (!type already_seen 23)
-    (!srcfileloc  "cp/coroutines.cc" 92)
+    (!srcfileloc  "cp/coroutines.cc" 90)
     nil )
-   (!pair  "return_void"
+   (!pair  "promise_proxy"
     (!type already_seen 23)
     (!srcfileloc  "cp/coroutines.cc" 93)
     nil )
+   (!pair  "from_address"
+    (!type already_seen 23)
+    (!srcfileloc  "cp/coroutines.cc" 94)
+    nil )
+   (!pair  "return_void"
+    (!type already_seen 23)
+    (!srcfileloc  "cp/coroutines.cc" 95)
+    nil )
    (!pair  "first_coro_keyword"
     (!type already_seen 2)
-    (!srcfileloc  "cp/coroutines.cc" 94)
+    (!srcfileloc  "cp/coroutines.cc" 96)
     nil )
    (!pair  "coro_ret_type_error_emitted"
     (!type already_seen 2)
-    (!srcfileloc  "cp/coroutines.cc" 97)
+    (!srcfileloc  "cp/coroutines.cc" 99)
     nil )
    (!pair  "coro_promise_error_emitted"
     (!type already_seen 2)
-    (!srcfileloc  "cp/coroutines.cc" 98)
+    (!srcfileloc  "cp/coroutines.cc" 100)
     nil )
    (!pair  "coro_co_return_error_emitted"
     (!type already_seen 2)
-    (!srcfileloc  "cp/coroutines.cc" 99)
+    (!srcfileloc  "cp/coroutines.cc" 101)
     nil )
   )
   (!options 
@@ -31366,7 +31374,7 @@
   1028 nil nil )
  
  (!type struct 2239 nil  gc_used "coroutine_info_hasher"
-  (!srcfileloc  "cp/coroutines.cc" 114)
+  (!srcfileloc  "cp/coroutines.cc" 116)
   (!fields 0 )
   nil 1028 nil nil )
  
@@ -31375,11 +31383,11 @@
    (!type already_seen 2240)
   )
   gc_pointed_to "hash_table<coroutine_info_hasher>"
-  (!srcfileloc  "cp/coroutines.cc" 114)
+  (!srcfileloc  "cp/coroutines.cc" 116)
   (!fields 1 
    (!pair  "coroutine_info_hasher"
     (!type already_seen 2239)
-    (!srcfileloc  "cp/coroutines.cc" 114)
+    (!srcfileloc  "cp/coroutines.cc" 116)
     nil )
   )
  )
@@ -31449,7 +31457,7 @@
   nil 0 nil nil )
  
  (!type lang_struct 2258 nil  gc_pointed_to "source_location_table_entry"
-  (!srcfileloc  "cp/cp-gimplify.cc" 3785)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3789)
   (!fields 0 )
   (!options 
    (!option for_user string  "")
@@ -31480,19 +31488,19 @@
     nil )
    
    (!type struct 2260 nil  gc_pointed_to "source_location_table_entry"
-    (!srcfileloc  "cp/cp-gimplify.cc" 3785)
+    (!srcfileloc  "cp/cp-gimplify.cc" 3789)
     (!fields 3 
      (!pair  "loc"
       (!type already_seen 2)
-      (!srcfileloc  "cp/cp-gimplify.cc" 3782)
+      (!srcfileloc  "cp/cp-gimplify.cc" 3786)
       nil )
      (!pair  "uid"
       (!type already_seen 2)
-      (!srcfileloc  "cp/cp-gimplify.cc" 3783)
+      (!srcfileloc  "cp/cp-gimplify.cc" 3787)
       nil )
      (!pair  "var"
       (!type already_seen 23)
-      (!srcfileloc  "cp/cp-gimplify.cc" 3784)
+      (!srcfileloc  "cp/cp-gimplify.cc" 3788)
       nil )
     )
     (!options 
@@ -31505,7 +31513,7 @@
  )
  
  (!type struct 2261 nil  gc_used "source_location_table_entry_hash"
-  (!srcfileloc  "cp/cp-gimplify.cc" 3861)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3865)
   (!fields 0 )
   nil 1028 nil nil )
  
@@ -31514,11 +31522,11 @@
    (!type already_seen 2262)
   )
   gc_pointed_to "hash_table<source_location_table_entry_hash>"
-  (!srcfileloc  "cp/cp-gimplify.cc" 3861)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3865)
   (!fields 1 
    (!pair  "source_location_table_entry_hash"
     (!type already_seen 2261)
-    (!srcfileloc  "cp/cp-gimplify.cc" 3861)
+    (!srcfileloc  "cp/cp-gimplify.cc" 3865)
     nil )
   )
  )
@@ -32354,7 +32362,7 @@
   nil 0 nil nil )
  
  (!type undefined 2379 nil  gc_unused "class_to_loc_map_t::iterator"
-  (!srcfileloc  "cp/parser.cc" 35529)
+  (!srcfileloc  "cp/parser.cc" 35552)
  )
  
  (!type struct 2380 nil  gc_unused "sit_data"nil 
@@ -32475,15 +32483,15 @@
    (!type already_seen 2399)
   )
   gc_pointed_to "hash_map<tree,tree_pair_p>"
-  (!srcfileloc  "cp/pt.cc" 30694)
+  (!srcfileloc  "cp/pt.cc" 30689)
   (!fields 2 
    (!pair  "tree_pair_p"
     (!type already_seen 583)
-    (!srcfileloc  "cp/pt.cc" 30694)
+    (!srcfileloc  "cp/pt.cc" 30689)
     nil )
    (!pair  "tree"
     (!type already_seen 23)
-    (!srcfileloc  "cp/pt.cc" 30694)
+    (!srcfileloc  "cp/pt.cc" 30689)
     nil )
   )
  )
@@ -32773,7 +32781,7 @@
   nil 0 nil nil )
  
  (!type struct 2448 nil  gc_used "module_hasher"
-  (!srcfileloc  "fortran/trans-decl.cc" 5322)
+  (!srcfileloc  "fortran/trans-decl.cc" 5351)
   (!fields 0 )
   nil 16 nil nil )
  
@@ -32782,11 +32790,11 @@
    (!type already_seen 2449)
   )
   gc_pointed_to "hash_table<module_hasher>"
-  (!srcfileloc  "fortran/trans-decl.cc" 5322)
+  (!srcfileloc  "fortran/trans-decl.cc" 5351)
   (!fields 1 
    (!pair  "module_hasher"
     (!type already_seen 2448)
-    (!srcfileloc  "fortran/trans-decl.cc" 5322)
+    (!srcfileloc  "fortran/trans-decl.cc" 5351)
     nil )
   )
  )
@@ -34243,11 +34251,11 @@
   nil )
  (!pair  "module_hasher"
   (!type already_seen 2448)
-  (!srcfileloc  "fortran/trans-decl.cc" 5322)
+  (!srcfileloc  "fortran/trans-decl.cc" 5351)
   nil )
  (!pair  "hash_table<module_hasher>"
   (!type already_seen 2449)
-  (!srcfileloc  "fortran/trans-decl.cc" 5322)
+  (!srcfileloc  "fortran/trans-decl.cc" 5351)
   nil )
  (!pair  "tree_frame_info"
   (!type already_seen 706)
@@ -34347,7 +34355,7 @@
   nil )
  (!pair  "hash_map<tree,tree_pair_p>"
   (!type already_seen 2399)
-  (!srcfileloc  "cp/pt.cc" 30694)
+  (!srcfileloc  "cp/pt.cc" 30689)
   nil )
  (!pair  "pending_template"
   (!type already_seen 2381)
@@ -34387,11 +34395,11 @@
   nil )
  (!pair  "iter_t"
   (!type already_seen 2379)
-  (!srcfileloc  "cp/parser.cc" 35529)
+  (!srcfileloc  "cp/parser.cc" 35552)
   nil )
  (!pair  "class_to_loc_map_t::iterator"
   (!type already_seen 2379)
-  (!srcfileloc  "cp/parser.cc" 35529)
+  (!srcfileloc  "cp/parser.cc" 35552)
   nil )
  (!pair  "cp_parser_expression_stack"
   (!type array 2556 nil  gc_unused "NUM_PREC_VALUES" 
@@ -34675,19 +34683,19 @@
   nil )
  (!pair  "source_location_table_entry_hash"
   (!type already_seen 2261)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3861)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3865)
   nil )
  (!pair  "hash_table<source_location_table_entry_hash>"
   (!type already_seen 2262)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3861)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3865)
   nil )
  (!pair  "coroutine_info_hasher"
   (!type already_seen 2239)
-  (!srcfileloc  "cp/coroutines.cc" 114)
+  (!srcfileloc  "cp/coroutines.cc" 116)
   nil )
  (!pair  "hash_table<coroutine_info_hasher>"
   (!type already_seen 2240)
-  (!srcfileloc  "cp/coroutines.cc" 114)
+  (!srcfileloc  "cp/coroutines.cc" 116)
   nil )
  (!pair  "sat_hasher"
   (!type already_seen 2234)
@@ -38080,7 +38088,7 @@
   nil )
  (!pair  "rust_gc_root"
   (!type already_seen 23)
-  (!srcfileloc  "rust/rust-lang.cc" 367)
+  (!srcfileloc  "rust/rust-lang.cc" 358)
   nil )
  (!pair  "objc_eh_personality_decl"
   (!type already_seen 23)
@@ -39353,27 +39361,27 @@
   nil )
  (!pair  "module_htab"
   (!type already_seen 2450)
-  (!srcfileloc  "fortran/trans-decl.cc" 5322)
+  (!srcfileloc  "fortran/trans-decl.cc" 5351)
   nil )
  (!pair  "saved_local_decls"
   (!type already_seen 23)
-  (!srcfileloc  "fortran/trans-decl.cc" 70)
+  (!srcfileloc  "fortran/trans-decl.cc" 72)
   nil )
  (!pair  "saved_parent_function_decls"
   (!type already_seen 23)
-  (!srcfileloc  "fortran/trans-decl.cc" 66)
+  (!srcfileloc  "fortran/trans-decl.cc" 68)
   nil )
  (!pair  "saved_function_decls"
   (!type already_seen 23)
-  (!srcfileloc  "fortran/trans-decl.cc" 65)
+  (!srcfileloc  "fortran/trans-decl.cc" 67)
   nil )
  (!pair  "parent_fake_result_decl"
   (!type already_seen 23)
-  (!srcfileloc  "fortran/trans-decl.cc" 60)
+  (!srcfileloc  "fortran/trans-decl.cc" 62)
   nil )
  (!pair  "current_fake_result_decl"
   (!type already_seen 23)
-  (!srcfileloc  "fortran/trans-decl.cc" 59)
+  (!srcfileloc  "fortran/trans-decl.cc" 61)
   nil )
  (!pair  "global_binding_level"
   (!type already_seen 477)
@@ -39516,7 +39524,7 @@
   nil )
  (!pair  "dguide_cache"
   (!type already_seen 2400)
-  (!srcfileloc  "cp/pt.cc" 30694)
+  (!srcfileloc  "cp/pt.cc" 30689)
   (!options 
    (!option deletable string  "")
   )
@@ -39612,11 +39620,11 @@
   nil )
  (!pair  "generic_parm_count"
   (!type already_seen 2)
-  (!srcfileloc  "cp/parser.cc" 51807)
+  (!srcfileloc  "cp/parser.cc" 51830)
   nil )
  (!pair  "cp_parser_decl_specs_attrs"
   (!type already_seen 85)
-  (!srcfileloc  "cp/parser.cc" 20129)
+  (!srcfileloc  "cp/parser.cc" 20137)
   nil )
  (!pair  "cp_parser_context_free_list"
   (!type already_seen 2186)
@@ -39786,11 +39794,11 @@
   nil )
  (!pair  "start_cleanup_cnt"
   (!type already_seen 2)
-  (!srcfileloc  "cp/decl.cc" 9925)
+  (!srcfileloc  "cp/decl.cc" 9935)
   nil )
  (!pair  "decomp_type_table"
   (!type already_seen 1013)
-  (!srcfileloc  "cp/decl.cc" 9314)
+  (!srcfileloc  "cp/decl.cc" 9324)
   (!options 
    (!option cache string  "")
   )
@@ -39823,17 +39831,17 @@
   nil )
  (!pair  "source_location_id"
   (!type already_seen 2)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3863)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3867)
   nil )
  (!pair  "source_location_table"
   (!type already_seen 2263)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3862)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3866)
   nil )
  (!pair  "fold_caches"
   (!type array 2590 nil  gc_used "2" 
    (!type already_seen 422)
   )
-  (!srcfileloc  "cp/cp-gimplify.cc" 2899)
+  (!srcfileloc  "cp/cp-gimplify.cc" 2903)
   (!options 
    (!option deletable string  "")
   )
@@ -39844,7 +39852,11 @@
   nil )
  (!pair  "to_ramp"
   (!type already_seen 422)
-  (!srcfileloc  "cp/coroutines.cc" 560)
+  (!srcfileloc  "cp/coroutines.cc" 685)
+  nil )
+ (!pair  "void_coro_handle_address"
+  (!type already_seen 23)
+  (!srcfileloc  "cp/coroutines.cc" 273)
   nil )
  (!pair  "void_coro_handle_type"
   (!type already_seen 23)
@@ -39860,111 +39872,107 @@
   nil )
  (!pair  "coro_frame_i_a_r_c_id"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 227)
+  (!srcfileloc  "cp/coroutines.cc" 228)
   nil )
  (!pair  "coro_actor_continue_id"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 226)
+  (!srcfileloc  "cp/coroutines.cc" 227)
   nil )
  (!pair  "coro_self_handle_id"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 225)
+  (!srcfileloc  "cp/coroutines.cc" 226)
   nil )
  (!pair  "coro_resume_index_id"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 224)
+  (!srcfileloc  "cp/coroutines.cc" 225)
   nil )
  (!pair  "coro_frame_needs_free_id"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 223)
+  (!srcfileloc  "cp/coroutines.cc" 224)
   nil )
  (!pair  "coro_promise_id"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 222)
+  (!srcfileloc  "cp/coroutines.cc" 223)
   nil )
  (!pair  "coro_destroy_fn_id"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 221)
+  (!srcfileloc  "cp/coroutines.cc" 222)
   nil )
  (!pair  "coro_resume_fn_id"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 220)
+  (!srcfileloc  "cp/coroutines.cc" 221)
   nil )
  (!pair  "coro_await_resume_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 216)
+  (!srcfileloc  "cp/coroutines.cc" 217)
   nil )
  (!pair  "coro_await_suspend_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 215)
+  (!srcfileloc  "cp/coroutines.cc" 216)
   nil )
  (!pair  "coro_await_ready_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 214)
+  (!srcfileloc  "cp/coroutines.cc" 215)
   nil )
  (!pair  "coro_unhandled_exception_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 210)
+  (!srcfileloc  "cp/coroutines.cc" 211)
   nil )
  (!pair  "coro_gro_on_allocation_fail_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 209)
+  (!srcfileloc  "cp/coroutines.cc" 210)
   nil )
  (!pair  "coro_get_return_object_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 208)
+  (!srcfileloc  "cp/coroutines.cc" 209)
   nil )
  (!pair  "coro_from_address_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 207)
+  (!srcfileloc  "cp/coroutines.cc" 208)
   nil )
  (!pair  "coro_address_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 206)
-  nil )
- (!pair  "coro_resume_identifier"
-  (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 205)
+  (!srcfileloc  "cp/coroutines.cc" 207)
   nil )
  (!pair  "coro_yield_value_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 204)
+  (!srcfileloc  "cp/coroutines.cc" 206)
   nil )
  (!pair  "coro_return_value_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 203)
+  (!srcfileloc  "cp/coroutines.cc" 205)
   nil )
  (!pair  "coro_return_void_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 202)
+  (!srcfileloc  "cp/coroutines.cc" 204)
   nil )
  (!pair  "coro_final_suspend_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 201)
+  (!srcfileloc  "cp/coroutines.cc" 203)
   nil )
  (!pair  "coro_initial_suspend_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 200)
+  (!srcfileloc  "cp/coroutines.cc" 202)
   nil )
  (!pair  "coro_await_transform_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 199)
+  (!srcfileloc  "cp/coroutines.cc" 201)
   nil )
  (!pair  "coro_promise_type_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 195)
+  (!srcfileloc  "cp/coroutines.cc" 197)
   nil )
  (!pair  "coro_handle_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 194)
+  (!srcfileloc  "cp/coroutines.cc" 196)
   nil )
  (!pair  "coro_traits_identifier"
   (!type already_seen 23)
-  (!srcfileloc  "cp/coroutines.cc" 193)
+  (!srcfileloc  "cp/coroutines.cc" 195)
   nil )
  (!pair  "coroutine_info_table"
   (!type already_seen 2241)
-  (!srcfileloc  "cp/coroutines.cc" 114)
+  (!srcfileloc  "cp/coroutines.cc" 116)
   nil )
  (!pair  "decl_satisfied_cache"
   (!type already_seen 422)
@@ -40025,7 +40033,7 @@
   nil )
  (!pair  "cv_cache"
   (!type already_seen 422)
-  (!srcfileloc  "cp/constexpr.cc" 9125)
+  (!srcfileloc  "cp/constexpr.cc" 9128)
   (!options 
    (!option deletable string  "")
   )
@@ -40237,7 +40245,7 @@
   nil )
  (!pair  "ext_block"
   (!type already_seen 23)
-  (!srcfileloc  "c/c-decl.cc" 13496)
+  (!srcfileloc  "c/c-decl.cc" 13507)
   nil )
  (!pair  "last_structptr_types"
   (!type array 2599 nil  gc_used "builtin_structptr_type_count" 

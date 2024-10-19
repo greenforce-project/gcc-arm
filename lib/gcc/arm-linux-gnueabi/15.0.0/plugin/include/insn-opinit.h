@@ -796,6 +796,24 @@ gen_atomic_compare_and_swap_1 (machine_mode arg0, machine_mode arg1, rtx x0, rtx
   return res;
 }
 
+extern insn_code maybe_code_for_mve_vdupq_n (machine_mode);
+inline insn_code
+code_for_mve_vdupq_n (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vdupq_n (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vdupq_n (machine_mode, rtx, rtx);
+inline rtx
+gen_mve_vdupq_n (machine_mode arg0, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_vdupq_n (arg0, x0, x1);
+  gcc_assert (res);
+  return res;
+}
+
 extern insn_code maybe_code_for_mve_q_f (int, machine_mode);
 inline insn_code
 code_for_mve_q_f (int arg0, machine_mode arg1)
@@ -832,38 +850,74 @@ gen_mve_q_f (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3)
   return res;
 }
 
-extern insn_code maybe_code_for_mve_q_n_f (int, machine_mode);
+extern insn_code maybe_code_for_mve_q_f32_f16v4sf (int);
 inline insn_code
-code_for_mve_q_n_f (int arg0, machine_mode arg1)
+code_for_mve_q_f32_f16v4sf (int arg0)
 {
-  insn_code code = maybe_code_for_mve_q_n_f (arg0, arg1);
+  insn_code code = maybe_code_for_mve_q_f32_f16v4sf (arg0);
   gcc_assert (code != CODE_FOR_nothing);
   return code;
 }
 
-extern rtx maybe_gen_mve_q_n_f (int, machine_mode, rtx, rtx);
+extern rtx maybe_gen_mve_q_f32_f16v4sf (int, rtx, rtx);
 inline rtx
-gen_mve_q_n_f (int arg0, machine_mode arg1, rtx x0, rtx x1)
+gen_mve_q_f32_f16v4sf (int arg0, rtx x0, rtx x1)
 {
-  rtx res = maybe_gen_mve_q_n_f (arg0, arg1, x0, x1);
+  rtx res = maybe_gen_mve_q_f32_f16v4sf (arg0, x0, x1);
   gcc_assert (res);
   return res;
 }
 
-extern rtx maybe_gen_mve_q_n_f (int, machine_mode, rtx, rtx, rtx);
-inline rtx
-gen_mve_q_n_f (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2)
+extern insn_code maybe_code_for_mve_q_to_f (int, int, machine_mode);
+inline insn_code
+code_for_mve_q_to_f (int arg0, int arg1, machine_mode arg2)
 {
-  rtx res = maybe_gen_mve_q_n_f (arg0, arg1, x0, x1, x2);
+  insn_code code = maybe_code_for_mve_q_to_f (arg0, arg1, arg2);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_to_f (int, int, machine_mode, rtx, rtx);
+inline rtx
+gen_mve_q_to_f (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_q_to_f (arg0, arg1, arg2, x0, x1);
   gcc_assert (res);
   return res;
 }
 
-extern rtx maybe_gen_mve_q_n_f (int, machine_mode, rtx, rtx, rtx, rtx);
-inline rtx
-gen_mve_q_n_f (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3)
+extern insn_code maybe_code_for_mve_q_from_f (int, int, machine_mode);
+inline insn_code
+code_for_mve_q_from_f (int arg0, int arg1, machine_mode arg2)
 {
-  rtx res = maybe_gen_mve_q_n_f (arg0, arg1, x0, x1, x2, x3);
+  insn_code code = maybe_code_for_mve_q_from_f (arg0, arg1, arg2);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_from_f (int, int, machine_mode, rtx, rtx);
+inline rtx
+gen_mve_q_from_f (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_q_from_f (arg0, arg1, arg2, x0, x1);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vclzq_s (machine_mode);
+inline insn_code
+code_for_mve_vclzq_s (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vclzq_s (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vclzq_s (machine_mode, rtx, rtx);
+inline rtx
+gen_mve_vclzq_s (machine_mode arg0, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_vclzq_s (arg0, x0, x1);
   gcc_assert (res);
   return res;
 }
@@ -904,24 +958,6 @@ gen_mve_q_n (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2, rtx 
   return res;
 }
 
-extern insn_code maybe_code_for_mve_vclzq_s (machine_mode);
-inline insn_code
-code_for_mve_vclzq_s (machine_mode arg0)
-{
-  insn_code code = maybe_code_for_mve_vclzq_s (arg0);
-  gcc_assert (code != CODE_FOR_nothing);
-  return code;
-}
-
-extern rtx maybe_gen_mve_vclzq_s (machine_mode, rtx, rtx);
-inline rtx
-gen_mve_vclzq_s (machine_mode arg0, rtx x0, rtx x1)
-{
-  rtx res = maybe_gen_mve_vclzq_s (arg0, x0, x1);
-  gcc_assert (res);
-  return res;
-}
-
 extern insn_code maybe_code_for_mve_q_v4si (int, int);
 inline insn_code
 code_for_mve_q_v4si (int arg0, int arg1)
@@ -954,6 +990,87 @@ inline rtx
 gen_mve_q_v4si (int arg0, int arg1, rtx x0, rtx x1, rtx x2, rtx x3)
 {
   rtx res = maybe_gen_mve_q_v4si (arg0, arg1, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vctpq (machine_mode, machine_mode);
+inline insn_code
+code_for_mve_vctpq (machine_mode arg0, machine_mode arg1)
+{
+  insn_code code = maybe_code_for_mve_vctpq (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vctpq (machine_mode, machine_mode, rtx, rtx);
+inline rtx
+gen_mve_vctpq (machine_mode arg0, machine_mode arg1, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_vctpq (arg0, arg1, x0, x1);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_n_f (int, machine_mode);
+inline insn_code
+code_for_mve_q_n_f (int arg0, machine_mode arg1)
+{
+  insn_code code = maybe_code_for_mve_q_n_f (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_n_f (int, machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_n_f (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_q_n_f (arg0, arg1, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern rtx maybe_gen_mve_q_n_f (int, machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_n_f (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_q_n_f (arg0, arg1, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_n_to_f (int, int, machine_mode);
+inline insn_code
+code_for_mve_q_n_to_f (int arg0, int arg1, machine_mode arg2)
+{
+  insn_code code = maybe_code_for_mve_q_n_to_f (arg0, arg1, arg2);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_n_to_f (int, int, machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_n_to_f (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_q_n_to_f (arg0, arg1, arg2, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_n_from_f (int, int, machine_mode);
+inline insn_code
+code_for_mve_q_n_from_f (int arg0, int arg1, machine_mode arg2)
+{
+  insn_code code = maybe_code_for_mve_q_n_from_f (arg0, arg1, arg2);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_n_from_f (int, int, machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_n_from_f (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_q_n_from_f (arg0, arg1, arg2, x0, x1, x2);
   gcc_assert (res);
   return res;
 }
@@ -1066,6 +1183,42 @@ gen_mve_q_p (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2, rtx 
   return res;
 }
 
+extern insn_code maybe_code_for_mve_vbicq_u (machine_mode);
+inline insn_code
+code_for_mve_vbicq_u (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vbicq_u (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vbicq_u (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vbicq_u (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vbicq_u (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vbicq_s (machine_mode);
+inline insn_code
+code_for_mve_vbicq_s (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vbicq_s (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vbicq_s (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vbicq_s (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vbicq_s (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
 extern insn_code maybe_code_for_mve_q (int, int, int, machine_mode);
 inline insn_code
 code_for_mve_q (int arg0, int arg1, int arg2, machine_mode arg3)
@@ -1102,6 +1255,42 @@ gen_mve_q_int (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2)
   return res;
 }
 
+extern insn_code maybe_code_for_mve_vornq_s (machine_mode);
+inline insn_code
+code_for_mve_vornq_s (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vornq_s (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vornq_s (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vornq_s (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vornq_s (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vornq_u (machine_mode);
+inline insn_code
+code_for_mve_vornq_u (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vornq_u (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vornq_u (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vornq_u (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vornq_u (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
 extern insn_code maybe_code_for_mve_q_r (int, int, machine_mode);
 inline insn_code
 code_for_mve_q_r (int arg0, int arg1, machine_mode arg2)
@@ -1116,6 +1305,24 @@ inline rtx
 gen_mve_q_r (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2)
 {
   rtx res = maybe_gen_mve_q_r (arg0, arg1, arg2, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vbicq_f (machine_mode);
+inline insn_code
+code_for_mve_vbicq_f (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vbicq_f (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vbicq_f (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vbicq_f (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vbicq_f (arg0, x0, x1, x2);
   gcc_assert (res);
   return res;
 }
@@ -1183,6 +1390,42 @@ gen_mve_vcmpq_n_f (rtx_code arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2)
   return res;
 }
 
+extern insn_code maybe_code_for_mve_vctpq_m (machine_mode, machine_mode);
+inline insn_code
+code_for_mve_vctpq_m (machine_mode arg0, machine_mode arg1)
+{
+  insn_code code = maybe_code_for_mve_vctpq_m (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vctpq_m (machine_mode, machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vctpq_m (machine_mode arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vctpq_m (arg0, arg1, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_f16_f32v8hf (int);
+inline insn_code
+code_for_mve_q_f16_f32v8hf (int arg0)
+{
+  insn_code code = maybe_code_for_mve_q_f16_f32v8hf (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_f16_f32v8hf (int, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_f16_f32v8hf (int arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_q_f16_f32v8hf (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
 extern insn_code maybe_code_for_mve_q_f (rtx_code, machine_mode);
 inline insn_code
 code_for_mve_q_f (rtx_code arg0, machine_mode arg1)
@@ -1197,6 +1440,24 @@ inline rtx
 gen_mve_q_f (rtx_code arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2)
 {
   rtx res = maybe_gen_mve_q_f (arg0, arg1, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vornq_f (machine_mode);
+inline insn_code
+code_for_mve_vornq_f (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vornq_f (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vornq_f (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vornq_f (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vornq_f (arg0, x0, x1, x2);
   gcc_assert (res);
   return res;
 }
@@ -1260,6 +1521,42 @@ inline rtx
 gen_mve_q_m (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4)
 {
   rtx res = maybe_gen_mve_q_m (arg0, arg1, arg2, x0, x1, x2, x3, x4);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_m_to_f (int, int, machine_mode);
+inline insn_code
+code_for_mve_q_m_to_f (int arg0, int arg1, machine_mode arg2)
+{
+  insn_code code = maybe_code_for_mve_q_m_to_f (arg0, arg1, arg2);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_m_to_f (int, int, machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_m_to_f (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_q_m_to_f (arg0, arg1, arg2, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vshlcq (int, machine_mode);
+inline insn_code
+code_for_mve_vshlcq (int arg0, machine_mode arg1)
+{
+  insn_code code = maybe_code_for_mve_vshlcq (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vshlcq (int, machine_mode, rtx, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vshlcq (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4)
+{
+  rtx res = maybe_gen_mve_vshlcq (arg0, arg1, x0, x1, x2, x3, x4);
   gcc_assert (res);
   return res;
 }
@@ -1390,6 +1687,42 @@ gen_mve_vcmpq_m_n_f (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3
   return res;
 }
 
+extern insn_code maybe_code_for_mve_q_m_f16_f32v8hf (int);
+inline insn_code
+code_for_mve_q_m_f16_f32v8hf (int arg0)
+{
+  insn_code code = maybe_code_for_mve_q_m_f16_f32v8hf (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_m_f16_f32v8hf (int, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_m_f16_f32v8hf (int arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_q_m_f16_f32v8hf (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_m_f32_f16v4sf (int);
+inline insn_code
+code_for_mve_q_m_f32_f16v4sf (int arg0)
+{
+  insn_code code = maybe_code_for_mve_q_m_f32_f16v4sf (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_m_f32_f16v4sf (int, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_m_f32_f16v4sf (int arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_q_m_f32_f16v4sf (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
 extern insn_code maybe_code_for_mve_q_m_n_f (int, machine_mode);
 inline insn_code
 code_for_mve_q_m_n_f (int arg0, machine_mode arg1)
@@ -1431,6 +1764,60 @@ inline rtx
 gen_mve_q_p_f (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3)
 {
   rtx res = maybe_gen_mve_q_p_f (arg0, arg1, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_m_n_from_f (int, int, machine_mode);
+inline insn_code
+code_for_mve_q_m_n_from_f (int arg0, int arg1, machine_mode arg2)
+{
+  insn_code code = maybe_code_for_mve_q_m_n_from_f (arg0, arg1, arg2);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_m_n_from_f (int, int, machine_mode, rtx, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_m_n_from_f (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4)
+{
+  rtx res = maybe_gen_mve_q_m_n_from_f (arg0, arg1, arg2, x0, x1, x2, x3, x4);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_m_from_f (int, int, machine_mode);
+inline insn_code
+code_for_mve_q_m_from_f (int arg0, int arg1, machine_mode arg2)
+{
+  insn_code code = maybe_code_for_mve_q_m_from_f (arg0, arg1, arg2);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_m_from_f (int, int, machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_m_from_f (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_q_m_from_f (arg0, arg1, arg2, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_m_n_to_f (int, int, machine_mode);
+inline insn_code
+code_for_mve_q_m_n_to_f (int arg0, int arg1, machine_mode arg2)
+{
+  insn_code code = maybe_code_for_mve_q_m_n_to_f (arg0, arg1, arg2);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_m_n_to_f (int, int, machine_mode, rtx, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_m_n_to_f (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4)
+{
+  rtx res = maybe_gen_mve_q_m_n_to_f (arg0, arg1, arg2, x0, x1, x2, x3, x4);
   gcc_assert (res);
   return res;
 }
@@ -1575,6 +1962,96 @@ inline rtx
 gen_mve_vst1q (int arg0, machine_mode arg1, rtx x0, rtx x1)
 {
   rtx res = maybe_gen_mve_vst1q (arg0, arg1, x0, x1);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_u_insn (int, machine_mode);
+inline insn_code
+code_for_mve_q_u_insn (int arg0, machine_mode arg1)
+{
+  insn_code code = maybe_code_for_mve_q_u_insn (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_u_insn (int, machine_mode, rtx, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_u_insn (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4)
+{
+  rtx res = maybe_gen_mve_q_u_insn (arg0, arg1, x0, x1, x2, x3, x4);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_m_wb_u_insn (int, machine_mode);
+inline insn_code
+code_for_mve_q_m_wb_u_insn (int arg0, machine_mode arg1)
+{
+  insn_code code = maybe_code_for_mve_q_m_wb_u_insn (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_m_wb_u_insn (int, machine_mode, rtx, rtx, rtx, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_m_wb_u_insn (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4, rtx x5, rtx x6)
+{
+  rtx res = maybe_gen_mve_q_m_wb_u_insn (arg0, arg1, x0, x1, x2, x3, x4, x5, x6);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_wb_u_insn (int, machine_mode);
+inline insn_code
+code_for_mve_q_wb_u_insn (int arg0, machine_mode arg1)
+{
+  insn_code code = maybe_code_for_mve_q_wb_u_insn (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_wb_u_insn (int, machine_mode, rtx, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_wb_u_insn (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4)
+{
+  rtx res = maybe_gen_mve_q_wb_u_insn (arg0, arg1, x0, x1, x2, x3, x4);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_q_m_v4si (int, int);
+inline insn_code
+code_for_mve_q_m_v4si (int arg0, int arg1)
+{
+  insn_code code = maybe_code_for_mve_q_m_v4si (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_q_m_v4si (int, int, rtx, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_q_m_v4si (int arg0, int arg1, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4)
+{
+  rtx res = maybe_gen_mve_q_m_v4si (arg0, arg1, x0, x1, x2, x3, x4);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vshlcq_m (int, machine_mode);
+inline insn_code
+code_for_mve_vshlcq_m (int arg0, machine_mode arg1)
+{
+  insn_code code = maybe_code_for_mve_vshlcq_m (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vshlcq_m (int, machine_mode, rtx, rtx, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vshlcq_m (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4, rtx x5)
+{
+  rtx res = maybe_gen_mve_vshlcq_m (arg0, arg1, x0, x1, x2, x3, x4, x5);
   gcc_assert (res);
   return res;
 }

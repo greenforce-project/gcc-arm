@@ -453,6 +453,8 @@ enum optab_tag {
   vec_shl_insert_optab,
   len_load_optab,
   len_store_optab,
+  mask_len_strided_load_optab,
+  mask_len_strided_store_optab,
   select_vl_optab,
   andn_optab,
   iorn_optab,
@@ -464,7 +466,7 @@ enum optab_tag {
   LAST_NORM_OPTAB = iorn_optab
 };
 
-#define NUM_OPTABS          452
+#define NUM_OPTABS          454
 #define NUM_CONVLIB_OPTABS  17
 #define NUM_NORMLIB_OPTABS  80
 #define NUM_OPTAB_PATTERNS  948
@@ -1894,74 +1896,146 @@ gen_mve_q_m_f (int arg0, int arg1, machine_mode arg2, rtx x0, rtx x1, rtx x2, rt
   return res;
 }
 
-extern insn_code maybe_code_for_mve_vld1q_f (machine_mode);
+extern insn_code maybe_code_for_mve_vstrq (machine_mode);
 inline insn_code
-code_for_mve_vld1q_f (machine_mode arg0)
+code_for_mve_vstrq (machine_mode arg0)
 {
-  insn_code code = maybe_code_for_mve_vld1q_f (arg0);
+  insn_code code = maybe_code_for_mve_vstrq (arg0);
   gcc_assert (code != CODE_FOR_nothing);
   return code;
 }
 
-extern rtx maybe_gen_mve_vld1q_f (machine_mode, rtx, rtx);
+extern rtx maybe_gen_mve_vstrq (machine_mode, rtx, rtx);
 inline rtx
-gen_mve_vld1q_f (machine_mode arg0, rtx x0, rtx x1)
+gen_mve_vstrq (machine_mode arg0, rtx x0, rtx x1)
 {
-  rtx res = maybe_gen_mve_vld1q_f (arg0, x0, x1);
+  rtx res = maybe_gen_mve_vstrq (arg0, x0, x1);
   gcc_assert (res);
   return res;
 }
 
-extern insn_code maybe_code_for_mve_vld1q (int, machine_mode);
+extern insn_code maybe_code_for_mve_vstrq_p (machine_mode);
 inline insn_code
-code_for_mve_vld1q (int arg0, machine_mode arg1)
+code_for_mve_vstrq_p (machine_mode arg0)
 {
-  insn_code code = maybe_code_for_mve_vld1q (arg0, arg1);
+  insn_code code = maybe_code_for_mve_vstrq_p (arg0);
   gcc_assert (code != CODE_FOR_nothing);
   return code;
 }
 
-extern rtx maybe_gen_mve_vld1q (int, machine_mode, rtx, rtx);
+extern rtx maybe_gen_mve_vstrq_p (machine_mode, rtx, rtx, rtx);
 inline rtx
-gen_mve_vld1q (int arg0, machine_mode arg1, rtx x0, rtx x1)
+gen_mve_vstrq_p (machine_mode arg0, rtx x0, rtx x1, rtx x2)
 {
-  rtx res = maybe_gen_mve_vld1q (arg0, arg1, x0, x1);
+  rtx res = maybe_gen_mve_vstrq_p (arg0, x0, x1, x2);
   gcc_assert (res);
   return res;
 }
 
-extern insn_code maybe_code_for_mve_vst1q_f (machine_mode);
+extern insn_code maybe_code_for_mve_vstrq_truncate (machine_mode);
 inline insn_code
-code_for_mve_vst1q_f (machine_mode arg0)
+code_for_mve_vstrq_truncate (machine_mode arg0)
 {
-  insn_code code = maybe_code_for_mve_vst1q_f (arg0);
+  insn_code code = maybe_code_for_mve_vstrq_truncate (arg0);
   gcc_assert (code != CODE_FOR_nothing);
   return code;
 }
 
-extern rtx maybe_gen_mve_vst1q_f (machine_mode, rtx, rtx);
+extern rtx maybe_gen_mve_vstrq_truncate (machine_mode, rtx, rtx);
 inline rtx
-gen_mve_vst1q_f (machine_mode arg0, rtx x0, rtx x1)
+gen_mve_vstrq_truncate (machine_mode arg0, rtx x0, rtx x1)
 {
-  rtx res = maybe_gen_mve_vst1q_f (arg0, x0, x1);
+  rtx res = maybe_gen_mve_vstrq_truncate (arg0, x0, x1);
   gcc_assert (res);
   return res;
 }
 
-extern insn_code maybe_code_for_mve_vst1q (int, machine_mode);
+extern insn_code maybe_code_for_mve_vstrq_p_truncate (machine_mode);
 inline insn_code
-code_for_mve_vst1q (int arg0, machine_mode arg1)
+code_for_mve_vstrq_p_truncate (machine_mode arg0)
 {
-  insn_code code = maybe_code_for_mve_vst1q (arg0, arg1);
+  insn_code code = maybe_code_for_mve_vstrq_p_truncate (arg0);
   gcc_assert (code != CODE_FOR_nothing);
   return code;
 }
 
-extern rtx maybe_gen_mve_vst1q (int, machine_mode, rtx, rtx);
+extern rtx maybe_gen_mve_vstrq_p_truncate (machine_mode, rtx, rtx, rtx);
 inline rtx
-gen_mve_vst1q (int arg0, machine_mode arg1, rtx x0, rtx x1)
+gen_mve_vstrq_p_truncate (machine_mode arg0, rtx x0, rtx x1, rtx x2)
 {
-  rtx res = maybe_gen_mve_vst1q (arg0, arg1, x0, x1);
+  rtx res = maybe_gen_mve_vstrq_p_truncate (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq (machine_mode);
+inline insn_code
+code_for_mve_vldrq (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq (machine_mode, rtx, rtx);
+inline rtx
+gen_mve_vldrq (machine_mode arg0, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_vldrq (arg0, x0, x1);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_z (machine_mode);
+inline insn_code
+code_for_mve_vldrq_z (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_z (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_z (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_z (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vldrq_z (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_extend (machine_mode, rtx_code);
+inline insn_code
+code_for_mve_vldrq_extend (machine_mode arg0, rtx_code arg1)
+{
+  insn_code code = maybe_code_for_mve_vldrq_extend (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_extend (machine_mode, rtx_code, rtx, rtx);
+inline rtx
+gen_mve_vldrq_extend (machine_mode arg0, rtx_code arg1, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_vldrq_extend (arg0, arg1, x0, x1);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_z_extend (machine_mode, rtx_code);
+inline insn_code
+code_for_mve_vldrq_z_extend (machine_mode arg0, rtx_code arg1)
+{
+  insn_code code = maybe_code_for_mve_vldrq_z_extend (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_z_extend (machine_mode, rtx_code, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_z_extend (machine_mode arg0, rtx_code arg1, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vldrq_z_extend (arg0, arg1, x0, x1, x2);
   gcc_assert (res);
   return res;
 }

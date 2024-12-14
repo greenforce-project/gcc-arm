@@ -43,9 +43,6 @@ enum optab_tag {
   vec_mask_store_lanes_optab,
   vec_mask_len_load_lanes_optab,
   vec_mask_len_store_lanes_optab,
-  vcond_optab,
-  vcondu_optab,
-  vcondeq_optab,
   vcond_mask_optab,
   vec_cmp_optab,
   vec_cmpu_optab,
@@ -468,10 +465,10 @@ enum optab_tag {
   LAST_NORM_OPTAB = iorn_optab
 };
 
-#define NUM_OPTABS          456
+#define NUM_OPTABS          453
 #define NUM_CONVLIB_OPTABS  17
 #define NUM_NORMLIB_OPTABS  80
-#define NUM_OPTAB_PATTERNS  948
+#define NUM_OPTAB_PATTERNS  952
 typedef enum optab_tag optab;
 typedef enum optab_tag convert_optab;
 typedef enum optab_tag direct_optab;
@@ -814,6 +811,24 @@ inline rtx
 gen_mve_vdupq_n (machine_mode arg0, rtx x0, rtx x1)
 {
   rtx res = maybe_gen_mve_vdupq_n (arg0, x0, x1);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vst4q (machine_mode);
+inline insn_code
+code_for_mve_vst4q (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vst4q (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vst4q (machine_mode, rtx, rtx);
+inline rtx
+gen_mve_vst4q (machine_mode arg0, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_vst4q (arg0, x0, x1);
   gcc_assert (res);
   return res;
 }
@@ -2042,6 +2057,330 @@ gen_mve_vldrq_z_extend (machine_mode arg0, rtx_code arg1, rtx x0, rtx x1, rtx x2
   return res;
 }
 
+extern insn_code maybe_code_for_mve_vstrq_scatter_offset (machine_mode);
+inline insn_code
+code_for_mve_vstrq_scatter_offset (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vstrq_scatter_offset (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vstrq_scatter_offset (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vstrq_scatter_offset (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vstrq_scatter_offset (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vstrq_scatter_offset_p (machine_mode);
+inline insn_code
+code_for_mve_vstrq_scatter_offset_p (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vstrq_scatter_offset_p (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vstrq_scatter_offset_p (machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vstrq_scatter_offset_p (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vstrq_scatter_offset_p (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vstrq_truncate_scatter_offset (machine_mode);
+inline insn_code
+code_for_mve_vstrq_truncate_scatter_offset (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vstrq_truncate_scatter_offset (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vstrq_truncate_scatter_offset (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vstrq_truncate_scatter_offset (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vstrq_truncate_scatter_offset (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vstrq_truncate_scatter_offset_p (machine_mode);
+inline insn_code
+code_for_mve_vstrq_truncate_scatter_offset_p (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vstrq_truncate_scatter_offset_p (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vstrq_truncate_scatter_offset_p (machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vstrq_truncate_scatter_offset_p (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vstrq_truncate_scatter_offset_p (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vstrq_scatter_base (machine_mode);
+inline insn_code
+code_for_mve_vstrq_scatter_base (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vstrq_scatter_base (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vstrq_scatter_base (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vstrq_scatter_base (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vstrq_scatter_base (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_offset (machine_mode);
+inline insn_code
+code_for_mve_vldrq_gather_offset (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_offset (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_offset (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_offset (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_offset (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_offset_extend (machine_mode, rtx_code);
+inline insn_code
+code_for_mve_vldrq_gather_offset_extend (machine_mode arg0, rtx_code arg1)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_offset_extend (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_offset_extend (machine_mode, rtx_code, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_offset_extend (machine_mode arg0, rtx_code arg1, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_offset_extend (arg0, arg1, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_offset_z (machine_mode);
+inline insn_code
+code_for_mve_vldrq_gather_offset_z (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_offset_z (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_offset_z (machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_offset_z (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_offset_z (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_offset_z_extend (machine_mode, rtx_code);
+inline insn_code
+code_for_mve_vldrq_gather_offset_z_extend (machine_mode arg0, rtx_code arg1)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_offset_z_extend (arg0, arg1);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_offset_z_extend (machine_mode, rtx_code, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_offset_z_extend (machine_mode arg0, rtx_code arg1, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_offset_z_extend (arg0, arg1, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vstrq_scatter_base_p (machine_mode);
+inline insn_code
+code_for_mve_vstrq_scatter_base_p (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vstrq_scatter_base_p (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vstrq_scatter_base_p (machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vstrq_scatter_base_p (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vstrq_scatter_base_p (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_base (machine_mode);
+inline insn_code
+code_for_mve_vldrq_gather_base (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_base (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_base (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_base (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_base (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_base_z (machine_mode);
+inline insn_code
+code_for_mve_vldrq_gather_base_z (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_base_z (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_base_z (machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_base_z (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_base_z (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_shifted_offset (machine_mode);
+inline insn_code
+code_for_mve_vldrq_gather_shifted_offset (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_shifted_offset (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_shifted_offset (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_shifted_offset (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_shifted_offset (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_shifted_offset_extend_v4si (rtx_code);
+inline insn_code
+code_for_mve_vldrq_gather_shifted_offset_extend_v4si (rtx_code arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_shifted_offset_extend_v4si (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_shifted_offset_extend_v4si (rtx_code, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_shifted_offset_extend_v4si (rtx_code arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_shifted_offset_extend_v4si (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_shifted_offset_z (machine_mode);
+inline insn_code
+code_for_mve_vldrq_gather_shifted_offset_z (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_shifted_offset_z (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_shifted_offset_z (machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_shifted_offset_z (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_shifted_offset_z (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_shifted_offset_z_extend_v4si (rtx_code);
+inline insn_code
+code_for_mve_vldrq_gather_shifted_offset_z_extend_v4si (rtx_code arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_shifted_offset_z_extend_v4si (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_shifted_offset_z_extend_v4si (rtx_code, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_shifted_offset_z_extend_v4si (rtx_code arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_shifted_offset_z_extend_v4si (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vstrq_scatter_shifted_offset (machine_mode);
+inline insn_code
+code_for_mve_vstrq_scatter_shifted_offset (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vstrq_scatter_shifted_offset (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vstrq_scatter_shifted_offset (machine_mode, rtx, rtx, rtx);
+inline rtx
+gen_mve_vstrq_scatter_shifted_offset (machine_mode arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_vstrq_scatter_shifted_offset (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vstrq_scatter_shifted_offset_p (machine_mode);
+inline insn_code
+code_for_mve_vstrq_scatter_shifted_offset_p (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vstrq_scatter_shifted_offset_p (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vstrq_scatter_shifted_offset_p (machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vstrq_scatter_shifted_offset_p (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vstrq_scatter_shifted_offset_p (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
 extern insn_code maybe_code_for_mve_q_u_insn (int, machine_mode);
 inline insn_code
 code_for_mve_q_u_insn (int arg0, machine_mode arg1)
@@ -2096,6 +2435,78 @@ gen_mve_q_wb_u_insn (int arg0, machine_mode arg1, rtx x0, rtx x1, rtx x2, rtx x3
   return res;
 }
 
+extern insn_code maybe_code_for_mve_vstrq_scatter_base_wb (machine_mode);
+inline insn_code
+code_for_mve_vstrq_scatter_base_wb (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vstrq_scatter_base_wb (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vstrq_scatter_base_wb (machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vstrq_scatter_base_wb (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vstrq_scatter_base_wb (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vstrq_scatter_base_wb_p (machine_mode);
+inline insn_code
+code_for_mve_vstrq_scatter_base_wb_p (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vstrq_scatter_base_wb_p (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vstrq_scatter_base_wb_p (machine_mode, rtx, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vstrq_scatter_base_wb_p (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4)
+{
+  rtx res = maybe_gen_mve_vstrq_scatter_base_wb_p (arg0, x0, x1, x2, x3, x4);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_base_wb (machine_mode);
+inline insn_code
+code_for_mve_vldrq_gather_base_wb (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_base_wb (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_base_wb (machine_mode, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_base_wb (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_base_wb (arg0, x0, x1, x2, x3);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vldrq_gather_base_wb_z (machine_mode);
+inline insn_code
+code_for_mve_vldrq_gather_base_wb_z (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vldrq_gather_base_wb_z (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vldrq_gather_base_wb_z (machine_mode, rtx, rtx, rtx, rtx, rtx);
+inline rtx
+gen_mve_vldrq_gather_base_wb_z (machine_mode arg0, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4)
+{
+  rtx res = maybe_gen_mve_vldrq_gather_base_wb_z (arg0, x0, x1, x2, x3, x4);
+  gcc_assert (res);
+  return res;
+}
+
 extern insn_code maybe_code_for_mve_q_m_v4si (int, int);
 inline insn_code
 code_for_mve_q_m_v4si (int arg0, int arg1)
@@ -2110,6 +2521,60 @@ inline rtx
 gen_mve_q_m_v4si (int arg0, int arg1, rtx x0, rtx x1, rtx x2, rtx x3, rtx x4)
 {
   rtx res = maybe_gen_mve_q_m_v4si (arg0, arg1, x0, x1, x2, x3, x4);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vst2q (machine_mode);
+inline insn_code
+code_for_mve_vst2q (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vst2q (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vst2q (machine_mode, rtx, rtx);
+inline rtx
+gen_mve_vst2q (machine_mode arg0, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_vst2q (arg0, x0, x1);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vld2q (machine_mode);
+inline insn_code
+code_for_mve_vld2q (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vld2q (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vld2q (machine_mode, rtx, rtx);
+inline rtx
+gen_mve_vld2q (machine_mode arg0, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_vld2q (arg0, x0, x1);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_vld4q (machine_mode);
+inline insn_code
+code_for_mve_vld4q (machine_mode arg0)
+{
+  insn_code code = maybe_code_for_mve_vld4q (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_vld4q (machine_mode, rtx, rtx);
+inline rtx
+gen_mve_vld4q (machine_mode arg0, rtx x0, rtx x1)
+{
+  rtx res = maybe_gen_mve_vld4q (arg0, x0, x1);
   gcc_assert (res);
   return res;
 }

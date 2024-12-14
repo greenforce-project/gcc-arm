@@ -152,6 +152,7 @@ extern bool imm_lshift_or_reg_neon (rtx, machine_mode);
 extern bool imm_rshift_or_reg_neon (rtx, machine_mode);
 extern bool cmpdi_operand (rtx, machine_mode);
 extern bool arm_sync_memory_operand (rtx, machine_mode);
+extern bool arm_ldrd_memory_operand (rtx, machine_mode);
 extern bool vect_par_constant_high (rtx, machine_mode);
 extern bool vect_par_constant_low (rtx, machine_mode);
 extern bool const_double_vcvt_power_of_two_reciprocal (rtx, machine_mode);
@@ -251,6 +252,7 @@ enum constraint_num
   CONSTRAINT_Uu,
   CONSTRAINT_Uw,
   CONSTRAINT_Uz,
+  CONSTRAINT_Uo,
   CONSTRAINT_p,
   CONSTRAINT_Rd,
   CONSTRAINT_Ra,
@@ -334,7 +336,7 @@ insn_extra_register_constraint (enum constraint_num c)
 static inline bool
 insn_extra_memory_constraint (enum constraint_num c)
 {
-  return c >= CONSTRAINT_m && c <= CONSTRAINT_Uz;
+  return c >= CONSTRAINT_m && c <= CONSTRAINT_Uo;
 }
 
 static inline bool

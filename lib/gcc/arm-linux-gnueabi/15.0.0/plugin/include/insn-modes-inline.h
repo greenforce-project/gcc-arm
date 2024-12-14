@@ -14,7 +14,7 @@ extern __inline__ __attribute__((__always_inline__, __gnu_inline__))
 poly_uint16
 mode_size_inline (machine_mode mode)
 {
-  extern const poly_uint16 mode_size[NUM_MACHINE_MODES];
+  extern poly_uint16 mode_size[NUM_MACHINE_MODES];
   gcc_assert (mode >= 0 && mode < NUM_MACHINE_MODES);
   switch (mode)
     {
@@ -121,6 +121,10 @@ mode_size_inline (machine_mode mode)
     case E_V8BFmode: return 16;
     case E_V4SFmode: return 16;
     case E_V2DFmode: return 16;
+    case E_V2x8BFmode: return 16;
+    case E_V4x8BFmode: return 16;
+    case E_V2x2DFmode: return 16;
+    case E_V4x2DFmode: return 16;
     default: return mode_size[mode];
     }
 }
@@ -133,7 +137,7 @@ extern __inline__ __attribute__((__always_inline__, __gnu_inline__))
 poly_uint16
 mode_nunits_inline (machine_mode mode)
 {
-  extern const poly_uint16 mode_nunits[NUM_MACHINE_MODES];
+  extern poly_uint16 mode_nunits[NUM_MACHINE_MODES];
   switch (mode)
     {
     case E_VOIDmode: return 0;
@@ -239,6 +243,10 @@ mode_nunits_inline (machine_mode mode)
     case E_V8BFmode: return 8;
     case E_V4SFmode: return 4;
     case E_V2DFmode: return 2;
+    case E_V2x8BFmode: return 8;
+    case E_V4x8BFmode: return 8;
+    case E_V2x2DFmode: return 2;
+    case E_V4x2DFmode: return 2;
     default: return mode_nunits[mode];
     }
 }
@@ -343,6 +351,14 @@ mode_inner_inline (machine_mode mode)
     case E_V8HImode: return E_HImode;
     case E_V4SImode: return E_SImode;
     case E_V2DImode: return E_DImode;
+    case E_V2x16QImode: return E_QImode;
+    case E_V4x16QImode: return E_QImode;
+    case E_V2x8HImode: return E_HImode;
+    case E_V4x8HImode: return E_HImode;
+    case E_V2x4SImode: return E_SImode;
+    case E_V4x4SImode: return E_SImode;
+    case E_V2x2DImode: return E_DImode;
+    case E_V4x2DImode: return E_DImode;
     case E_V4QQmode: return E_QQmode;
     case E_V2HQmode: return E_HQmode;
     case E_V4UQQmode: return E_UQQmode;
@@ -358,6 +374,14 @@ mode_inner_inline (machine_mode mode)
     case E_V8BFmode: return E_BFmode;
     case E_V4SFmode: return E_SFmode;
     case E_V2DFmode: return E_DFmode;
+    case E_V2x8BFmode: return E_BFmode;
+    case E_V2x8HFmode: return E_HFmode;
+    case E_V4x8BFmode: return E_BFmode;
+    case E_V4x8HFmode: return E_HFmode;
+    case E_V2x4SFmode: return E_SFmode;
+    case E_V4x4SFmode: return E_SFmode;
+    case E_V2x2DFmode: return E_DFmode;
+    case E_V4x2DFmode: return E_DFmode;
     default: return mode_inner[mode];
     }
 }
@@ -462,6 +486,14 @@ mode_unit_size_inline (machine_mode mode)
     case E_V8HImode: return 2;
     case E_V4SImode: return 4;
     case E_V2DImode: return 8;
+    case E_V2x16QImode: return 1;
+    case E_V4x16QImode: return 1;
+    case E_V2x8HImode: return 2;
+    case E_V4x8HImode: return 2;
+    case E_V2x4SImode: return 4;
+    case E_V4x4SImode: return 4;
+    case E_V2x2DImode: return 8;
+    case E_V4x2DImode: return 8;
     case E_V4QQmode: return 1;
     case E_V2HQmode: return 2;
     case E_V4UQQmode: return 1;
@@ -477,6 +509,14 @@ mode_unit_size_inline (machine_mode mode)
     case E_V8BFmode: return 2;
     case E_V4SFmode: return 4;
     case E_V2DFmode: return 8;
+    case E_V2x8BFmode: return 2;
+    case E_V2x8HFmode: return 2;
+    case E_V4x8BFmode: return 2;
+    case E_V4x8HFmode: return 2;
+    case E_V2x4SFmode: return 4;
+    case E_V4x4SFmode: return 4;
+    case E_V2x2DFmode: return 8;
+    case E_V4x2DFmode: return 8;
     default: return mode_unit_size[mode];
     }
 }
@@ -581,6 +621,14 @@ mode_unit_precision_inline (machine_mode mode)
     case E_V8HImode: return 2*BITS_PER_UNIT;
     case E_V4SImode: return 4*BITS_PER_UNIT;
     case E_V2DImode: return 8*BITS_PER_UNIT;
+    case E_V2x16QImode: return 1*BITS_PER_UNIT;
+    case E_V4x16QImode: return 1*BITS_PER_UNIT;
+    case E_V2x8HImode: return 2*BITS_PER_UNIT;
+    case E_V4x8HImode: return 2*BITS_PER_UNIT;
+    case E_V2x4SImode: return 4*BITS_PER_UNIT;
+    case E_V4x4SImode: return 4*BITS_PER_UNIT;
+    case E_V2x2DImode: return 8*BITS_PER_UNIT;
+    case E_V4x2DImode: return 8*BITS_PER_UNIT;
     case E_V4QQmode: return 1*BITS_PER_UNIT;
     case E_V2HQmode: return 2*BITS_PER_UNIT;
     case E_V4UQQmode: return 1*BITS_PER_UNIT;
@@ -596,6 +644,14 @@ mode_unit_precision_inline (machine_mode mode)
     case E_V8BFmode: return 2*BITS_PER_UNIT;
     case E_V4SFmode: return 4*BITS_PER_UNIT;
     case E_V2DFmode: return 8*BITS_PER_UNIT;
+    case E_V2x8BFmode: return 2*BITS_PER_UNIT;
+    case E_V2x8HFmode: return 2*BITS_PER_UNIT;
+    case E_V4x8BFmode: return 2*BITS_PER_UNIT;
+    case E_V4x8HFmode: return 2*BITS_PER_UNIT;
+    case E_V2x4SFmode: return 4*BITS_PER_UNIT;
+    case E_V4x4SFmode: return 4*BITS_PER_UNIT;
+    case E_V2x2DFmode: return 8*BITS_PER_UNIT;
+    case E_V4x2DFmode: return 8*BITS_PER_UNIT;
     default: return mode_unit_precision[mode];
     }
 }

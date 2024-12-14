@@ -622,6 +622,62 @@ enum machine_mode
 #else
 #define V2DImode ((void) 0, E_V2DImode)
 #endif
+  E_V2x16QImode,           /* config/arm/arm-modes.def:128 */
+#define HAVE_V2x16QImode
+#ifdef USE_ENUM_MODES
+#define V2x16QImode E_V2x16QImode
+#else
+#define V2x16QImode ((void) 0, E_V2x16QImode)
+#endif
+  E_V4x16QImode,           /* config/arm/arm-modes.def:129 */
+#define HAVE_V4x16QImode
+#ifdef USE_ENUM_MODES
+#define V4x16QImode E_V4x16QImode
+#else
+#define V4x16QImode ((void) 0, E_V4x16QImode)
+#endif
+  E_V2x8HImode,            /* config/arm/arm-modes.def:128 */
+#define HAVE_V2x8HImode
+#ifdef USE_ENUM_MODES
+#define V2x8HImode E_V2x8HImode
+#else
+#define V2x8HImode ((void) 0, E_V2x8HImode)
+#endif
+  E_V4x8HImode,            /* config/arm/arm-modes.def:129 */
+#define HAVE_V4x8HImode
+#ifdef USE_ENUM_MODES
+#define V4x8HImode E_V4x8HImode
+#else
+#define V4x8HImode ((void) 0, E_V4x8HImode)
+#endif
+  E_V2x4SImode,            /* config/arm/arm-modes.def:128 */
+#define HAVE_V2x4SImode
+#ifdef USE_ENUM_MODES
+#define V2x4SImode E_V2x4SImode
+#else
+#define V2x4SImode ((void) 0, E_V2x4SImode)
+#endif
+  E_V4x4SImode,            /* config/arm/arm-modes.def:129 */
+#define HAVE_V4x4SImode
+#ifdef USE_ENUM_MODES
+#define V4x4SImode E_V4x4SImode
+#else
+#define V4x4SImode ((void) 0, E_V4x4SImode)
+#endif
+  E_V2x2DImode,            /* config/arm/arm-modes.def:128 */
+#define HAVE_V2x2DImode
+#ifdef USE_ENUM_MODES
+#define V2x2DImode E_V2x2DImode
+#else
+#define V2x2DImode ((void) 0, E_V2x2DImode)
+#endif
+  E_V4x2DImode,            /* config/arm/arm-modes.def:129 */
+#define HAVE_V4x2DImode
+#ifdef USE_ENUM_MODES
+#define V4x2DImode E_V4x2DImode
+#else
+#define V4x2DImode ((void) 0, E_V4x2DImode)
+#endif
   E_V4QQmode,              /* config/arm/arm-modes.def:97 */
 #define HAVE_V4QQmode
 #ifdef USE_ENUM_MODES
@@ -727,6 +783,62 @@ enum machine_mode
 #else
 #define V2DFmode ((void) 0, E_V2DFmode)
 #endif
+  E_V2x8BFmode,            /* config/arm/arm-modes.def:128 */
+#define HAVE_V2x8BFmode
+#ifdef USE_ENUM_MODES
+#define V2x8BFmode E_V2x8BFmode
+#else
+#define V2x8BFmode ((void) 0, E_V2x8BFmode)
+#endif
+  E_V2x8HFmode,            /* config/arm/arm-modes.def:128 */
+#define HAVE_V2x8HFmode
+#ifdef USE_ENUM_MODES
+#define V2x8HFmode E_V2x8HFmode
+#else
+#define V2x8HFmode ((void) 0, E_V2x8HFmode)
+#endif
+  E_V4x8BFmode,            /* config/arm/arm-modes.def:129 */
+#define HAVE_V4x8BFmode
+#ifdef USE_ENUM_MODES
+#define V4x8BFmode E_V4x8BFmode
+#else
+#define V4x8BFmode ((void) 0, E_V4x8BFmode)
+#endif
+  E_V4x8HFmode,            /* config/arm/arm-modes.def:129 */
+#define HAVE_V4x8HFmode
+#ifdef USE_ENUM_MODES
+#define V4x8HFmode E_V4x8HFmode
+#else
+#define V4x8HFmode ((void) 0, E_V4x8HFmode)
+#endif
+  E_V2x4SFmode,            /* config/arm/arm-modes.def:128 */
+#define HAVE_V2x4SFmode
+#ifdef USE_ENUM_MODES
+#define V2x4SFmode E_V2x4SFmode
+#else
+#define V2x4SFmode ((void) 0, E_V2x4SFmode)
+#endif
+  E_V4x4SFmode,            /* config/arm/arm-modes.def:129 */
+#define HAVE_V4x4SFmode
+#ifdef USE_ENUM_MODES
+#define V4x4SFmode E_V4x4SFmode
+#else
+#define V4x4SFmode ((void) 0, E_V4x4SFmode)
+#endif
+  E_V2x2DFmode,            /* config/arm/arm-modes.def:128 */
+#define HAVE_V2x2DFmode
+#ifdef USE_ENUM_MODES
+#define V2x2DFmode E_V2x2DFmode
+#else
+#define V2x2DFmode ((void) 0, E_V2x2DFmode)
+#endif
+  E_V4x2DFmode,            /* config/arm/arm-modes.def:129 */
+#define HAVE_V4x2DFmode
+#ifdef USE_ENUM_MODES
+#define V4x2DFmode E_V4x2DFmode
+#else
+#define V4x2DFmode ((void) 0, E_V4x2DFmode)
+#endif
   MAX_MACHINE_MODE,
 
   MIN_MODE_RANDOM = E_VOIDmode,
@@ -772,7 +884,7 @@ enum machine_mode
   MAX_MODE_VECTOR_BOOL = E_V4BImode,
 
   MIN_MODE_VECTOR_INT = E_V2QImode,
-  MAX_MODE_VECTOR_INT = E_V2DImode,
+  MAX_MODE_VECTOR_INT = E_V4x2DImode,
 
   MIN_MODE_VECTOR_FRACT = E_V4QQmode,
   MAX_MODE_VECTOR_FRACT = E_V2HQmode,
@@ -787,7 +899,7 @@ enum machine_mode
   MAX_MODE_VECTOR_UACCUM = E_V2UHAmode,
 
   MIN_MODE_VECTOR_FLOAT = E_V2HFmode,
-  MAX_MODE_VECTOR_FLOAT = E_V2DFmode,
+  MAX_MODE_VECTOR_FLOAT = E_V4x2DFmode,
 
   MIN_MODE_OPAQUE = E_VOIDmode,
   MAX_MODE_OPAQUE = E_VOIDmode,
@@ -816,14 +928,14 @@ enum machine_mode
 #define NUM_MODE_VECTOR_FLOAT (MAX_MODE_VECTOR_FLOAT - MIN_MODE_VECTOR_FLOAT + 1)
 #define NUM_MODE_OPAQUE 0
 
-#define CONST_MODE_NUNITS const
-#define CONST_MODE_PRECISION const
-#define CONST_MODE_SIZE const
+#define CONST_MODE_NUNITS
+#define CONST_MODE_PRECISION
+#define CONST_MODE_SIZE
 #define CONST_MODE_UNIT_SIZE const
-#define CONST_MODE_BASE_ALIGN const
+#define CONST_MODE_BASE_ALIGN
 #define CONST_MODE_IBIT const
 #define CONST_MODE_FBIT const
-#define CONST_MODE_MASK const
+#define CONST_MODE_MASK
 
 #define BITS_PER_UNIT (8)
 #define MAX_BITSIZE_MODE_ANY_INT (64*BITS_PER_UNIT)

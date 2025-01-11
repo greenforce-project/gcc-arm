@@ -1554,7 +1554,7 @@
 /* Define 0/1 if your assembler supports marking sections with SHF_MERGE flag.
    */
 #ifndef USED_FOR_TARGET
-#define HAVE_GAS_SHF_MERGE 0
+#define HAVE_GAS_SHF_MERGE 1
 #endif
 
 

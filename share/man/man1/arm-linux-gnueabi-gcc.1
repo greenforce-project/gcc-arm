@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "GCC 1"
-.TH GCC 1 "2025-04-12" "gcc-15.0.1" "GNU"
+.TH GCC 1 "2025-04-19" "gcc-16.0.0" "GNU"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -611,7 +611,7 @@ in the following sections.
 \&\-finline\-functions  \-finline\-functions\-called\-once  \-finline\-limit=\fR\fIn\fR
 \&\fB\-finline\-small\-functions \-fipa\-modref \-fipa\-cp  \-fipa\-cp\-clone
 \&\-fipa\-bit\-cp  \-fipa\-vrp  \-fipa\-pta  \-fipa\-profile  \-fipa\-pure\-const
-\&\-fipa\-reference  \-fipa\-reference\-addressable
+\&\-fipa\-reference  \-fipa\-reference\-addressable \-fipa\-reorder\-for\-locality
 \&\-fipa\-stack\-alignment  \-fipa\-icf  \-fira\-algorithm=\fR\fIalgorithm\fR
 \&\fB\-flate\-combine\-instructions \-flifetime\-dse \-flive\-patching=\fR\fIlevel\fR
 \&\fB\-fira\-region=\fR\fIregion\fR  \fB\-fira\-hoist\-pressure
@@ -11953,6 +11953,7 @@ complexity than at \fB\-O\fR.
 \&\-fipa\-pure\-const
 \&\-fipa\-reference
 \&\-fipa\-reference\-addressable
+\&\-fivopts
 \&\-fmerge\-constants
 \&\-fmove\-loop\-invariants
 \&\-fmove\-loop\-stores
@@ -12055,6 +12056,13 @@ by \fB\-O2\fR and also turns on the following optimization flags:
 .IX Item "-O0"
 Reduce compilation time and make debugging produce the expected
 results.  This is the default.
+.Sp
+At \fB\-O0\fR, \s-1GCC\s0 completely disables most optimization passes;
+they are not run even if you explicitly enable them on the command
+line, or are listed by \fB\-Q \-\-help=optimizers\fR as being enabled by
+default.  Many optimizations performed by \s-1GCC\s0 depend on code analysis
+or canonicalization passes that are enabled by \fB\-O\fR, and it would
+not be useful to run individual optimization passes in isolation.
 .IP "\fB\-Os\fR" 4
 .IX Item "-Os"
 Optimize for size.  \fB\-Os\fR enables all \fB\-O2\fR optimizations
@@ -12961,6 +12969,20 @@ Enabled by default at \fB\-O1\fR and higher.
 .IX Item "-fipa-reference-addressable"
 Discover read-only, write-only and non-addressable static variables.
 Enabled by default at \fB\-O1\fR and higher.
+.IP "\fB\-fipa\-reorder\-for\-locality\fR" 4
+.IX Item "-fipa-reorder-for-locality"
+Group call chains close together in the binary layout to improve code
+locality and minimize jump distances between frequently called functions.
+Unlike \fB\-freorder\-functions\fR this pass considers the call
+chains between functions and groups them together, rather than grouping all
+hot/normal/cold/never\-executed functions into separate sections.
+Unlike \fB\-fprofile\-reorder\-functions\fR it aims to improve code locality
+throughout the runtime of the program rather than focusing on program startup.
+This option is incompatible with an explicit
+\&\fB\-flto\-partition=\fR option since it enforces a custom partitioning
+scheme.
+If using this option it is recommended to also use profile feedback, but this
+option is not enabled by default otherwise.
 .IP "\fB\-fipa\-stack\-alignment\fR" 4
 .IX Item "-fipa-stack-alignment"
 Reduce stack alignment on call sites if possible.
@@ -13351,6 +13373,7 @@ Enabled by default at \fB\-O1\fR and higher.
 .IX Item "-fivopts"
 Perform induction variable optimizations (strength reduction, induction
 variable merging and induction variable elimination) on trees.
+Enabled by default at \fB\-O1\fR and higher.
 .IP "\fB\-ftree\-parallelize\-loops=n\fR" 4
 .IX Item "-ftree-parallelize-loops=n"
 Parallelize loops, i.e., split their iteration space to run in n threads.
@@ -13636,11 +13659,13 @@ Enabled for x86 at levels \fB\-O2\fR, \fB\-O3\fR, \fB\-Os\fR.
 .IP "\fB\-freorder\-functions\fR" 4
 .IX Item "-freorder-functions"
 Reorder functions in the object file in order to
-improve code locality.  This is implemented by using special
-subsections \f(CW\*(C`.text.hot\*(C'\fR for most frequently executed functions and
-\&\f(CW\*(C`.text.unlikely\*(C'\fR for unlikely executed functions.  Reordering is done by
-the linker so object file format must support named sections and linker must
-place them in a reasonable way.
+improve code locality.  Unlike \fB\-fipa\-reorder\-for\-locality\fR this option
+prioritises grouping all functions within a category
+(hot/normal/cold/never\-executed) together.
+This is implemented by using special subsections \f(CW\*(C`.text.hot\*(C'\fR for most
+frequently executed functions and \f(CW\*(C`.text.unlikely\*(C'\fR for unlikely executed
+functions.  Reordering is done by the linker so object file format must support
+named sections and linker must place them in a reasonable way.
 .Sp
 This option isn't effective unless you either provide profile feedback
 (see \fB\-fprofile\-arcs\fR for details) or manually annotate functions with
@@ -13651,12 +13676,14 @@ Enabled at levels \fB\-O2\fR, \fB\-O3\fR, \fB\-Os\fR.
 .IX Item "-fstrict-aliasing"
 Allow the compiler to assume the strictest aliasing rules applicable to
 the language being compiled.  For C (and \*(C+), this activates
-optimizations based on the type of expressions.  In particular, an
-object of one type is assumed never to reside at the same address as an
-object of a different type, unless the types are almost the same.  For
-example, an \f(CW\*(C`unsigned int\*(C'\fR can alias an \f(CW\*(C`int\*(C'\fR, but not a
-\&\f(CW\*(C`void*\*(C'\fR or a \f(CW\*(C`double\*(C'\fR.  A character type may alias any other
-type.
+optimizations based on the type of expressions.  In particular, accessing
+an object of one type via an expression of a different type is not allowed,
+unless the types are \fIcompatible types\fR, differ only in signedness or
+qualifiers, or the expression has a character type.  Accessing scalar
+objects via a corresponding vector type is also allowed.
+.Sp
+For example, an \f(CW\*(C`unsigned int\*(C'\fR can alias an \f(CW\*(C`int\*(C'\fR, but not a
+\&\f(CW\*(C`void*\*(C'\fR or a \f(CW\*(C`double\*(C'\fR.  A character type may alias any other type.
 .Sp
 Pay special attention to code like this:
 .Sp
@@ -14637,7 +14664,8 @@ Enabled by \fB\-fprofile\-generate\fR, \fB\-fprofile\-use\fR, and
 .IX Item "-fprofile-reorder-functions"
 Function reordering based on profile instrumentation collects
 first time of execution of a function and orders these functions
-in ascending order.
+in ascending order, aiming to optimize program startup through more
+efficient loading of text segments.
 .Sp
 Enabled with \fB\-fprofile\-use\fR.
 .IP "\fB\-fvpt\fR" 4
@@ -20604,8 +20632,12 @@ Toggle \fB\-fvar\-tracking\-assignments\fR, in the same way that
 \&\fB\-gtoggle\fR toggles \fB\-g\fR.
 .IP "\fB\-Q\fR" 4
 .IX Item "-Q"
-Makes the compiler print out each function name as it is compiled, and
-print some statistics about each pass when it finishes.
+When used on the command line prior to \fB\-\-help=\fR, \fB\-Q\fR
+acts as a modifier to the help output.
+.Sp
+Otherwise, this option makes the compiler print out each function name
+as it is compiled, and print some statistics about each pass when it
+finishes.
 .IP "\fB\-ftime\-report\fR" 4
 .IX Item "-ftime-report"
 Makes the compiler print some statistics to stderr about the time consumed
@@ -32491,7 +32523,7 @@ system representing a certain processor type.  Possible values for
 \&\fBz9\-109\fR, \fBz9\-ec\fR/\fBarch7\fR, \fBz10\fR/\fBarch8\fR,
 \&\fBz196\fR/\fBarch9\fR, \fBzEC12\fR, \fBz13\fR/\fBarch11\fR,
 \&\fBz14\fR/\fBarch12\fR, \fBz15\fR/\fBarch13\fR,
-\&\fBz16\fR/\fBarch14\fR, and \fBnative\fR.
+\&\fBz16\fR/\fBarch14\fR, \fBz17\fR/\fBarch15\fR, and \fBnative\fR.
 .Sp
 The default is \fB\-march=z900\fR.
 .Sp
@@ -33881,7 +33913,8 @@ produces code optimized for the local machine under the constraints
 of the selected instruction set.
 .IP "\fBx86\-64\fR" 4
 .IX Item "x86-64"
-A generic \s-1CPU\s0 with 64\-bit extensions.
+A generic \s-1CPU\s0 with 64\-bit extensions, \s-1MMX, SSE, SSE2,\s0 and \s-1FXSR\s0 instruction set
+support.
 .IP "\fBx86\-64\-v2\fR" 4
 .IX Item "x86-64-v2"
 .PD 0
@@ -33921,7 +33954,7 @@ Intel Lakemont \s-1MCU,\s0 based on Intel Pentium \s-1CPU.\s0
 Intel Pentium \s-1MMX CPU,\s0 based on Pentium core with \s-1MMX\s0 instruction set support.
 .IP "\fBpentiumpro\fR" 4
 .IX Item "pentiumpro"
-Intel Pentium Pro \s-1CPU.\s0
+Intel Pentium Pro \s-1CPU\s0 with no \s-1MMX\s0 support.
 .IP "\fBi686\fR" 4
 .IX Item "i686"
 When used with \fB\-march\fR, the Pentium Pro

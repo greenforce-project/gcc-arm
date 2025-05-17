@@ -36,8 +36,6 @@ enum processor_type
   TARGET_CPU_arm9e,
   TARGET_CPU_arm10e,
   TARGET_CPU_xscale,
-  TARGET_CPU_iwmmxt,
-  TARGET_CPU_iwmmxt2,
   TARGET_CPU_fa606te,
   TARGET_CPU_fa626te,
   TARGET_CPU_fmp626,

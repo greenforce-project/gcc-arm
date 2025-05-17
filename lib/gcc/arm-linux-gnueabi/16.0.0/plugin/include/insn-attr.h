@@ -139,39 +139,6 @@ extern enum attr_generic_sched get_attr_generic_sched (void);
 #define HAVE_ATTR_generic_vfp 1
 extern enum attr_generic_vfp get_attr_generic_vfp (void);
 
-#define HAVE_ATTR_marvell_f_iwmmxt 1
-extern enum attr_marvell_f_iwmmxt get_attr_marvell_f_iwmmxt (void);
-
-#define HAVE_ATTR_wmmxt_shift 1
-extern enum attr_wmmxt_shift get_attr_wmmxt_shift (rtx_insn *);
-
-#define HAVE_ATTR_wmmxt_pack 1
-extern enum attr_wmmxt_pack get_attr_wmmxt_pack (rtx_insn *);
-
-#define HAVE_ATTR_wmmxt_mult_c1 1
-extern enum attr_wmmxt_mult_c1 get_attr_wmmxt_mult_c1 (rtx_insn *);
-
-#define HAVE_ATTR_wmmxt_mult_c2 1
-extern enum attr_wmmxt_mult_c2 get_attr_wmmxt_mult_c2 (rtx_insn *);
-
-#define HAVE_ATTR_wmmxt_alu_c1 1
-extern enum attr_wmmxt_alu_c1 get_attr_wmmxt_alu_c1 (rtx_insn *);
-
-#define HAVE_ATTR_wmmxt_alu_c2 1
-extern enum attr_wmmxt_alu_c2 get_attr_wmmxt_alu_c2 (rtx_insn *);
-
-#define HAVE_ATTR_wmmxt_alu_c3 1
-extern enum attr_wmmxt_alu_c3 get_attr_wmmxt_alu_c3 (rtx_insn *);
-
-#define HAVE_ATTR_wmmxt_transfer_c1 1
-extern enum attr_wmmxt_transfer_c1 get_attr_wmmxt_transfer_c1 (rtx_insn *);
-
-#define HAVE_ATTR_wmmxt_transfer_c2 1
-extern enum attr_wmmxt_transfer_c2 get_attr_wmmxt_transfer_c2 (rtx_insn *);
-
-#define HAVE_ATTR_wmmxt_transfer_c3 1
-extern enum attr_wmmxt_transfer_c3 get_attr_wmmxt_transfer_c3 (rtx_insn *);
-
 #define HAVE_ATTR_vfp10 1
 extern enum attr_vfp10 get_attr_vfp10 (void);
 

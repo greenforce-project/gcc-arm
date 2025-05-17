@@ -143,7 +143,6 @@ extern bool push_mult_memory_operand (rtx, machine_mode);
 extern bool thumb1_cmp_operand (rtx, machine_mode);
 extern bool thumb1_cmpneg_operand (rtx, machine_mode);
 extern bool thumb_cbrch_target_operand (rtx, machine_mode);
-extern bool imm_or_reg_operand (rtx, machine_mode);
 extern bool const_multiple_of_8_operand (rtx, machine_mode);
 extern bool imm_for_neon_mov_operand (rtx, machine_mode);
 extern bool imm_for_neon_lshift_operand (rtx, machine_mode);
@@ -202,8 +201,6 @@ enum constraint_num
   CONSTRAINT_t,
   CONSTRAINT_w,
   CONSTRAINT_x,
-  CONSTRAINT_y,
-  CONSTRAINT_z,
   CONSTRAINT_l,
   CONSTRAINT_h,
   CONSTRAINT_k,
@@ -242,7 +239,6 @@ enum constraint_num
   CONSTRAINT_Uv,
   CONSTRAINT_Ug,
   CONSTRAINT_Uj,
-  CONSTRAINT_Uy,
   CONSTRAINT_Un,
   CONSTRAINT_Um,
   CONSTRAINT_Us,

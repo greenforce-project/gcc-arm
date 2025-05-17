@@ -229,210 +229,18 @@
 #define HAVE_pacbti_nop (arm_arch8m_main)
 #define HAVE_aut_nop (arm_arch8m_main)
 #define HAVE_bti_nop (arm_arch8m_main)
-#define HAVE_mve_vshlq_sv8qi (ARM_HAVE_V8QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_uv8qi (ARM_HAVE_V8QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_sv16qi (ARM_HAVE_V16QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_uv16qi (ARM_HAVE_V16QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_sv4hi (ARM_HAVE_V4HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_uv4hi (ARM_HAVE_V4HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_sv8hi (ARM_HAVE_V8HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_uv8hi (ARM_HAVE_V8HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_sv2si (ARM_HAVE_V2SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_uv2si (ARM_HAVE_V2SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_sv4si (ARM_HAVE_V4SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_mve_vshlq_uv4si (ARM_HAVE_V4SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_tbcstv8qi (TARGET_REALLY_IWMMXT)
-#define HAVE_tbcstv4hi (TARGET_REALLY_IWMMXT)
-#define HAVE_tbcstv2si (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_iordi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_xordi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_anddi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_nanddi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_movv2si_internal (TARGET_REALLY_IWMMXT)
-#define HAVE_movv4hi_internal (TARGET_REALLY_IWMMXT)
-#define HAVE_movv8qi_internal (TARGET_REALLY_IWMMXT)
-#define HAVE_ssaddv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_ssaddv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_ssaddv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_usaddv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_usaddv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_usaddv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_sssubv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_sssubv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_sssubv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_ussubv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_ussubv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_ussubv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_smulv4hi3_highpart (TARGET_REALLY_IWMMXT)
-#define HAVE_umulv4hi3_highpart (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmacs (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmacsz (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmacu (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmacuz (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_clrdi (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_clrv8qi (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_clrv4hi (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_clrv2si (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_uavgrndv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_uavgrndv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_uavgv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_uavgv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tinsrb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tinsrh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tinsrw (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_textrmub (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_textrmsb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_textrmuh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_textrmsh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_textrmw (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wshufh (TARGET_REALLY_IWMMXT)
-#define HAVE_eqv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_eqv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_eqv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_gtuv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_gtuv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_gtuv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_gtv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_gtv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_gtv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wpackhss (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wpackwss (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wpackdss (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wpackhus (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wpackwus (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wpackdus (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckihb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckihh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckihw (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckilb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckilh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckilw (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckehub (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckehuh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckehuw (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckehsb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckehsh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckehsw (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckelub (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckeluh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckeluw (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckelsb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckelsh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wunpckelsw (TARGET_REALLY_IWMMXT)
-#define HAVE_rorv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_rorv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_rordi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_ashrv4hi3_iwmmxt (TARGET_REALLY_IWMMXT)
-#define HAVE_ashrv2si3_iwmmxt (TARGET_REALLY_IWMMXT)
-#define HAVE_ashrdi3_iwmmxt (TARGET_REALLY_IWMMXT)
-#define HAVE_lshrv4hi3_iwmmxt (TARGET_REALLY_IWMMXT)
-#define HAVE_lshrv2si3_iwmmxt (TARGET_REALLY_IWMMXT)
-#define HAVE_lshrdi3_iwmmxt (TARGET_REALLY_IWMMXT)
-#define HAVE_ashlv4hi3_iwmmxt (TARGET_REALLY_IWMMXT)
-#define HAVE_ashlv2si3_iwmmxt (TARGET_REALLY_IWMMXT)
-#define HAVE_ashldi3_iwmmxt (TARGET_REALLY_IWMMXT)
-#define HAVE_rorv4hi3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_rorv2si3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_rordi3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_ashrv4hi3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_ashrv2si3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_ashrdi3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_lshrv4hi3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_lshrv2si3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_lshrdi3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_ashlv4hi3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_ashlv2si3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_ashldi3_di (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmadds (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmaddu (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tmia (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tmiaph (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tmiabb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tmiatb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tmiabt (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tmiatt (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tmovmskb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tmovmskh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tmovmskw (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_waccb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wacch (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_waccw (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_waligni (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_walignr (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_walignr0 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_walignr1 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_walignr2 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_walignr3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wsadb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wsadh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wsadbz (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wsadhz (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wabsv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wabsv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wabsv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wabsdiffb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wabsdiffh (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wabsdiffw (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_waddsubhx (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wsubaddhx (TARGET_REALLY_IWMMXT)
-#define HAVE_addcv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_addcv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_avg4 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_avg4r (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmaddsx (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmaddux (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmaddsn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmaddun (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmulwsm (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmulwum (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmulsmr (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmulumr (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmulwsmr (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmulwumr (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmulwl (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmulm (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmulwm (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmulmr (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmulwmr (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_waddbhusm (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_waddbhusl (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmiabb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmiabt (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmiatb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmiatt (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmiabbn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmiabtn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmiatbn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wqmiattn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiabb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiabt (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiatb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiatt (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiabbn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiabtn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiatbn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiattn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiawbb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiawbt (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiawtb (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiawtt (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiawbbn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiawbtn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiawtbn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmiawttn (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_wmerge (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tandcv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tandcv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_tandcv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_torcv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_torcv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_torcv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_torvscv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_torvscv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_torvscv8qi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_textrcv2si3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_textrcv4hi3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_textrcv8qi3 (TARGET_REALLY_IWMMXT)
+#define HAVE_mve_vshlq_sv8qi (ARM_HAVE_V8QI_ARITH)
+#define HAVE_mve_vshlq_uv8qi (ARM_HAVE_V8QI_ARITH)
+#define HAVE_mve_vshlq_sv16qi (ARM_HAVE_V16QI_ARITH)
+#define HAVE_mve_vshlq_uv16qi (ARM_HAVE_V16QI_ARITH)
+#define HAVE_mve_vshlq_sv4hi (ARM_HAVE_V4HI_ARITH)
+#define HAVE_mve_vshlq_uv4hi (ARM_HAVE_V4HI_ARITH)
+#define HAVE_mve_vshlq_sv8hi (ARM_HAVE_V8HI_ARITH)
+#define HAVE_mve_vshlq_uv8hi (ARM_HAVE_V8HI_ARITH)
+#define HAVE_mve_vshlq_sv2si (ARM_HAVE_V2SI_ARITH)
+#define HAVE_mve_vshlq_uv2si (ARM_HAVE_V2SI_ARITH)
+#define HAVE_mve_vshlq_sv4si (ARM_HAVE_V4SI_ARITH)
+#define HAVE_mve_vshlq_uv4si (ARM_HAVE_V4SI_ARITH)
 #define HAVE_abshf2 (TARGET_VFP_FP16INST)
 #define HAVE_neghf2 (TARGET_VFP_FP16INST)
 #define HAVE_neon_vrndhf (TARGET_VFP_FP16INST)
@@ -4747,33 +4555,24 @@
 #define HAVE_arm_stc2l (arm_coproc_builtin_available (VUNSPEC_STC2L))
 #define HAVE_speculation_barrier 1
 #define HAVE_movv16qi (TARGET_NEON \
-   || (TARGET_REALLY_IWMMXT && VALID_IWMMXT_REG_MODE (V16QImode)) \
    || (TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V16QImode)) \
    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V16QImode)))
 #define HAVE_movv8hi (TARGET_NEON \
-   || (TARGET_REALLY_IWMMXT && VALID_IWMMXT_REG_MODE (V8HImode)) \
    || (TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V8HImode)) \
    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V8HImode)))
 #define HAVE_movv4si (TARGET_NEON \
-   || (TARGET_REALLY_IWMMXT && VALID_IWMMXT_REG_MODE (V4SImode)) \
    || (TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V4SImode)) \
    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V4SImode)))
 #define HAVE_movv4sf (TARGET_NEON \
-   || (TARGET_REALLY_IWMMXT && VALID_IWMMXT_REG_MODE (V4SFmode)) \
    || (TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V4SFmode)) \
    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V4SFmode)))
 #define HAVE_movv2di (TARGET_NEON \
-   || (TARGET_REALLY_IWMMXT && VALID_IWMMXT_REG_MODE (V2DImode)) \
    || (TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V2DImode)) \
    || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V2DImode)))
-#define HAVE_movv2si (TARGET_NEON \
-   || (TARGET_REALLY_IWMMXT && VALID_IWMMXT_REG_MODE (V2SImode)))
-#define HAVE_movv4hi (TARGET_NEON \
-   || (TARGET_REALLY_IWMMXT && VALID_IWMMXT_REG_MODE (V4HImode)))
-#define HAVE_movv8qi (TARGET_NEON \
-   || (TARGET_REALLY_IWMMXT && VALID_IWMMXT_REG_MODE (V8QImode)))
-#define HAVE_movv2sf (TARGET_NEON \
-   || (TARGET_REALLY_IWMMXT && VALID_IWMMXT_REG_MODE (V2SFmode)))
+#define HAVE_movv2si (TARGET_NEON)
+#define HAVE_movv4hi (TARGET_NEON)
+#define HAVE_movv8qi (TARGET_NEON)
+#define HAVE_movv2sf (TARGET_NEON)
 #define HAVE_movv8hf (TARGET_NEON || TARGET_HAVE_MVE_FLOAT)
 #define HAVE_addv8qi3 (ARM_HAVE_V8QI_ARITH)
 #define HAVE_addv16qi3 (ARM_HAVE_V16QI_ARITH)
@@ -4797,46 +4596,16 @@
 #define HAVE_subv2sf3 (ARM_HAVE_V2SF_ARITH)
 #define HAVE_subv4sf3 (ARM_HAVE_V4SF_ARITH)
 #define HAVE_subv2di3 (ARM_HAVE_V2DI_ARITH)
-#define HAVE_mulv8qi3 (ARM_HAVE_V8QI_ARITH \
-   && (!TARGET_REALLY_IWMMXT \
-       || V8QImode == V4HImode \
-       || V8QImode == V2SImode))
-#define HAVE_mulv16qi3 (ARM_HAVE_V16QI_ARITH \
-   && (!TARGET_REALLY_IWMMXT \
-       || V16QImode == V4HImode \
-       || V16QImode == V2SImode))
-#define HAVE_mulv4hi3 (ARM_HAVE_V4HI_ARITH \
-   && (!TARGET_REALLY_IWMMXT \
-       || V4HImode == V4HImode \
-       || V4HImode == V2SImode))
-#define HAVE_mulv8hi3 (ARM_HAVE_V8HI_ARITH \
-   && (!TARGET_REALLY_IWMMXT \
-       || V8HImode == V4HImode \
-       || V8HImode == V2SImode))
-#define HAVE_mulv2si3 (ARM_HAVE_V2SI_ARITH \
-   && (!TARGET_REALLY_IWMMXT \
-       || V2SImode == V4HImode \
-       || V2SImode == V2SImode))
-#define HAVE_mulv4si3 (ARM_HAVE_V4SI_ARITH \
-   && (!TARGET_REALLY_IWMMXT \
-       || V4SImode == V4HImode \
-       || V4SImode == V2SImode))
-#define HAVE_mulv2sf3 (ARM_HAVE_V2SF_ARITH \
-   && (!TARGET_REALLY_IWMMXT \
-       || V2SFmode == V4HImode \
-       || V2SFmode == V2SImode))
-#define HAVE_mulv4sf3 (ARM_HAVE_V4SF_ARITH \
-   && (!TARGET_REALLY_IWMMXT \
-       || V4SFmode == V4HImode \
-       || V4SFmode == V2SImode))
-#define HAVE_mulv8hf3 (ARM_HAVE_V8HF_ARITH \
-   && (!TARGET_REALLY_IWMMXT \
-       || V8HFmode == V4HImode \
-       || V8HFmode == V2SImode))
-#define HAVE_mulv4hf3 (ARM_HAVE_V4HF_ARITH \
-   && (!TARGET_REALLY_IWMMXT \
-       || V4HFmode == V4HImode \
-       || V4HFmode == V2SImode))
+#define HAVE_mulv8qi3 (ARM_HAVE_V8QI_ARITH)
+#define HAVE_mulv16qi3 (ARM_HAVE_V16QI_ARITH)
+#define HAVE_mulv4hi3 (ARM_HAVE_V4HI_ARITH)
+#define HAVE_mulv8hi3 (ARM_HAVE_V8HI_ARITH)
+#define HAVE_mulv2si3 (ARM_HAVE_V2SI_ARITH)
+#define HAVE_mulv4si3 (ARM_HAVE_V4SI_ARITH)
+#define HAVE_mulv2sf3 (ARM_HAVE_V2SF_ARITH)
+#define HAVE_mulv4sf3 (ARM_HAVE_V4SF_ARITH)
+#define HAVE_mulv8hf3 (ARM_HAVE_V8HF_ARITH)
+#define HAVE_mulv4hf3 (ARM_HAVE_V4HF_ARITH)
 #define HAVE_sminv8qi3 (ARM_HAVE_V8QI_ARITH)
 #define HAVE_sminv16qi3 (ARM_HAVE_V16QI_ARITH)
 #define HAVE_sminv4hi3 (ARM_HAVE_V4HI_ARITH)
@@ -4924,37 +4693,37 @@
 #define HAVE_xorv2sf3 (ARM_HAVE_V2SF_ARITH)
 #define HAVE_xorv4sf3 (ARM_HAVE_V4SF_ARITH)
 #define HAVE_xorv2di3 (ARM_HAVE_V2DI_ARITH)
-#define HAVE_one_cmplv8qi2 (ARM_HAVE_V8QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_one_cmplv16qi2 (ARM_HAVE_V16QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_one_cmplv4hi2 (ARM_HAVE_V4HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_one_cmplv8hi2 (ARM_HAVE_V8HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_one_cmplv2si2 (ARM_HAVE_V2SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_one_cmplv4si2 (ARM_HAVE_V4SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_one_cmplv4hf2 (ARM_HAVE_V4HF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_one_cmplv8hf2 (ARM_HAVE_V8HF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_one_cmplv2sf2 (ARM_HAVE_V2SF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_one_cmplv4sf2 (ARM_HAVE_V4SF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_one_cmplv2di2 (ARM_HAVE_V2DI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_absv8qi2 (ARM_HAVE_V8QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_negv8qi2 (ARM_HAVE_V8QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_absv16qi2 (ARM_HAVE_V16QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_negv16qi2 (ARM_HAVE_V16QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_absv4hi2 (ARM_HAVE_V4HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_negv4hi2 (ARM_HAVE_V4HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_absv8hi2 (ARM_HAVE_V8HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_negv8hi2 (ARM_HAVE_V8HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_absv2si2 (ARM_HAVE_V2SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_negv2si2 (ARM_HAVE_V2SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_absv4si2 (ARM_HAVE_V4SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_negv4si2 (ARM_HAVE_V4SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_absv2sf2 (ARM_HAVE_V2SF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_negv2sf2 (ARM_HAVE_V2SF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_absv4sf2 (ARM_HAVE_V4SF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_negv4sf2 (ARM_HAVE_V4SF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_absv8hf2 (ARM_HAVE_V8HF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_negv8hf2 (ARM_HAVE_V8HF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_absv4hf2 (ARM_HAVE_V4HF_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_negv4hf2 (ARM_HAVE_V4HF_ARITH && !TARGET_REALLY_IWMMXT)
+#define HAVE_one_cmplv8qi2 (ARM_HAVE_V8QI_ARITH)
+#define HAVE_one_cmplv16qi2 (ARM_HAVE_V16QI_ARITH)
+#define HAVE_one_cmplv4hi2 (ARM_HAVE_V4HI_ARITH)
+#define HAVE_one_cmplv8hi2 (ARM_HAVE_V8HI_ARITH)
+#define HAVE_one_cmplv2si2 (ARM_HAVE_V2SI_ARITH)
+#define HAVE_one_cmplv4si2 (ARM_HAVE_V4SI_ARITH)
+#define HAVE_one_cmplv4hf2 (ARM_HAVE_V4HF_ARITH)
+#define HAVE_one_cmplv8hf2 (ARM_HAVE_V8HF_ARITH)
+#define HAVE_one_cmplv2sf2 (ARM_HAVE_V2SF_ARITH)
+#define HAVE_one_cmplv4sf2 (ARM_HAVE_V4SF_ARITH)
+#define HAVE_one_cmplv2di2 (ARM_HAVE_V2DI_ARITH)
+#define HAVE_absv8qi2 (ARM_HAVE_V8QI_ARITH)
+#define HAVE_negv8qi2 (ARM_HAVE_V8QI_ARITH)
+#define HAVE_absv16qi2 (ARM_HAVE_V16QI_ARITH)
+#define HAVE_negv16qi2 (ARM_HAVE_V16QI_ARITH)
+#define HAVE_absv4hi2 (ARM_HAVE_V4HI_ARITH)
+#define HAVE_negv4hi2 (ARM_HAVE_V4HI_ARITH)
+#define HAVE_absv8hi2 (ARM_HAVE_V8HI_ARITH)
+#define HAVE_negv8hi2 (ARM_HAVE_V8HI_ARITH)
+#define HAVE_absv2si2 (ARM_HAVE_V2SI_ARITH)
+#define HAVE_negv2si2 (ARM_HAVE_V2SI_ARITH)
+#define HAVE_absv4si2 (ARM_HAVE_V4SI_ARITH)
+#define HAVE_negv4si2 (ARM_HAVE_V4SI_ARITH)
+#define HAVE_absv2sf2 (ARM_HAVE_V2SF_ARITH)
+#define HAVE_negv2sf2 (ARM_HAVE_V2SF_ARITH)
+#define HAVE_absv4sf2 (ARM_HAVE_V4SF_ARITH)
+#define HAVE_negv4sf2 (ARM_HAVE_V4SF_ARITH)
+#define HAVE_absv8hf2 (ARM_HAVE_V8HF_ARITH)
+#define HAVE_negv8hf2 (ARM_HAVE_V8HF_ARITH)
+#define HAVE_absv4hf2 (ARM_HAVE_V4HF_ARITH)
+#define HAVE_negv4hf2 (ARM_HAVE_V4HF_ARITH)
 #define HAVE_cadd90v4hf3 (((TARGET_COMPLEX || (TARGET_HAVE_MVE && TARGET_HAVE_MVE_FLOAT \
 		      && ARM_HAVE_V4HF_ARITH)) && !BYTES_BIG_ENDIAN) && (TARGET_NEON_FP16INST))
 #define HAVE_cadd270v4hf3 (((TARGET_COMPLEX || (TARGET_HAVE_MVE && TARGET_HAVE_MVE_FLOAT \
@@ -5043,46 +4812,35 @@
 		      && ARM_HAVE_V4SF_ARITH)) && !BYTES_BIG_ENDIAN)
 #define HAVE_cmls_conjv4sf4 ((TARGET_COMPLEX || (TARGET_HAVE_MVE && TARGET_HAVE_MVE_FLOAT \
 		      && ARM_HAVE_V4SF_ARITH)) && !BYTES_BIG_ENDIAN)
-#define HAVE_movmisalignv8qi (ARM_HAVE_V8QI_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_movmisalignv16qi (ARM_HAVE_V16QI_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_movmisalignv4hi (ARM_HAVE_V4HI_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_movmisalignv8hi (ARM_HAVE_V8HI_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_movmisalignv2si (ARM_HAVE_V2SI_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_movmisalignv4si (ARM_HAVE_V4SI_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_movmisalignv4hf (ARM_HAVE_V4HF_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_movmisalignv8hf (ARM_HAVE_V8HF_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_movmisalignv2sf (ARM_HAVE_V2SF_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_movmisalignv4sf (ARM_HAVE_V4SF_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_movmisalignv2di (ARM_HAVE_V2DI_LDST && !BYTES_BIG_ENDIAN \
-  && unaligned_access && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashlv8qi3 (ARM_HAVE_V8QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashlv16qi3 (ARM_HAVE_V16QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashlv4hi3 (ARM_HAVE_V4HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashlv8hi3 (ARM_HAVE_V8HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashlv2si3 (ARM_HAVE_V2SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashlv4si3 (ARM_HAVE_V4SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashrv8qi3 (ARM_HAVE_V8QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashrv16qi3 (ARM_HAVE_V16QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashrv4hi3 (ARM_HAVE_V4HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashrv8hi3 (ARM_HAVE_V8HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashrv2si3 (ARM_HAVE_V2SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vashrv4si3 (ARM_HAVE_V4SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vlshrv8qi3 (ARM_HAVE_V8QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vlshrv16qi3 (ARM_HAVE_V16QI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vlshrv4hi3 (ARM_HAVE_V4HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vlshrv8hi3 (ARM_HAVE_V8HI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vlshrv2si3 (ARM_HAVE_V2SI_ARITH && !TARGET_REALLY_IWMMXT)
-#define HAVE_vlshrv4si3 (ARM_HAVE_V4SI_ARITH && !TARGET_REALLY_IWMMXT)
+#define HAVE_movmisalignv8qi (ARM_HAVE_V8QI_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv16qi (ARM_HAVE_V16QI_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv4hi (ARM_HAVE_V4HI_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv8hi (ARM_HAVE_V8HI_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv2si (ARM_HAVE_V2SI_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv4si (ARM_HAVE_V4SI_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv4hf (ARM_HAVE_V4HF_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv8hf (ARM_HAVE_V8HF_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv2sf (ARM_HAVE_V2SF_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv4sf (ARM_HAVE_V4SF_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_movmisalignv2di (ARM_HAVE_V2DI_LDST && !BYTES_BIG_ENDIAN && unaligned_access)
+#define HAVE_vashlv8qi3 (ARM_HAVE_V8QI_ARITH)
+#define HAVE_vashlv16qi3 (ARM_HAVE_V16QI_ARITH)
+#define HAVE_vashlv4hi3 (ARM_HAVE_V4HI_ARITH)
+#define HAVE_vashlv8hi3 (ARM_HAVE_V8HI_ARITH)
+#define HAVE_vashlv2si3 (ARM_HAVE_V2SI_ARITH)
+#define HAVE_vashlv4si3 (ARM_HAVE_V4SI_ARITH)
+#define HAVE_vashrv8qi3 (ARM_HAVE_V8QI_ARITH)
+#define HAVE_vashrv16qi3 (ARM_HAVE_V16QI_ARITH)
+#define HAVE_vashrv4hi3 (ARM_HAVE_V4HI_ARITH)
+#define HAVE_vashrv8hi3 (ARM_HAVE_V8HI_ARITH)
+#define HAVE_vashrv2si3 (ARM_HAVE_V2SI_ARITH)
+#define HAVE_vashrv4si3 (ARM_HAVE_V4SI_ARITH)
+#define HAVE_vlshrv8qi3 (ARM_HAVE_V8QI_ARITH)
+#define HAVE_vlshrv16qi3 (ARM_HAVE_V16QI_ARITH)
+#define HAVE_vlshrv4hi3 (ARM_HAVE_V4HI_ARITH)
+#define HAVE_vlshrv8hi3 (ARM_HAVE_V8HI_ARITH)
+#define HAVE_vlshrv2si3 (ARM_HAVE_V2SI_ARITH)
+#define HAVE_vlshrv4si3 (ARM_HAVE_V4SI_ARITH)
 #define HAVE_vec_load_lanesoiv16qi (TARGET_NEON)
 #define HAVE_vec_load_lanesoiv8hi (TARGET_NEON)
 #define HAVE_vec_load_lanesoiv8hf (TARGET_NEON)
@@ -5147,18 +4905,12 @@
 #define HAVE_uavgv16qi3_ceil (ARM_HAVE_V16QI_ARITH)
 #define HAVE_uavgv8hi3_ceil (ARM_HAVE_V8HI_ARITH)
 #define HAVE_uavgv4si3_ceil (ARM_HAVE_V4SI_ARITH)
-#define HAVE_clzv8qi2 (ARM_HAVE_V8QI_ARITH \
-   && !TARGET_REALLY_IWMMXT)
-#define HAVE_clzv16qi2 (ARM_HAVE_V16QI_ARITH \
-   && !TARGET_REALLY_IWMMXT)
-#define HAVE_clzv4hi2 (ARM_HAVE_V4HI_ARITH \
-   && !TARGET_REALLY_IWMMXT)
-#define HAVE_clzv8hi2 (ARM_HAVE_V8HI_ARITH \
-   && !TARGET_REALLY_IWMMXT)
-#define HAVE_clzv2si2 (ARM_HAVE_V2SI_ARITH \
-   && !TARGET_REALLY_IWMMXT)
-#define HAVE_clzv4si2 (ARM_HAVE_V4SI_ARITH \
-   && !TARGET_REALLY_IWMMXT)
+#define HAVE_clzv8qi2 (ARM_HAVE_V8QI_ARITH)
+#define HAVE_clzv16qi2 (ARM_HAVE_V16QI_ARITH)
+#define HAVE_clzv4hi2 (ARM_HAVE_V4HI_ARITH)
+#define HAVE_clzv8hi2 (ARM_HAVE_V8HI_ARITH)
+#define HAVE_clzv2si2 (ARM_HAVE_V2SI_ARITH)
+#define HAVE_clzv4si2 (ARM_HAVE_V4SI_ARITH)
 #define HAVE_vec_initv8qiqi (TARGET_NEON || (TARGET_HAVE_MVE && VALID_MVE_MODE (V8QImode)))
 #define HAVE_vec_initv16qiqi (TARGET_NEON || (TARGET_HAVE_MVE && VALID_MVE_MODE (V16QImode)))
 #define HAVE_vec_initv4hihi (TARGET_NEON || (TARGET_HAVE_MVE && VALID_MVE_MODE (V4HImode)))
@@ -5173,14 +4925,6 @@
 #define HAVE_vec_initv4sfsf (TARGET_NEON || (TARGET_HAVE_MVE && VALID_MVE_MODE (V4SFmode)))
 #define HAVE_vec_initdidi (TARGET_NEON || (TARGET_HAVE_MVE && VALID_MVE_MODE (DImode)))
 #define HAVE_vec_initv2didi (TARGET_NEON || (TARGET_HAVE_MVE && VALID_MVE_MODE (V2DImode)))
-#define HAVE_iwmmxt_setwcgr0 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_setwcgr1 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_setwcgr2 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_setwcgr3 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_getwcgr0 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_getwcgr1 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_getwcgr2 (TARGET_REALLY_IWMMXT)
-#define HAVE_iwmmxt_getwcgr3 (TARGET_REALLY_IWMMXT)
 #define HAVE_neon_vabshf (TARGET_VFP_FP16INST)
 #define HAVE_neon_vfmahf (TARGET_VFP_FP16INST)
 #define HAVE_neon_vfmshf (TARGET_VFP_FP16INST)
@@ -6252,198 +5996,6 @@ extern rtx        gen_mve_vshlq_sv2si                                  (rtx, rtx
 extern rtx        gen_mve_vshlq_uv2si                                  (rtx, rtx, rtx);
 extern rtx        gen_mve_vshlq_sv4si                                  (rtx, rtx, rtx);
 extern rtx        gen_mve_vshlq_uv4si                                  (rtx, rtx, rtx);
-extern rtx        gen_tbcstv8qi                                        (rtx, rtx);
-extern rtx        gen_tbcstv4hi                                        (rtx, rtx);
-extern rtx        gen_tbcstv2si                                        (rtx, rtx);
-extern rtx        gen_iwmmxt_iordi3                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_xordi3                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_anddi3                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_nanddi3                                   (rtx, rtx, rtx);
-extern rtx        gen_movv2si_internal                                 (rtx, rtx);
-extern rtx        gen_movv4hi_internal                                 (rtx, rtx);
-extern rtx        gen_movv8qi_internal                                 (rtx, rtx);
-extern rtx        gen_ssaddv8qi3                                       (rtx, rtx, rtx);
-extern rtx        gen_ssaddv4hi3                                       (rtx, rtx, rtx);
-extern rtx        gen_ssaddv2si3                                       (rtx, rtx, rtx);
-extern rtx        gen_usaddv8qi3                                       (rtx, rtx, rtx);
-extern rtx        gen_usaddv4hi3                                       (rtx, rtx, rtx);
-extern rtx        gen_usaddv2si3                                       (rtx, rtx, rtx);
-extern rtx        gen_sssubv8qi3                                       (rtx, rtx, rtx);
-extern rtx        gen_sssubv4hi3                                       (rtx, rtx, rtx);
-extern rtx        gen_sssubv2si3                                       (rtx, rtx, rtx);
-extern rtx        gen_ussubv8qi3                                       (rtx, rtx, rtx);
-extern rtx        gen_ussubv4hi3                                       (rtx, rtx, rtx);
-extern rtx        gen_ussubv2si3                                       (rtx, rtx, rtx);
-extern rtx        gen_smulv4hi3_highpart                               (rtx, rtx, rtx);
-extern rtx        gen_umulv4hi3_highpart                               (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmacs                                     (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmacsz                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmacu                                     (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmacuz                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_clrdi                                     (rtx);
-extern rtx        gen_iwmmxt_clrv8qi                                   (rtx);
-extern rtx        gen_iwmmxt_clrv4hi                                   (rtx);
-extern rtx        gen_iwmmxt_clrv2si                                   (rtx);
-extern rtx        gen_iwmmxt_uavgrndv8qi3                              (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_uavgrndv4hi3                              (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_uavgv8qi3                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_uavgv4hi3                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tinsrb                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tinsrh                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tinsrw                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_textrmub                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_textrmsb                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_textrmuh                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_textrmsh                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_textrmw                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wshufh                                    (rtx, rtx, rtx);
-extern rtx        gen_eqv8qi3                                          (rtx, rtx, rtx);
-extern rtx        gen_eqv4hi3                                          (rtx, rtx, rtx);
-extern rtx        gen_eqv2si3                                          (rtx, rtx, rtx);
-extern rtx        gen_gtuv8qi3                                         (rtx, rtx, rtx);
-extern rtx        gen_gtuv4hi3                                         (rtx, rtx, rtx);
-extern rtx        gen_gtuv2si3                                         (rtx, rtx, rtx);
-extern rtx        gen_gtv8qi3                                          (rtx, rtx, rtx);
-extern rtx        gen_gtv4hi3                                          (rtx, rtx, rtx);
-extern rtx        gen_gtv2si3                                          (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wpackhss                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wpackwss                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wpackdss                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wpackhus                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wpackwus                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wpackdus                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckihb                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckihh                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckihw                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckilb                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckilh                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckilw                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckehub                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckehuh                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckehuw                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckehsb                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckehsh                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckehsw                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckelub                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckeluh                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckeluw                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckelsb                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckelsh                                (rtx, rtx);
-extern rtx        gen_iwmmxt_wunpckelsw                                (rtx, rtx);
-extern rtx        gen_rorv4hi3                                         (rtx, rtx, rtx);
-extern rtx        gen_rorv2si3                                         (rtx, rtx, rtx);
-extern rtx        gen_rordi3                                           (rtx, rtx, rtx);
-extern rtx        gen_ashrv4hi3_iwmmxt                                 (rtx, rtx, rtx);
-extern rtx        gen_ashrv2si3_iwmmxt                                 (rtx, rtx, rtx);
-extern rtx        gen_ashrdi3_iwmmxt                                   (rtx, rtx, rtx);
-extern rtx        gen_lshrv4hi3_iwmmxt                                 (rtx, rtx, rtx);
-extern rtx        gen_lshrv2si3_iwmmxt                                 (rtx, rtx, rtx);
-extern rtx        gen_lshrdi3_iwmmxt                                   (rtx, rtx, rtx);
-extern rtx        gen_ashlv4hi3_iwmmxt                                 (rtx, rtx, rtx);
-extern rtx        gen_ashlv2si3_iwmmxt                                 (rtx, rtx, rtx);
-extern rtx        gen_ashldi3_iwmmxt                                   (rtx, rtx, rtx);
-extern rtx        gen_rorv4hi3_di                                      (rtx, rtx, rtx);
-extern rtx        gen_rorv2si3_di                                      (rtx, rtx, rtx);
-extern rtx        gen_rordi3_di                                        (rtx, rtx, rtx);
-extern rtx        gen_ashrv4hi3_di                                     (rtx, rtx, rtx);
-extern rtx        gen_ashrv2si3_di                                     (rtx, rtx, rtx);
-extern rtx        gen_ashrdi3_di                                       (rtx, rtx, rtx);
-extern rtx        gen_lshrv4hi3_di                                     (rtx, rtx, rtx);
-extern rtx        gen_lshrv2si3_di                                     (rtx, rtx, rtx);
-extern rtx        gen_lshrdi3_di                                       (rtx, rtx, rtx);
-extern rtx        gen_ashlv4hi3_di                                     (rtx, rtx, rtx);
-extern rtx        gen_ashlv2si3_di                                     (rtx, rtx, rtx);
-extern rtx        gen_ashldi3_di                                       (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmadds                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmaddu                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tmia                                      (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tmiaph                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tmiabb                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tmiatb                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tmiabt                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tmiatt                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tmovmskb                                  (rtx, rtx);
-extern rtx        gen_iwmmxt_tmovmskh                                  (rtx, rtx);
-extern rtx        gen_iwmmxt_tmovmskw                                  (rtx, rtx);
-extern rtx        gen_iwmmxt_waccb                                     (rtx, rtx);
-extern rtx        gen_iwmmxt_wacch                                     (rtx, rtx);
-extern rtx        gen_iwmmxt_waccw                                     (rtx, rtx);
-extern rtx        gen_iwmmxt_waligni                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_walignr                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_walignr0                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_walignr1                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_walignr2                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_walignr3                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wsadb                                     (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wsadh                                     (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wsadbz                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wsadhz                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wabsv2si3                                 (rtx, rtx);
-extern rtx        gen_iwmmxt_wabsv4hi3                                 (rtx, rtx);
-extern rtx        gen_iwmmxt_wabsv8qi3                                 (rtx, rtx);
-extern rtx        gen_iwmmxt_wabsdiffb                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wabsdiffh                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wabsdiffw                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_waddsubhx                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wsubaddhx                                 (rtx, rtx, rtx);
-extern rtx        gen_addcv4hi3                                        (rtx, rtx, rtx);
-extern rtx        gen_addcv2si3                                        (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_avg4                                      (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_avg4r                                     (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmaddsx                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmaddux                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmaddsn                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmaddun                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmulwsm                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmulwum                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmulsmr                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmulumr                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmulwsmr                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmulwumr                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmulwl                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmulm                                    (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmulwm                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmulmr                                   (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmulwmr                                  (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_waddbhusm                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_waddbhusl                                 (rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmiabb                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmiabt                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmiatb                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmiatt                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmiabbn                                  (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmiabtn                                  (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmiatbn                                  (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wqmiattn                                  (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiabb                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiabt                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiatb                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiatt                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiabbn                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiabtn                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiatbn                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiattn                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiawbb                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiawbt                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiawtb                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiawtt                                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiawbbn                                  (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiawbtn                                  (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiawtbn                                  (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmiawttn                                  (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_wmerge                                    (rtx, rtx, rtx, rtx);
-extern rtx        gen_iwmmxt_tandcv2si3                                (void);
-extern rtx        gen_iwmmxt_tandcv4hi3                                (void);
-extern rtx        gen_iwmmxt_tandcv8qi3                                (void);
-extern rtx        gen_iwmmxt_torcv2si3                                 (void);
-extern rtx        gen_iwmmxt_torcv4hi3                                 (void);
-extern rtx        gen_iwmmxt_torcv8qi3                                 (void);
-extern rtx        gen_iwmmxt_torvscv2si3                               (void);
-extern rtx        gen_iwmmxt_torvscv4hi3                               (void);
-extern rtx        gen_iwmmxt_torvscv8qi3                               (void);
-extern rtx        gen_iwmmxt_textrcv2si3                               (rtx);
-extern rtx        gen_iwmmxt_textrcv4hi3                               (rtx);
-extern rtx        gen_iwmmxt_textrcv8qi3                               (rtx);
 extern rtx        gen_abshf2                                           (rtx, rtx);
 extern rtx        gen_neghf2                                           (rtx, rtx);
 extern rtx        gen_neon_vrndhf                                      (rtx, rtx);
@@ -10852,14 +10404,6 @@ extern rtx        gen_vec_initv2sfsf                                   (rtx, rtx
 extern rtx        gen_vec_initv4sfsf                                   (rtx, rtx);
 extern rtx        gen_vec_initdidi                                     (rtx, rtx);
 extern rtx        gen_vec_initv2didi                                   (rtx, rtx);
-extern rtx        gen_iwmmxt_setwcgr0                                  (rtx);
-extern rtx        gen_iwmmxt_setwcgr1                                  (rtx);
-extern rtx        gen_iwmmxt_setwcgr2                                  (rtx);
-extern rtx        gen_iwmmxt_setwcgr3                                  (rtx);
-extern rtx        gen_iwmmxt_getwcgr0                                  (rtx);
-extern rtx        gen_iwmmxt_getwcgr1                                  (rtx);
-extern rtx        gen_iwmmxt_getwcgr2                                  (rtx);
-extern rtx        gen_iwmmxt_getwcgr3                                  (rtx);
 extern rtx        gen_neon_vabshf                                      (rtx, rtx);
 extern rtx        gen_neon_vfmahf                                      (rtx, rtx, rtx, rtx);
 extern rtx        gen_neon_vfmshf                                      (rtx, rtx, rtx, rtx);

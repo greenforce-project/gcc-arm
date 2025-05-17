@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "16.0.0 20250510 (Gf Cross v16)")
+(!version  "16.0.0 20250517 (Gf Cross v16)")
 (!srcdir  "/__w/gcc_build/gcc_build/gcc/gcc")
 (!languages 13 ada c cobol cp d fortran go jit lto m2 objc objcp rust)
 (!fileslist 258 0
@@ -2475,11 +2475,11 @@
                           nil )
                          
                          (!type struct 121 nil  gc_pointed_to "lang_decl"
-                          (!srcfileloc  "cobol/cobol1.cc" 69)
+                          (!srcfileloc  "cobol/cobol1.cc" 68)
                           (!fields 1 
                            (!pair  "dummy"
                             (!type already_seen 8)
-                            (!srcfileloc  "cobol/cobol1.cc" 68)
+                            (!srcfileloc  "cobol/cobol1.cc" 67)
                             nil )
                           )
                           nil 4 
@@ -9270,113 +9270,113 @@
                            (!type struct 460 
                             (!type already_seen 459)
                             gc_maybe_pointed_to "machine_function"
-                            (!srcfileloc  "config/arm/arm.h" 1655)
+                            (!srcfileloc  "config/arm/arm.h" 1599)
                             (!fields 18 
                              (!pair  "eh_epilogue_sp_ofs"
                               (!type already_seen 125)
-                              (!srcfileloc  "config/arm/arm.h" 1615)
+                              (!srcfileloc  "config/arm/arm.h" 1559)
                               nil )
                              (!pair  "far_jump_used"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1617)
+                              (!srcfileloc  "config/arm/arm.h" 1561)
                               nil )
                              (!pair  "arg_pointer_live"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1619)
+                              (!srcfileloc  "config/arm/arm.h" 1563)
                               nil )
                              (!pair  "lr_save_eliminated"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1621)
+                              (!srcfileloc  "config/arm/arm.h" 1565)
                               nil )
                              (!pair  "stack_offsets"
                               (!type struct 461 nil  gc_used "arm_stack_offsets"
-                               (!srcfileloc  "config/arm/arm.h" 1606)
+                               (!srcfileloc  "config/arm/arm.h" 1550)
                                (!fields 7 
                                 (!pair  "saved_args"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/arm/arm.h" 1599)
+                                 (!srcfileloc  "config/arm/arm.h" 1543)
                                  nil )
                                 (!pair  "frame"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/arm/arm.h" 1600)
+                                 (!srcfileloc  "config/arm/arm.h" 1544)
                                  nil )
                                 (!pair  "saved_regs"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/arm/arm.h" 1601)
+                                 (!srcfileloc  "config/arm/arm.h" 1545)
                                  nil )
                                 (!pair  "soft_frame"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/arm/arm.h" 1602)
+                                 (!srcfileloc  "config/arm/arm.h" 1546)
                                  nil )
                                 (!pair  "locals_base"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/arm/arm.h" 1603)
+                                 (!srcfileloc  "config/arm/arm.h" 1547)
                                  nil )
                                 (!pair  "outgoing_args"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/arm/arm.h" 1604)
+                                 (!srcfileloc  "config/arm/arm.h" 1548)
                                  nil )
                                 (!pair  "saved_regs_mask"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "config/arm/arm.h" 1605)
+                                 (!srcfileloc  "config/arm/arm.h" 1549)
                                  nil )
                                )
                                nil 8191 nil nil )
-                              (!srcfileloc  "config/arm/arm.h" 1623)
+                              (!srcfileloc  "config/arm/arm.h" 1567)
                               nil )
                              (!pair  "func_type"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1625)
+                              (!srcfileloc  "config/arm/arm.h" 1569)
                               nil )
                              (!pair  "uses_anonymous_args"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1627)
+                              (!srcfileloc  "config/arm/arm.h" 1571)
                               nil )
                              (!pair  "sibcall_blocked"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1630)
+                              (!srcfileloc  "config/arm/arm.h" 1574)
                               nil )
                              (!pair  "pic_reg"
                               (!type already_seen 125)
-                              (!srcfileloc  "config/arm/arm.h" 1632)
+                              (!srcfileloc  "config/arm/arm.h" 1576)
                               nil )
                              (!pair  "call_via"
                               (!type array 462 nil  gc_used "14" 
                                (!type already_seen 125)
                               )
-                              (!srcfileloc  "config/arm/arm.h" 1636)
+                              (!srcfileloc  "config/arm/arm.h" 1580)
                               nil )
                              (!pair  "return_used_this_function"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1639)
+                              (!srcfileloc  "config/arm/arm.h" 1583)
                               nil )
                              (!pair  "thumb1_cc_insn"
                               (!type already_seen 125)
-                              (!srcfileloc  "config/arm/arm.h" 1642)
+                              (!srcfileloc  "config/arm/arm.h" 1586)
                               nil )
                              (!pair  "thumb1_cc_op0"
                               (!type already_seen 125)
-                              (!srcfileloc  "config/arm/arm.h" 1643)
+                              (!srcfileloc  "config/arm/arm.h" 1587)
                               nil )
                              (!pair  "thumb1_cc_op1"
                               (!type already_seen 125)
-                              (!srcfileloc  "config/arm/arm.h" 1644)
+                              (!srcfileloc  "config/arm/arm.h" 1588)
                               nil )
                              (!pair  "thumb1_cc_mode"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1646)
+                              (!srcfileloc  "config/arm/arm.h" 1590)
                               nil )
                              (!pair  "after_arm_reorg"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1648)
+                              (!srcfileloc  "config/arm/arm.h" 1592)
                               nil )
                              (!pair  "static_chain_stack_bytes"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1651)
+                              (!srcfileloc  "config/arm/arm.h" 1595)
                               nil )
                              (!pair  "pacspval_needed"
                               (!type already_seen 2)
-                              (!srcfileloc  "config/arm/arm.h" 1654)
+                              (!srcfileloc  "config/arm/arm.h" 1598)
                               nil )
                             )
                             nil 8191 nil nil )
@@ -9966,11 +9966,11 @@
                               nil )
                              
                              (!type struct 500 nil  gc_pointed_to "language_function"
-                              (!srcfileloc  "cobol/cobol1.cc" 105)
+                              (!srcfileloc  "cobol/cobol1.cc" 104)
                               (!fields 1 
                                (!pair  "dummy"
                                 (!type already_seen 2)
-                                (!srcfileloc  "cobol/cobol1.cc" 104)
+                                (!srcfileloc  "cobol/cobol1.cc" 103)
                                 nil )
                               )
                               nil 4 
@@ -12377,11 +12377,11 @@
                           nil )
                          
                          (!type struct 593 nil  gc_pointed_to "lang_type"
-                          (!srcfileloc  "cobol/cobol1.cc" 57)
+                          (!srcfileloc  "cobol/cobol1.cc" 56)
                           (!fields 1 
                            (!pair  "dummy"
                             (!type already_seen 8)
-                            (!srcfileloc  "cobol/cobol1.cc" 56)
+                            (!srcfileloc  "cobol/cobol1.cc" 55)
                             nil )
                           )
                           nil 4 
@@ -15486,7 +15486,7 @@
                        (!type struct 679 
                         (!type already_seen 678)
                         gc_pointed_to "cl_target_option"
-                        (!srcfileloc  "config/arm/arm.cc" 28758)
+                        (!srcfileloc  "config/arm/arm.cc" 28496)
                         (!fields 15 
                          (!pair  "x_arm_stack_protector_guard_offset"
                           (!type already_seen 2)
@@ -15764,11 +15764,11 @@
                            nil )
                           
                           (!type struct 697 nil  gc_used "lang_identifier"
-                           (!srcfileloc  "cobol/cobol1.cc" 78)
+                           (!srcfileloc  "cobol/cobol1.cc" 77)
                            (!fields 1 
                             (!pair  "common"
                              (!type already_seen 51)
-                             (!srcfileloc  "cobol/cobol1.cc" 77)
+                             (!srcfileloc  "cobol/cobol1.cc" 76)
                              nil )
                            )
                            nil 4 
@@ -16815,11 +16815,11 @@
                      )
                      
                      (!type union 749 nil  gc_pointed_to "lang_tree_node"
-                      (!srcfileloc  "cobol/cobol1.cc" 89)
+                      (!srcfileloc  "cobol/cobol1.cc" 88)
                       (!fields 2 
                        (!pair  "generic"
                         (!type already_seen 22)
-                        (!srcfileloc  "cobol/cobol1.cc" 87)
+                        (!srcfileloc  "cobol/cobol1.cc" 86)
                         (!options 
                          (!option desc string  "tree_node_structure (&%h)")
                          (!option tag string  "0")
@@ -16827,7 +16827,7 @@
                        )
                        (!pair  "identifier"
                         (!type already_seen 683)
-                        (!srcfileloc  "cobol/cobol1.cc" 88)
+                        (!srcfileloc  "cobol/cobol1.cc" 87)
                         (!options 
                          (!option tag string  "1")
                         )
@@ -19282,7 +19282,7 @@
  
  (!type already_seen 460)
  
- (!type struct 931 nil  gc_unused "anonymous:/__w/gcc_build/gcc_build/gcc/gcc/config/arm/arm.h:1690"nil 
+ (!type struct 931 nil  gc_unused "anonymous:/__w/gcc_build/gcc_build/gcc/gcc/config/arm/arm.h:1633"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -27504,25 +27504,25 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1792 nil  gc_unused "anonymous:/__w/gcc_build/gcc_build/gcc/gcc/config/arm/arm.cc:2496"nil 
+ (!type struct 1792 nil  gc_unused "anonymous:/__w/gcc_build/gcc_build/gcc/gcc/config/arm/arm.cc:2490"nil 
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 1793 nil  gc_unused "anonymous:/__w/gcc_build/gcc_build/gcc/gcc/config/arm/arm.cc:4117"nil 
+ (!type struct 1793 nil  gc_unused "anonymous:/__w/gcc_build/gcc_build/gcc/gcc/config/arm/arm.cc:4092"nil 
   (!fields 0 )
   nil 0 nil nil )
  
  (!type struct 1794 nil  gc_unused "libcall_hasher"
-  (!srcfileloc  "config/arm/arm.cc" 5944)
+  (!srcfileloc  "config/arm/arm.cc" 5914)
   (!fields 0 )
   nil 8191 nil nil )
  
  (!type user_struct 1795 nil  gc_unused "hash_table<libcall_hasher>"
-  (!srcfileloc  "config/arm/arm.cc" 5944)
+  (!srcfileloc  "config/arm/arm.cc" 5914)
   (!fields 1 
    (!pair  "libcall_hasher"
     (!type already_seen 1794)
-    (!srcfileloc  "config/arm/arm.cc" 5944)
+    (!srcfileloc  "config/arm/arm.cc" 5914)
     nil )
   )
  )
@@ -27684,19 +27684,19 @@
   nil 0 nil nil )
  
  (!type user_struct 1831 nil  gc_unused "int_range<3,true>"
-  (!srcfileloc  "value-range.h" 732)
+  (!srcfileloc  "value-range.h" 734)
   (!fields 2 
    (!pair  "true"
     (!type undefined 1832 nil  gc_unused "true"
-     (!srcfileloc  "value-range.h" 732)
+     (!srcfileloc  "value-range.h" 734)
     )
-    (!srcfileloc  "value-range.h" 732)
+    (!srcfileloc  "value-range.h" 734)
     nil )
    (!pair  "3"
     (!type undefined 1833 nil  gc_unused "3"
-     (!srcfileloc  "value-range.h" 732)
+     (!srcfileloc  "value-range.h" 734)
     )
-    (!srcfileloc  "value-range.h" 732)
+    (!srcfileloc  "value-range.h" 734)
     nil )
   )
  )
@@ -31822,7 +31822,7 @@
   nil 0 nil nil )
  
  (!type lang_struct 2293 nil  gc_pointed_to "source_location_table_entry"
-  (!srcfileloc  "cp/cp-gimplify.cc" 3805)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3799)
   (!fields 0 )
   (!options 
    (!option for_user string  "")
@@ -31853,19 +31853,19 @@
     nil )
    
    (!type struct 2295 nil  gc_pointed_to "source_location_table_entry"
-    (!srcfileloc  "cp/cp-gimplify.cc" 3805)
+    (!srcfileloc  "cp/cp-gimplify.cc" 3799)
     (!fields 3 
      (!pair  "loc"
       (!type already_seen 2)
-      (!srcfileloc  "cp/cp-gimplify.cc" 3802)
+      (!srcfileloc  "cp/cp-gimplify.cc" 3796)
       nil )
      (!pair  "uid"
       (!type already_seen 2)
-      (!srcfileloc  "cp/cp-gimplify.cc" 3803)
+      (!srcfileloc  "cp/cp-gimplify.cc" 3797)
       nil )
      (!pair  "var"
       (!type already_seen 23)
-      (!srcfileloc  "cp/cp-gimplify.cc" 3804)
+      (!srcfileloc  "cp/cp-gimplify.cc" 3798)
       nil )
     )
     (!options 
@@ -31878,7 +31878,7 @@
  )
  
  (!type struct 2296 nil  gc_used "source_location_table_entry_hash"
-  (!srcfileloc  "cp/cp-gimplify.cc" 3881)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3875)
   (!fields 0 )
   nil 2056 nil nil )
  
@@ -31887,11 +31887,11 @@
    (!type already_seen 2297)
   )
   gc_pointed_to "hash_table<source_location_table_entry_hash>"
-  (!srcfileloc  "cp/cp-gimplify.cc" 3881)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3875)
   (!fields 1 
    (!pair  "source_location_table_entry_hash"
     (!type already_seen 2296)
-    (!srcfileloc  "cp/cp-gimplify.cc" 3881)
+    (!srcfileloc  "cp/cp-gimplify.cc" 3875)
     nil )
   )
  )
@@ -31947,7 +31947,7 @@
   nil 0 nil nil )
  
  (!type struct 2306 nil  gc_used "typename_hasher"
-  (!srcfileloc  "cp/decl.cc" 4412)
+  (!srcfileloc  "cp/decl.cc" 4410)
   (!fields 0 )
   nil 2056 nil nil )
  
@@ -31956,11 +31956,11 @@
    (!type already_seen 2307)
   )
   gc_pointed_to "hash_table<typename_hasher>"
-  (!srcfileloc  "cp/decl.cc" 4412)
+  (!srcfileloc  "cp/decl.cc" 4410)
   (!fields 1 
    (!pair  "typename_hasher"
     (!type already_seen 2306)
-    (!srcfileloc  "cp/decl.cc" 4412)
+    (!srcfileloc  "cp/decl.cc" 4410)
     nil )
   )
  )
@@ -32856,15 +32856,15 @@
    (!type already_seen 2436)
   )
   gc_pointed_to "hash_map<tree,tree_pair_p>"
-  (!srcfileloc  "cp/pt.cc" 31322)
+  (!srcfileloc  "cp/pt.cc" 31330)
   (!fields 2 
    (!pair  "tree_pair_p"
     (!type already_seen 592)
-    (!srcfileloc  "cp/pt.cc" 31322)
+    (!srcfileloc  "cp/pt.cc" 31330)
     nil )
    (!pair  "tree"
     (!type already_seen 23)
-    (!srcfileloc  "cp/pt.cc" 31322)
+    (!srcfileloc  "cp/pt.cc" 31330)
     nil )
   )
  )
@@ -34744,7 +34744,7 @@
   nil )
  (!pair  "hash_map<tree,tree_pair_p>"
   (!type already_seen 2436)
-  (!srcfileloc  "cp/pt.cc" 31322)
+  (!srcfileloc  "cp/pt.cc" 31330)
   nil )
  (!pair  "pending_template"
   (!type already_seen 2418)
@@ -35048,11 +35048,11 @@
   nil )
  (!pair  "typename_hasher"
   (!type already_seen 2306)
-  (!srcfileloc  "cp/decl.cc" 4412)
+  (!srcfileloc  "cp/decl.cc" 4410)
   nil )
  (!pair  "hash_table<typename_hasher>"
   (!type already_seen 2307)
-  (!srcfileloc  "cp/decl.cc" 4412)
+  (!srcfileloc  "cp/decl.cc" 4410)
   nil )
  (!pair  "incomplete_var"
   (!type already_seen 2301)
@@ -35072,11 +35072,11 @@
   nil )
  (!pair  "source_location_table_entry_hash"
   (!type already_seen 2296)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3881)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3875)
   nil )
  (!pair  "hash_table<source_location_table_entry_hash>"
   (!type already_seen 2297)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3881)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3875)
   nil )
  (!pair  "coroutine_info_hasher"
   (!type already_seen 2279)
@@ -35626,7 +35626,7 @@
   nil )
  (!pair  "builtin_arg"
   (!type already_seen 2)
-  (!srcfileloc  "config/arm/arm-builtins.cc" 2694)
+  (!srcfileloc  "config/arm/arm-builtins.cc" 1926)
   nil )
  (!pair  "arm_builtin_cde_datum"
   (!type already_seen 1961)
@@ -35946,19 +35946,19 @@
   nil )
  (!pair  "int_range_max"
   (!type already_seen 1831)
-  (!srcfileloc  "value-range.h" 732)
+  (!srcfileloc  "value-range.h" 734)
   nil )
  (!pair  "true"
   (!type already_seen 1832)
-  (!srcfileloc  "value-range.h" 732)
+  (!srcfileloc  "value-range.h" 734)
   nil )
  (!pair  "3"
   (!type already_seen 1833)
-  (!srcfileloc  "value-range.h" 732)
+  (!srcfileloc  "value-range.h" 734)
   nil )
  (!pair  "int_range<3,true>"
   (!type already_seen 1831)
-  (!srcfileloc  "value-range.h" 732)
+  (!srcfileloc  "value-range.h" 734)
   nil )
  (!pair  "vec<gimple*,va_gc>"
   (!type already_seen 1819)
@@ -35978,31 +35978,31 @@
   nil )
  (!pair  "cl_target_option"
   (!type already_seen 679)
-  (!srcfileloc  "config/arm/arm.cc" 28758)
+  (!srcfileloc  "config/arm/arm.cc" 28496)
   nil )
  (!pair  "arm_pragma_enum"
   (!type already_seen 2)
-  (!srcfileloc  "config/arm/arm.cc" 7449)
+  (!srcfileloc  "config/arm/arm.cc" 7373)
   nil )
  (!pair  "libcall_table_type"
   (!type already_seen 1795)
-  (!srcfileloc  "config/arm/arm.cc" 5944)
+  (!srcfileloc  "config/arm/arm.cc" 5914)
   nil )
  (!pair  "libcall_hasher"
   (!type already_seen 1794)
-  (!srcfileloc  "config/arm/arm.cc" 5944)
+  (!srcfileloc  "config/arm/arm.cc" 5914)
   nil )
  (!pair  "hash_table<libcall_hasher>"
   (!type already_seen 1795)
-  (!srcfileloc  "config/arm/arm.cc" 5944)
+  (!srcfileloc  "config/arm/arm.cc" 5914)
   nil )
  (!pair  "isr_attribute_arg"
   (!type already_seen 1793)
-  (!srcfileloc  "config/arm/arm.cc" 4121)
+  (!srcfileloc  "config/arm/arm.cc" 4096)
   nil )
  (!pair  "arm_fixed_mode_set"
   (!type already_seen 1792)
-  (!srcfileloc  "config/arm/arm.cc" 2499)
+  (!srcfileloc  "config/arm/arm.cc" 2493)
   nil )
  (!pair  "Mfix"
   (!type already_seen 1788)
@@ -38002,11 +38002,11 @@
   nil )
  (!pair  "machine_function"
   (!type already_seen 460)
-  (!srcfileloc  "config/arm/arm.h" 1656)
+  (!srcfileloc  "config/arm/arm.h" 1600)
   nil )
  (!pair  "arm_stack_offsets"
   (!type already_seen 461)
-  (!srcfileloc  "config/arm/arm.h" 1607)
+  (!srcfileloc  "config/arm/arm.h" 1551)
   nil )
  (!pair  "arm_cc"
   (!type already_seen 2)
@@ -39967,7 +39967,7 @@
   nil )
  (!pair  "dguide_cache"
   (!type already_seen 2437)
-  (!srcfileloc  "cp/pt.cc" 31322)
+  (!srcfileloc  "cp/pt.cc" 31330)
   (!options 
    (!option deletable string  "")
   )
@@ -40082,14 +40082,14 @@
   nil )
  (!pair  "free_saved_scope"
   (!type already_seen 2153)
-  (!srcfileloc  "cp/name-lookup.cc" 8686)
+  (!srcfileloc  "cp/name-lookup.cc" 8689)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "free_binding_level"
   (!type already_seen 92)
-  (!srcfileloc  "cp/name-lookup.cc" 4662)
+  (!srcfileloc  "cp/name-lookup.cc" 4665)
   (!options 
    (!option deletable string  "")
   )
@@ -40237,18 +40237,18 @@
   nil )
  (!pair  "decomp_type_table"
   (!type already_seen 1028)
-  (!srcfileloc  "cp/decl.cc" 9770)
+  (!srcfileloc  "cp/decl.cc" 9768)
   (!options 
    (!option cache string  "")
   )
  )
  (!pair  "typename_htab"
   (!type already_seen 2308)
-  (!srcfileloc  "cp/decl.cc" 4412)
+  (!srcfileloc  "cp/decl.cc" 4410)
   nil )
  (!pair  "local_entities"
   (!type already_seen 86)
-  (!srcfileloc  "cp/decl.cc" 951)
+  (!srcfileloc  "cp/decl.cc" 949)
   (!options 
    (!option deletable string  "")
   )
@@ -40270,11 +40270,11 @@
   nil )
  (!pair  "source_location_id"
   (!type already_seen 2)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3883)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3877)
   nil )
  (!pair  "source_location_table"
   (!type already_seen 2298)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3882)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3876)
   nil )
  (!pair  "fold_caches"
   (!type array 2634 nil  gc_used "2" 
@@ -40491,11 +40491,11 @@
   nil )
  (!pair  "dvirt_fn"
   (!type already_seen 23)
-  (!srcfileloc  "cp/class.cc" 10387)
+  (!srcfileloc  "cp/class.cc" 10389)
   nil )
  (!pair  "abort_fndecl_addr"
   (!type already_seen 23)
-  (!srcfileloc  "cp/class.cc" 10386)
+  (!srcfileloc  "cp/class.cc" 10388)
   nil )
  (!pair  "enum_to_min_precision"
   (!type already_seen 2247)
@@ -40951,7 +40951,7 @@
   (!type array 2656 nil  gc_used "ARM_BUILTIN_MAX" 
    (!type already_seen 23)
   )
-  (!srcfileloc  "config/arm/arm-builtins.cc" 1157)
+  (!srcfileloc  "config/arm/arm-builtins.cc" 911)
   nil )
  (!pair  "analyzer_stashed_constants"
   (!type already_seen 424)
@@ -41007,11 +41007,11 @@
  )
  (!pair  "hwasan_ctor_statements"
   (!type already_seen 23)
-  (!srcfileloc  "asan.cc" 4751)
+  (!srcfileloc  "asan.cc" 4744)
   nil )
  (!pair  "asan_ctor_statements"
   (!type already_seen 23)
-  (!srcfileloc  "asan.cc" 3699)
+  (!srcfileloc  "asan.cc" 3695)
   nil )
  (!pair  "asan_local_shadow_memory_dynamic_address"
   (!type already_seen 23)
@@ -41099,35 +41099,35 @@
   nil )
  (!pair  "arm_previous_fndecl"
   (!type already_seen 23)
-  (!srcfileloc  "config/arm/arm.cc" 33661)
+  (!srcfileloc  "config/arm/arm.cc" 33271)
   nil )
  (!pair  "last_asm_targ_options"
   (!type already_seen 678)
-  (!srcfileloc  "config/arm/arm.cc" 28758)
+  (!srcfileloc  "config/arm/arm.cc" 28496)
   nil )
  (!pair  "tls_get_addr_libfunc"
   (!type already_seen 125)
-  (!srcfileloc  "config/arm/arm.cc" 9274)
+  (!srcfileloc  "config/arm/arm.cc" 9180)
   nil )
  (!pair  "pic_labelno"
   (!type already_seen 2)
-  (!srcfileloc  "config/arm/arm.cc" 8406)
+  (!srcfileloc  "config/arm/arm.cc" 8329)
   nil )
  (!pair  "init_optimize"
   (!type already_seen 23)
-  (!srcfileloc  "config/arm/arm.cc" 3085)
+  (!srcfileloc  "config/arm/arm.cc" 3070)
   nil )
  (!pair  "thumb_flipper"
   (!type already_seen 2)
-  (!srcfileloc  "config/arm/arm.cc" 3082)
+  (!srcfileloc  "config/arm/arm.cc" 3067)
   nil )
  (!pair  "va_list_type"
   (!type already_seen 23)
-  (!srcfileloc  "config/arm/arm.cc" 2877)
+  (!srcfileloc  "config/arm/arm.cc" 2871)
   nil )
  (!pair  "speculation_barrier_libfunc"
   (!type already_seen 125)
-  (!srcfileloc  "config/arm/arm.cc" 2538)
+  (!srcfileloc  "config/arm/arm.cc" 2532)
   nil )
  (!pair  "stack_chk_fail_decl"
   (!type already_seen 23)
@@ -41519,7 +41519,7 @@
   nil )
  (!pair  "next_block_index"
   (!type already_seen 2)
-  (!srcfileloc  "function.cc" 4620)
+  (!srcfileloc  "function.cc" 4612)
   nil )
  (!pair  "temp_slot_address_table"
   (!type already_seen 1563)
@@ -41553,14 +41553,14 @@
     (!type already_seen 125)
    )
   )
-  (!srcfileloc  "emit-rtl.cc" 6652)
+  (!srcfileloc  "emit-rtl.cc" 6651)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "free_sequence_stack"
   (!type already_seen 1080)
-  (!srcfileloc  "emit-rtl.cc" 5634)
+  (!srcfileloc  "emit-rtl.cc" 5631)
   (!options 
    (!option deletable string  "")
   )
@@ -42319,7 +42319,7 @@
   (!type array 2677 nil  gc_used "14" 
    (!type already_seen 125)
   )
-  (!srcfileloc  "config/arm/arm.h" 1664)
+  (!srcfileloc  "config/arm/arm.h" 1608)
   nil )
  (!pair  "arm_target_insn"
   (!type already_seen 125)

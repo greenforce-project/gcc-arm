@@ -9647,7 +9647,7 @@ common_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,          
                            location_t loc,                            
                            const struct cl_option_handlers *handlers, 
-                           diagnostic_context *dc);                   
+                           diagnostics::context *dc);                   
 bool
 Ada_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9656,7 +9656,7 @@ Ada_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 AdaSCIL_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9665,7 +9665,7 @@ AdaSCIL_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 AdaWhy_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9674,7 +9674,7 @@ AdaWhy_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 C_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9683,7 +9683,7 @@ C_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 CXX_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9692,7 +9692,7 @@ CXX_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 Cobol_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9701,7 +9701,7 @@ Cobol_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 D_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9710,7 +9710,7 @@ D_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 Fortran_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9719,7 +9719,7 @@ Fortran_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 Go_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9728,7 +9728,7 @@ Go_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 LTO_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9737,7 +9737,7 @@ LTO_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 LTODump_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9746,7 +9746,7 @@ LTODump_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 ModulaX2_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9755,7 +9755,7 @@ ModulaX2_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 ObjC_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9764,7 +9764,7 @@ ObjC_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 ObjCXX_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9773,7 +9773,7 @@ ObjCXX_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 bool
 Rust_handle_option_auto (struct gcc_options *opts,
                            struct gcc_options *opts_set,
@@ -9782,7 +9782,7 @@ Rust_handle_option_auto (struct gcc_options *opts,
                            unsigned int lang_mask, int kind,
                            location_t loc,
                            const struct cl_option_handlers *handlers,
-                           diagnostic_context *dc);
+                           diagnostics::context *dc);
 void cpp_handle_option_auto (const struct gcc_options * opts, size_t scode,
                              struct cpp_options * cpp_opts);
 void init_global_opts_from_cpp(struct gcc_options * opts,      

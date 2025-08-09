@@ -10050,10 +10050,10 @@ extern rtx        gen_movdfcc                                          (rtx, rtx
 extern rtx        gen_jump                                             (rtx);
 extern rtx        gen_call                                             (rtx, rtx, rtx);
 extern rtx        gen_call_internal                                    (rtx, rtx, rtx);
-extern rtx        gen_nonsecure_call_internal                          (rtx, rtx, rtx);
+extern rtx        gen_nonsecure_call_internal                          (rtx, rtx, rtx, rtx);
 extern rtx        gen_call_value                                       (rtx, rtx, rtx, rtx);
 extern rtx        gen_call_value_internal                              (rtx, rtx, rtx, rtx);
-extern rtx        gen_nonsecure_call_value_internal                    (rtx, rtx, rtx, rtx);
+extern rtx        gen_nonsecure_call_value_internal                    (rtx, rtx, rtx, rtx, rtx);
 extern rtx        gen_sibcall_internal                                 (rtx, rtx, rtx);
 extern rtx        gen_sibcall                                          (rtx, rtx, rtx);
 extern rtx        gen_sibcall_value_internal                           (rtx, rtx, rtx, rtx);

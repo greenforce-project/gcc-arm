@@ -366,18 +366,42 @@
 #define HAVE_thumb2_lsrl (TARGET_HAVE_MVE)
 #define HAVE_dls_insn (TARGET_32BIT && TARGET_HAVE_LOB)
 #define HAVE_unaligned_storev8qi (TARGET_NEON)
-#define HAVE_vec_setv8qi_internal (TARGET_NEON)
-#define HAVE_vec_setv4hi_internal (TARGET_NEON)
-#define HAVE_vec_setv4hf_internal (TARGET_NEON)
-#define HAVE_vec_setv4bf_internal (TARGET_NEON)
-#define HAVE_vec_setv2si_internal (TARGET_NEON)
-#define HAVE_vec_setv2sf_internal (TARGET_NEON)
-#define HAVE_vec_setv16qi_internal (TARGET_NEON)
-#define HAVE_vec_setv8hi_internal (TARGET_NEON)
-#define HAVE_vec_setv8hf_internal (TARGET_NEON)
-#define HAVE_vec_setv4si_internal (TARGET_NEON)
-#define HAVE_vec_setv4sf_internal (TARGET_NEON)
-#define HAVE_vec_setv2di_internal (TARGET_NEON)
+#define HAVE_vec_setv8qi_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V8QImode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv4hi_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V4HImode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv4hf_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V4HFmode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv4bf_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V4BFmode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv2si_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V2SImode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv2sf_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V2SFmode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv16qi_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V16QImode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv8hi_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V8HImode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv8hf_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V8HFmode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv4si_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V4SImode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv4sf_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V4SFmode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
+#define HAVE_vec_setv2di_internal (TARGET_NEON \
+   && (GET_MODE_NUNITS (V2DImode) \
+       > (unsigned) exact_log2 (INTVAL (operands[2]))))
 #define HAVE_vec_extractv8qiqi (TARGET_NEON)
 #define HAVE_vec_extractv4hihi (TARGET_NEON)
 #define HAVE_vec_extractv4hfhf (TARGET_NEON)

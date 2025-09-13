@@ -403,6 +403,7 @@ enum optab_tag {
   vec_widen_uabd_lo_optab,
   vec_widen_uabd_odd_optab,
   vec_widen_uabd_even_optab,
+  vec_trunc_add_high_optab,
   vec_addsub_optab,
   vec_fmaddsub_optab,
   vec_fmsubadd_optab,
@@ -465,7 +466,7 @@ enum optab_tag {
   LAST_NORM_OPTAB = iorn_optab
 };
 
-#define NUM_OPTABS          453
+#define NUM_OPTABS          454
 #define NUM_CONVLIB_OPTABS  17
 #define NUM_NORMLIB_OPTABS  80
 #define NUM_OPTAB_PATTERNS  942

@@ -685,6 +685,14 @@ extern void gt_ggc_mx_vec_dw_ranges_by_label_va_gc_ (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_vec_die_arg_entry_va_gc_ (X);\
   } while (0)
 extern void gt_ggc_mx_vec_die_arg_entry_va_gc_ (void *);
+#define gt_ggc_m_15annotation_node(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_annotation_node (X);\
+  } while (0)
+extern void gt_ggc_mx_annotation_node (void *);
+#define gt_ggc_m_34hash_table_annotation_node_hasher_(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_hash_table_annotation_node_hasher_ (X);\
+  } while (0)
+extern void gt_ggc_mx_hash_table_annotation_node_hasher_ (void *);
 #define gt_ggc_m_23hash_table_addr_hasher_(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_hash_table_addr_hasher_ (X);\
   } while (0)
@@ -705,6 +713,10 @@ extern void gt_ggc_mx_hash_table_inline_entry_data_hasher_ (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_dtdef (X);\
   } while (0)
 extern void gt_ggc_mx_ctf_dtdef (void *);
+#define gt_ggc_m_9ctf_dvdef(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_dvdef (X);\
+  } while (0)
+extern void gt_ggc_mx_ctf_dvdef (void *);
 #define gt_ggc_m_10ctf_string(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_string (X);\
   } while (0)
@@ -717,10 +729,6 @@ extern void gt_ggc_mx_ctf_dmdef (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_func_arg (X);\
   } while (0)
 extern void gt_ggc_mx_ctf_func_arg (void *);
-#define gt_ggc_m_9ctf_dvdef(X) do { \
-  if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_dvdef (X);\
-  } while (0)
-extern void gt_ggc_mx_ctf_dvdef (void *);
 #define gt_ggc_m_27hash_table_ctfc_dtd_hasher_(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_hash_table_ctfc_dtd_hasher_ (X);\
   } while (0)
@@ -729,10 +737,6 @@ extern void gt_ggc_mx_hash_table_ctfc_dtd_hasher_ (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_hash_table_ctfc_dvd_hasher_ (X);\
   } while (0)
 extern void gt_ggc_mx_hash_table_ctfc_dvd_hasher_ (void *);
-#define gt_ggc_m_13ctf_container(X) do { \
-  if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_container (X);\
-  } while (0)
-extern void gt_ggc_mx_ctf_container (void *);
 #define gt_ggc_m_24vec_ctf_dtdef_ref_va_gc_(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_vec_ctf_dtdef_ref_va_gc_ (X);\
   } while (0)
@@ -741,6 +745,10 @@ extern void gt_ggc_mx_vec_ctf_dtdef_ref_va_gc_ (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_hash_map_ctf_dtdef_ref_ctf_dtdef_ref_ (X);\
   } while (0)
 extern void gt_ggc_mx_hash_map_ctf_dtdef_ref_ctf_dtdef_ref_ (void *);
+#define gt_ggc_m_13ctf_container(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_ctf_container (X);\
+  } while (0)
+extern void gt_ggc_mx_ctf_container (void *);
 #define gt_ggc_m_23hash_set_ctf_dtdef_ref_(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_hash_set_ctf_dtdef_ref_ (X);\
   } while (0)
@@ -1201,6 +1209,10 @@ extern void gt_ggc_mx_cp_binding_level (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_cxx_binding (X);\
   } while (0)
 extern void gt_ggc_mx_cxx_binding (void *);
+#define gt_ggc_m_46hash_map_unsigned_tree_module_tree_map_traits_(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_hash_map_unsigned_tree_module_tree_map_traits_ (X);\
+  } while (0)
+extern void gt_ggc_mx_hash_map_unsigned_tree_module_tree_map_traits_ (void *);
 #define gt_ggc_m_27vec_cp_class_binding_va_gc_(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_vec_cp_class_binding_va_gc_ (X);\
   } while (0)
@@ -1353,6 +1365,14 @@ extern void gt_ggc_mx_hash_table_source_location_table_entry_hash_ (void *);
   if ((intptr_t)(X) != 0) gt_ggc_mx_named_label_use_entry (X);\
   } while (0)
 extern void gt_ggc_mx_named_label_use_entry (void *);
+#define gt_ggc_m_38vec_named_label_fwd_direct_goto_va_gc_(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_vec_named_label_fwd_direct_goto_va_gc_ (X);\
+  } while (0)
+extern void gt_ggc_mx_vec_named_label_fwd_direct_goto_va_gc_ (void *);
+#define gt_ggc_m_38vec_named_label_bck_direct_goto_va_gc_(X) do { \
+  if ((intptr_t)(X) != 0) gt_ggc_mx_vec_named_label_bck_direct_goto_va_gc_ (X);\
+  } while (0)
+extern void gt_ggc_mx_vec_named_label_bck_direct_goto_va_gc_ (void *);
 #define gt_ggc_m_25vec_incomplete_var_va_gc_(X) do { \
   if ((intptr_t)(X) != 0) gt_ggc_mx_vec_incomplete_var_va_gc_ (X);\
   } while (0)
@@ -2270,6 +2290,14 @@ extern void gt_pch_nx_vec_dw_ranges_by_label_va_gc_ (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_vec_die_arg_entry_va_gc_ (X);\
   } while (0)
 extern void gt_pch_nx_vec_die_arg_entry_va_gc_ (void *);
+#define gt_pch_n_15annotation_node(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_annotation_node (X);\
+  } while (0)
+extern void gt_pch_nx_annotation_node (void *);
+#define gt_pch_n_34hash_table_annotation_node_hasher_(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_hash_table_annotation_node_hasher_ (X);\
+  } while (0)
+extern void gt_pch_nx_hash_table_annotation_node_hasher_ (void *);
 #define gt_pch_n_23hash_table_addr_hasher_(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_hash_table_addr_hasher_ (X);\
   } while (0)
@@ -2290,6 +2318,10 @@ extern void gt_pch_nx_hash_table_inline_entry_data_hasher_ (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_ctf_dtdef (X);\
   } while (0)
 extern void gt_pch_nx_ctf_dtdef (void *);
+#define gt_pch_n_9ctf_dvdef(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_ctf_dvdef (X);\
+  } while (0)
+extern void gt_pch_nx_ctf_dvdef (void *);
 #define gt_pch_n_10ctf_string(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_ctf_string (X);\
   } while (0)
@@ -2302,10 +2334,6 @@ extern void gt_pch_nx_ctf_dmdef (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_ctf_func_arg (X);\
   } while (0)
 extern void gt_pch_nx_ctf_func_arg (void *);
-#define gt_pch_n_9ctf_dvdef(X) do { \
-  if ((intptr_t)(X) != 0) gt_pch_nx_ctf_dvdef (X);\
-  } while (0)
-extern void gt_pch_nx_ctf_dvdef (void *);
 #define gt_pch_n_27hash_table_ctfc_dtd_hasher_(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_hash_table_ctfc_dtd_hasher_ (X);\
   } while (0)
@@ -2314,10 +2342,6 @@ extern void gt_pch_nx_hash_table_ctfc_dtd_hasher_ (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_hash_table_ctfc_dvd_hasher_ (X);\
   } while (0)
 extern void gt_pch_nx_hash_table_ctfc_dvd_hasher_ (void *);
-#define gt_pch_n_13ctf_container(X) do { \
-  if ((intptr_t)(X) != 0) gt_pch_nx_ctf_container (X);\
-  } while (0)
-extern void gt_pch_nx_ctf_container (void *);
 #define gt_pch_n_24vec_ctf_dtdef_ref_va_gc_(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_vec_ctf_dtdef_ref_va_gc_ (X);\
   } while (0)
@@ -2326,6 +2350,10 @@ extern void gt_pch_nx_vec_ctf_dtdef_ref_va_gc_ (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_hash_map_ctf_dtdef_ref_ctf_dtdef_ref_ (X);\
   } while (0)
 extern void gt_pch_nx_hash_map_ctf_dtdef_ref_ctf_dtdef_ref_ (void *);
+#define gt_pch_n_13ctf_container(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_ctf_container (X);\
+  } while (0)
+extern void gt_pch_nx_ctf_container (void *);
 #define gt_pch_n_23hash_set_ctf_dtdef_ref_(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_hash_set_ctf_dtdef_ref_ (X);\
   } while (0)
@@ -2786,6 +2814,10 @@ extern void gt_pch_nx_cp_binding_level (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_cxx_binding (X);\
   } while (0)
 extern void gt_pch_nx_cxx_binding (void *);
+#define gt_pch_n_46hash_map_unsigned_tree_module_tree_map_traits_(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_hash_map_unsigned_tree_module_tree_map_traits_ (X);\
+  } while (0)
+extern void gt_pch_nx_hash_map_unsigned_tree_module_tree_map_traits_ (void *);
 #define gt_pch_n_27vec_cp_class_binding_va_gc_(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_vec_cp_class_binding_va_gc_ (X);\
   } while (0)
@@ -2938,6 +2970,14 @@ extern void gt_pch_nx_hash_table_source_location_table_entry_hash_ (void *);
   if ((intptr_t)(X) != 0) gt_pch_nx_named_label_use_entry (X);\
   } while (0)
 extern void gt_pch_nx_named_label_use_entry (void *);
+#define gt_pch_n_38vec_named_label_fwd_direct_goto_va_gc_(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_vec_named_label_fwd_direct_goto_va_gc_ (X);\
+  } while (0)
+extern void gt_pch_nx_vec_named_label_fwd_direct_goto_va_gc_ (void *);
+#define gt_pch_n_38vec_named_label_bck_direct_goto_va_gc_(X) do { \
+  if ((intptr_t)(X) != 0) gt_pch_nx_vec_named_label_bck_direct_goto_va_gc_ (X);\
+  } while (0)
+extern void gt_pch_nx_vec_named_label_bck_direct_goto_va_gc_ (void *);
 #define gt_pch_n_25vec_incomplete_var_va_gc_(X) do { \
   if ((intptr_t)(X) != 0) gt_pch_nx_vec_incomplete_var_va_gc_ (X);\
   } while (0)
@@ -3611,6 +3651,10 @@ extern void gt_pch_p_29vec_dw_ranges_by_label_va_gc_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_24vec_die_arg_entry_va_gc_
     (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_15annotation_node
+    (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_34hash_table_annotation_node_hasher_
+    (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_23hash_table_addr_hasher_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_27hash_map_tree_sym_off_pair_
@@ -3621,23 +3665,23 @@ extern void gt_pch_p_36hash_table_inline_entry_data_hasher_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_9ctf_dtdef
     (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_9ctf_dvdef
+    (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_10ctf_string
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_9ctf_dmdef
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_12ctf_func_arg
     (void *, void *, gt_pointer_operator, void *);
-extern void gt_pch_p_9ctf_dvdef
-    (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_27hash_table_ctfc_dtd_hasher_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_27hash_table_ctfc_dvd_hasher_
     (void *, void *, gt_pointer_operator, void *);
-extern void gt_pch_p_13ctf_container
-    (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_24vec_ctf_dtdef_ref_va_gc_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_37hash_map_ctf_dtdef_ref_ctf_dtdef_ref_
+    (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_13ctf_container
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_23hash_set_ctf_dtdef_ref_
     (void *, void *, gt_pointer_operator, void *);
@@ -3901,6 +3945,8 @@ extern void gt_pch_p_16cp_binding_level
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_11cxx_binding
     (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_46hash_map_unsigned_tree_module_tree_map_traits_
+    (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_27vec_cp_class_binding_va_gc_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_14cp_token_cache
@@ -3976,6 +4022,10 @@ extern void gt_pch_p_27source_location_table_entry
 extern void gt_pch_p_44hash_table_source_location_table_entry_hash_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_21named_label_use_entry
+    (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_38vec_named_label_fwd_direct_goto_va_gc_
+    (void *, void *, gt_pointer_operator, void *);
+extern void gt_pch_p_38vec_named_label_bck_direct_goto_va_gc_
     (void *, void *, gt_pointer_operator, void *);
 extern void gt_pch_p_25vec_incomplete_var_va_gc_
     (void *, void *, gt_pointer_operator, void *);

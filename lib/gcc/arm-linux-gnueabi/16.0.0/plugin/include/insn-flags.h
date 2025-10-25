@@ -599,18 +599,18 @@
 #define HAVE_vec_sel_widen_ssum_hiv16qiv8qi3 (TARGET_NEON)
 #define HAVE_vec_sel_widen_ssum_hiv8hiv4hi3 (TARGET_NEON)
 #define HAVE_vec_sel_widen_ssum_hiv4siv2si3 (TARGET_NEON)
-#define HAVE_widen_ssumv8qi3 (TARGET_NEON)
-#define HAVE_widen_ssumv4hi3 (TARGET_NEON)
-#define HAVE_widen_ssumv2si3 (TARGET_NEON)
+#define HAVE_widen_ssumv8hiv8qi3 (TARGET_NEON)
+#define HAVE_widen_ssumv4siv4hi3 (TARGET_NEON)
+#define HAVE_widen_ssumv2div2si3 (TARGET_NEON)
 #define HAVE_vec_sel_widen_usum_lov16qiv8qi3 (TARGET_NEON)
 #define HAVE_vec_sel_widen_usum_lov8hiv4hi3 (TARGET_NEON)
 #define HAVE_vec_sel_widen_usum_lov4siv2si3 (TARGET_NEON)
 #define HAVE_vec_sel_widen_usum_hiv16qiv8qi3 (TARGET_NEON)
 #define HAVE_vec_sel_widen_usum_hiv8hiv4hi3 (TARGET_NEON)
 #define HAVE_vec_sel_widen_usum_hiv4siv2si3 (TARGET_NEON)
-#define HAVE_widen_usumv8qi3 (TARGET_NEON)
-#define HAVE_widen_usumv4hi3 (TARGET_NEON)
-#define HAVE_widen_usumv2si3 (TARGET_NEON)
+#define HAVE_widen_usumv8hiv8qi3 (TARGET_NEON)
+#define HAVE_widen_usumv4siv4hi3 (TARGET_NEON)
+#define HAVE_widen_usumv2div2si3 (TARGET_NEON)
 #define HAVE_quad_halves_plusv4si (TARGET_NEON)
 #define HAVE_quad_halves_sminv4si (TARGET_NEON)
 #define HAVE_quad_halves_smaxv4si (TARGET_NEON)
@@ -5024,12 +5024,12 @@
 #define HAVE_neon_vnegv8hf (TARGET_NEON_FP16INST)
 #define HAVE_neon_vabsv4hf (TARGET_NEON_FP16INST)
 #define HAVE_neon_vnegv4hf (TARGET_NEON_FP16INST)
-#define HAVE_widen_ssumv16qi3 (TARGET_NEON)
-#define HAVE_widen_ssumv8hi3 (TARGET_NEON)
-#define HAVE_widen_ssumv4si3 (TARGET_NEON)
-#define HAVE_widen_usumv16qi3 (TARGET_NEON)
-#define HAVE_widen_usumv8hi3 (TARGET_NEON)
-#define HAVE_widen_usumv4si3 (TARGET_NEON)
+#define HAVE_widen_ssumv8hiv16qi3 (TARGET_NEON)
+#define HAVE_widen_ssumv4siv8hi3 (TARGET_NEON)
+#define HAVE_widen_ssumv2div4si3 (TARGET_NEON)
+#define HAVE_widen_usumv8hiv16qi3 (TARGET_NEON)
+#define HAVE_widen_usumv4siv8hi3 (TARGET_NEON)
+#define HAVE_widen_usumv2div4si3 (TARGET_NEON)
 #define HAVE_move_hi_quad_v2di (TARGET_NEON)
 #define HAVE_move_hi_quad_v2df (TARGET_NEON)
 #define HAVE_move_hi_quad_v16qi (TARGET_NEON)
@@ -6349,18 +6349,18 @@ extern rtx        gen_vec_sel_widen_ssum_lov4siv2si3                   (rtx, rtx
 extern rtx        gen_vec_sel_widen_ssum_hiv16qiv8qi3                  (rtx, rtx, rtx, rtx);
 extern rtx        gen_vec_sel_widen_ssum_hiv8hiv4hi3                   (rtx, rtx, rtx, rtx);
 extern rtx        gen_vec_sel_widen_ssum_hiv4siv2si3                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_widen_ssumv8qi3                                  (rtx, rtx, rtx);
-extern rtx        gen_widen_ssumv4hi3                                  (rtx, rtx, rtx);
-extern rtx        gen_widen_ssumv2si3                                  (rtx, rtx, rtx);
+extern rtx        gen_widen_ssumv8hiv8qi3                              (rtx, rtx, rtx);
+extern rtx        gen_widen_ssumv4siv4hi3                              (rtx, rtx, rtx);
+extern rtx        gen_widen_ssumv2div2si3                              (rtx, rtx, rtx);
 extern rtx        gen_vec_sel_widen_usum_lov16qiv8qi3                  (rtx, rtx, rtx, rtx);
 extern rtx        gen_vec_sel_widen_usum_lov8hiv4hi3                   (rtx, rtx, rtx, rtx);
 extern rtx        gen_vec_sel_widen_usum_lov4siv2si3                   (rtx, rtx, rtx, rtx);
 extern rtx        gen_vec_sel_widen_usum_hiv16qiv8qi3                  (rtx, rtx, rtx, rtx);
 extern rtx        gen_vec_sel_widen_usum_hiv8hiv4hi3                   (rtx, rtx, rtx, rtx);
 extern rtx        gen_vec_sel_widen_usum_hiv4siv2si3                   (rtx, rtx, rtx, rtx);
-extern rtx        gen_widen_usumv8qi3                                  (rtx, rtx, rtx);
-extern rtx        gen_widen_usumv4hi3                                  (rtx, rtx, rtx);
-extern rtx        gen_widen_usumv2si3                                  (rtx, rtx, rtx);
+extern rtx        gen_widen_usumv8hiv8qi3                              (rtx, rtx, rtx);
+extern rtx        gen_widen_usumv4siv4hi3                              (rtx, rtx, rtx);
+extern rtx        gen_widen_usumv2div2si3                              (rtx, rtx, rtx);
 extern rtx        gen_quad_halves_plusv4si                             (rtx, rtx);
 extern rtx        gen_quad_halves_sminv4si                             (rtx, rtx);
 extern rtx        gen_quad_halves_smaxv4si                             (rtx, rtx);
@@ -10501,12 +10501,12 @@ extern rtx        gen_neon_vabsv8hf                                    (rtx, rtx
 extern rtx        gen_neon_vnegv8hf                                    (rtx, rtx);
 extern rtx        gen_neon_vabsv4hf                                    (rtx, rtx);
 extern rtx        gen_neon_vnegv4hf                                    (rtx, rtx);
-extern rtx        gen_widen_ssumv16qi3                                 (rtx, rtx, rtx);
-extern rtx        gen_widen_ssumv8hi3                                  (rtx, rtx, rtx);
-extern rtx        gen_widen_ssumv4si3                                  (rtx, rtx, rtx);
-extern rtx        gen_widen_usumv16qi3                                 (rtx, rtx, rtx);
-extern rtx        gen_widen_usumv8hi3                                  (rtx, rtx, rtx);
-extern rtx        gen_widen_usumv4si3                                  (rtx, rtx, rtx);
+extern rtx        gen_widen_ssumv8hiv16qi3                             (rtx, rtx, rtx);
+extern rtx        gen_widen_ssumv4siv8hi3                              (rtx, rtx, rtx);
+extern rtx        gen_widen_ssumv2div4si3                              (rtx, rtx, rtx);
+extern rtx        gen_widen_usumv8hiv16qi3                             (rtx, rtx, rtx);
+extern rtx        gen_widen_usumv4siv8hi3                              (rtx, rtx, rtx);
+extern rtx        gen_widen_usumv2div4si3                              (rtx, rtx, rtx);
 extern rtx        gen_move_hi_quad_v2di                                (rtx, rtx);
 extern rtx        gen_move_hi_quad_v2df                                (rtx, rtx);
 extern rtx        gen_move_hi_quad_v16qi                               (rtx, rtx);

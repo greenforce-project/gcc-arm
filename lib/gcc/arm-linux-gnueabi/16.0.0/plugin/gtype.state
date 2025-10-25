@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "16.0.0 20251018 (Gf Cross v16)")
+(!version  "16.0.0 20251025 (Gf Cross v16)")
 (!srcdir  "/__w/gcc_build/gcc_build/gcc/gcc")
 (!languages 13 ada c cobol cp d fortran go jit lto m2 objc objcp rust)
 (!fileslist 258 0
@@ -9572,11 +9572,11 @@
                               nil )
                              
                              (!type struct 476 nil  gc_pointed_to "language_function"
-                              (!srcfileloc  "jit/dummy-frontend.cc" 973)
+                              (!srcfileloc  "jit/dummy-frontend.cc" 975)
                               (!fields 1 
                                (!pair  "dummy"
                                 (!type already_seen 2)
-                                (!srcfileloc  "jit/dummy-frontend.cc" 972)
+                                (!srcfileloc  "jit/dummy-frontend.cc" 974)
                                 nil )
                               )
                               nil 128 
@@ -15867,26 +15867,26 @@
                            nil )
                           
                           (!type struct 701 nil  gc_used "lang_identifier"
-                           (!srcfileloc  "c/c-decl.cc" 240)
+                           (!srcfileloc  "c/c-decl.cc" 241)
                            (!fields 4 
                             (!pair  "common_id"
                              (!type already_seen 688)
-                             (!srcfileloc  "c/c-decl.cc" 236)
+                             (!srcfileloc  "c/c-decl.cc" 237)
                              nil )
                             (!pair  "symbol_binding"
                              (!type pointer 702 nil  gc_used
                               (!type struct 703 
                                (!type already_seen 702)
                                gc_pointed_to "c_binding"
-                               (!srcfileloc  "c/c-decl.cc" 225)
+                               (!srcfileloc  "c/c-decl.cc" 226)
                                (!fields 11 
                                 (!pair  "u"
-                                 (!type union 704 nil  gc_used "anonymous:/__w/gcc_build/gcc_build/gcc/gcc/c/c-decl.cc:211"
-                                  (!srcfileloc  "c/c-decl.cc" 214)
+                                 (!type union 704 nil  gc_used "anonymous:/__w/gcc_build/gcc_build/gcc/gcc/c/c-decl.cc:212"
+                                  (!srcfileloc  "c/c-decl.cc" 215)
                                   (!fields 2 
                                    (!pair  "type"
                                     (!type already_seen 23)
-                                    (!srcfileloc  "c/c-decl.cc" 212)
+                                    (!srcfileloc  "c/c-decl.cc" 213)
                                     (!options 
                                      (!option tag string  "0")
                                     )
@@ -15896,78 +15896,78 @@
                                      (!type struct 706 
                                       (!type already_seen 705)
                                       gc_pointed_to "c_label_vars"
-                                      (!srcfileloc  "c/c-decl.cc" 433)
+                                      (!srcfileloc  "c/c-decl.cc" 434)
                                       (!fields 4 
                                        (!pair  "shadowed"
                                         (!type already_seen 705)
-                                        (!srcfileloc  "c/c-decl.cc" 421)
+                                        (!srcfileloc  "c/c-decl.cc" 422)
                                         nil )
                                        (!pair  "label_bindings"
                                         (!type struct 707 nil  gc_used "c_spot_bindings"
-                                         (!srcfileloc  "c/c-decl.cc" 400)
+                                         (!srcfileloc  "c/c-decl.cc" 401)
                                          (!fields 4 
                                           (!pair  "scope"
                                            (!type pointer 708 nil  gc_used
                                             (!type struct 709 
                                              (!type already_seen 708)
                                              gc_pointed_to "c_scope"
-                                             (!srcfileloc  "c/c-decl.cc" 533)
+                                             (!srcfileloc  "c/c-decl.cc" 534)
                                              (!fields 14 
                                               (!pair  "outer"
                                                (!type already_seen 708)
-                                               (!srcfileloc  "c/c-decl.cc" 482)
+                                               (!srcfileloc  "c/c-decl.cc" 483)
                                                nil )
                                               (!pair  "outer_function"
                                                (!type already_seen 708)
-                                               (!srcfileloc  "c/c-decl.cc" 485)
+                                               (!srcfileloc  "c/c-decl.cc" 486)
                                                nil )
                                               (!pair  "bindings"
                                                (!type already_seen 702)
-                                               (!srcfileloc  "c/c-decl.cc" 488)
+                                               (!srcfileloc  "c/c-decl.cc" 489)
                                                nil )
                                               (!pair  "blocks"
                                                (!type already_seen 23)
-                                               (!srcfileloc  "c/c-decl.cc" 492)
+                                               (!srcfileloc  "c/c-decl.cc" 493)
                                                nil )
                                               (!pair  "blocks_last"
                                                (!type already_seen 23)
-                                               (!srcfileloc  "c/c-decl.cc" 493)
+                                               (!srcfileloc  "c/c-decl.cc" 494)
                                                nil )
                                               (!pair  "depth"
                                                (!type already_seen 2)
-                                               (!srcfileloc  "c/c-decl.cc" 497)
+                                               (!srcfileloc  "c/c-decl.cc" 498)
                                                nil )
                                               (!pair  "parm_flag"
                                                (!type already_seen 2)
-                                               (!srcfileloc  "c/c-decl.cc" 501)
+                                               (!srcfileloc  "c/c-decl.cc" 502)
                                                nil )
                                               (!pair  "had_vla_unspec"
                                                (!type already_seen 2)
-                                               (!srcfileloc  "c/c-decl.cc" 505)
+                                               (!srcfileloc  "c/c-decl.cc" 506)
                                                nil )
                                               (!pair  "had_forward_parm_decls"
                                                (!type already_seen 2)
-                                               (!srcfileloc  "c/c-decl.cc" 508)
+                                               (!srcfileloc  "c/c-decl.cc" 509)
                                                nil )
                                               (!pair  "function_body"
                                                (!type already_seen 2)
-                                               (!srcfileloc  "c/c-decl.cc" 514)
+                                               (!srcfileloc  "c/c-decl.cc" 515)
                                                nil )
                                               (!pair  "keep"
                                                (!type already_seen 2)
-                                               (!srcfileloc  "c/c-decl.cc" 517)
+                                               (!srcfileloc  "c/c-decl.cc" 518)
                                                nil )
                                               (!pair  "float_const_decimal64"
                                                (!type already_seen 2)
-                                               (!srcfileloc  "c/c-decl.cc" 520)
+                                               (!srcfileloc  "c/c-decl.cc" 521)
                                                nil )
                                               (!pair  "has_label_bindings"
                                                (!type already_seen 2)
-                                               (!srcfileloc  "c/c-decl.cc" 525)
+                                               (!srcfileloc  "c/c-decl.cc" 526)
                                                nil )
                                               (!pair  "has_jump_unsafe_decl"
                                                (!type already_seen 2)
-                                               (!srcfileloc  "c/c-decl.cc" 532)
+                                               (!srcfileloc  "c/c-decl.cc" 533)
                                                nil )
                                              )
                                              (!options 
@@ -15975,118 +15975,118 @@
                                              )
                                              1026 nil nil )
                                            )
-                                           (!srcfileloc  "c/c-decl.cc" 385)
+                                           (!srcfileloc  "c/c-decl.cc" 386)
                                            nil )
                                           (!pair  "bindings_in_scope"
                                            (!type already_seen 702)
-                                           (!srcfileloc  "c/c-decl.cc" 389)
+                                           (!srcfileloc  "c/c-decl.cc" 390)
                                            nil )
                                           (!pair  "stmt_exprs"
                                            (!type already_seen 2)
-                                           (!srcfileloc  "c/c-decl.cc" 396)
+                                           (!srcfileloc  "c/c-decl.cc" 397)
                                            nil )
                                           (!pair  "left_stmt_expr"
                                            (!type already_seen 2)
-                                           (!srcfileloc  "c/c-decl.cc" 399)
+                                           (!srcfileloc  "c/c-decl.cc" 400)
                                            nil )
                                          )
                                          nil 1026 nil nil )
-                                        (!srcfileloc  "c/c-decl.cc" 423)
+                                        (!srcfileloc  "c/c-decl.cc" 424)
                                         nil )
                                        (!pair  "decls_in_scope"
                                         (!type already_seen 86)
-                                        (!srcfileloc  "c/c-decl.cc" 428)
+                                        (!srcfileloc  "c/c-decl.cc" 429)
                                         nil )
                                        (!pair  "gotos"
                                         (!type pointer 710 nil  gc_used
                                          (!type user_struct 711 
                                           (!type already_seen 710)
                                           gc_pointed_to "vec<c_goto_bindings_p,va_gc>"
-                                          (!srcfileloc  "c/c-decl.cc" 432)
+                                          (!srcfileloc  "c/c-decl.cc" 433)
                                           (!fields 2 
                                            (!pair  "va_gc"
                                             (!type already_seen 80)
-                                            (!srcfileloc  "c/c-decl.cc" 432)
+                                            (!srcfileloc  "c/c-decl.cc" 433)
                                             nil )
                                            (!pair  "c_goto_bindings_p"
                                             (!type pointer 712 nil  gc_used
                                              (!type struct 713 
                                               (!type already_seen 712)
                                               gc_pointed_to "c_goto_bindings"
-                                              (!srcfileloc  "c/c-decl.cc" 411)
+                                              (!srcfileloc  "c/c-decl.cc" 412)
                                               (!fields 2 
                                                (!pair  "loc"
                                                 (!type already_seen 2)
-                                                (!srcfileloc  "c/c-decl.cc" 408)
+                                                (!srcfileloc  "c/c-decl.cc" 409)
                                                 nil )
                                                (!pair  "goto_bindings"
                                                 (!type already_seen 707)
-                                                (!srcfileloc  "c/c-decl.cc" 410)
+                                                (!srcfileloc  "c/c-decl.cc" 411)
                                                 nil )
                                               )
                                               nil 1026 nil nil )
                                             )
-                                            (!srcfileloc  "c/c-decl.cc" 432)
+                                            (!srcfileloc  "c/c-decl.cc" 433)
                                             nil )
                                           )
                                          )
                                         )
-                                        (!srcfileloc  "c/c-decl.cc" 432)
+                                        (!srcfileloc  "c/c-decl.cc" 433)
                                         nil )
                                       )
                                       nil 1026 nil nil )
                                     )
-                                    (!srcfileloc  "c/c-decl.cc" 213)
+                                    (!srcfileloc  "c/c-decl.cc" 214)
                                     (!options 
                                      (!option tag string  "1")
                                     )
                                    )
                                   )
                                   nil 1026 nil )
-                                 (!srcfileloc  "c/c-decl.cc" 214)
+                                 (!srcfileloc  "c/c-decl.cc" 215)
                                  (!options 
                                   (!option desc string  "TREE_CODE (%0.decl) == LABEL_DECL")
                                  )
                                 )
                                 (!pair  "decl"
                                  (!type already_seen 23)
-                                 (!srcfileloc  "c/c-decl.cc" 215)
+                                 (!srcfileloc  "c/c-decl.cc" 216)
                                  nil )
                                 (!pair  "id"
                                  (!type already_seen 23)
-                                 (!srcfileloc  "c/c-decl.cc" 216)
+                                 (!srcfileloc  "c/c-decl.cc" 217)
                                  nil )
                                 (!pair  "prev"
                                  (!type already_seen 702)
-                                 (!srcfileloc  "c/c-decl.cc" 217)
+                                 (!srcfileloc  "c/c-decl.cc" 218)
                                  nil )
                                 (!pair  "shadowed"
                                  (!type already_seen 702)
-                                 (!srcfileloc  "c/c-decl.cc" 218)
+                                 (!srcfileloc  "c/c-decl.cc" 219)
                                  nil )
                                 (!pair  "depth"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "c/c-decl.cc" 219)
+                                 (!srcfileloc  "c/c-decl.cc" 220)
                                  nil )
                                 (!pair  "invisible"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "c/c-decl.cc" 220)
+                                 (!srcfileloc  "c/c-decl.cc" 221)
                                  nil )
                                 (!pair  "nested"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "c/c-decl.cc" 221)
+                                 (!srcfileloc  "c/c-decl.cc" 222)
                                  nil )
                                 (!pair  "inner_comp"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "c/c-decl.cc" 222)
+                                 (!srcfileloc  "c/c-decl.cc" 223)
                                  nil )
                                 (!pair  "in_struct"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "c/c-decl.cc" 223)
+                                 (!srcfileloc  "c/c-decl.cc" 224)
                                  nil )
                                 (!pair  "locus"
                                  (!type already_seen 2)
-                                 (!srcfileloc  "c/c-decl.cc" 224)
+                                 (!srcfileloc  "c/c-decl.cc" 225)
                                  nil )
                                )
                                (!options 
@@ -16094,15 +16094,15 @@
                                )
                                1026 nil nil )
                              )
-                             (!srcfileloc  "c/c-decl.cc" 237)
+                             (!srcfileloc  "c/c-decl.cc" 238)
                              nil )
                             (!pair  "tag_binding"
                              (!type already_seen 702)
-                             (!srcfileloc  "c/c-decl.cc" 238)
+                             (!srcfileloc  "c/c-decl.cc" 239)
                              nil )
                             (!pair  "label_binding"
                              (!type already_seen 702)
-                             (!srcfileloc  "c/c-decl.cc" 239)
+                             (!srcfileloc  "c/c-decl.cc" 240)
                              nil )
                            )
                            nil 1026 
@@ -16172,11 +16172,11 @@
                      )
                      
                      (!type union 716 nil  gc_pointed_to "lang_tree_node"
-                      (!srcfileloc  "jit/dummy-frontend.cc" 966)
+                      (!srcfileloc  "jit/dummy-frontend.cc" 968)
                       (!fields 2 
                        (!pair  "generic"
                         (!type already_seen 22)
-                        (!srcfileloc  "jit/dummy-frontend.cc" 964)
+                        (!srcfileloc  "jit/dummy-frontend.cc" 966)
                         (!options 
                          (!option desc string  "tree_node_structure (&%h)")
                          (!option tag string  "0")
@@ -16184,14 +16184,14 @@
                        )
                        (!pair  "identifier"
                         (!type already_seen 686)
-                        (!srcfileloc  "jit/dummy-frontend.cc" 965)
+                        (!srcfileloc  "jit/dummy-frontend.cc" 967)
                         (!options 
                          (!option tag string  "1")
                         )
                        )
                       )
                       (!options 
-                       (!option chain_next string  "CODE_CONTAINS_STRUCT (TREE_CODE (&%h.generic), TS_COMMON) ? ((union lang_tree_node *) TREE_CHAIN (&%h.generic)) : NULL")
+                       (!option chain_next string  "(union lang_tree_node *) jit_tree_chain_next (&%h.generic)")
                        (!option desc string  "TREE_CODE (&%h.generic) == IDENTIFIER_NODE")
                       )
                       128 
@@ -16960,11 +16960,11 @@
                      )
                      
                      (!type union 756 nil  gc_pointed_to "lang_tree_node"
-                      (!srcfileloc  "c/c-decl.cc" 356)
+                      (!srcfileloc  "c/c-decl.cc" 357)
                       (!fields 3 
                        (!pair  "generic"
                         (!type already_seen 22)
-                        (!srcfileloc  "c/c-decl.cc" 353)
+                        (!srcfileloc  "c/c-decl.cc" 354)
                         (!options 
                          (!option desc string  "tree_node_structure (&%h)")
                          (!option tag string  "0")
@@ -16972,29 +16972,29 @@
                        )
                        (!pair  "identifier"
                         (!type already_seen 686)
-                        (!srcfileloc  "c/c-decl.cc" 354)
+                        (!srcfileloc  "c/c-decl.cc" 355)
                         (!options 
                          (!option tag string  "1")
                         )
                        )
                        (!pair  "c_token_vec"
                         (!type struct 757 nil  gc_used "c_tree_token_vec"
-                         (!srcfileloc  "c/c-decl.cc" 340)
+                         (!srcfileloc  "c/c-decl.cc" 341)
                          (!fields 2 
                           (!pair  "base"
                            (!type already_seen 25)
-                           (!srcfileloc  "c/c-decl.cc" 338)
+                           (!srcfileloc  "c/c-decl.cc" 339)
                            nil )
                           (!pair  "tokens"
                            (!type pointer 758 nil  gc_used
                             (!type user_struct 759 
                              (!type already_seen 758)
                              gc_pointed_to "vec<c_token,va_gc>"
-                             (!srcfileloc  "c/c-decl.cc" 339)
+                             (!srcfileloc  "c/c-decl.cc" 340)
                              (!fields 2 
                               (!pair  "va_gc"
                                (!type already_seen 80)
-                               (!srcfileloc  "c/c-decl.cc" 339)
+                               (!srcfileloc  "c/c-decl.cc" 340)
                                nil )
                               (!pair  "c_token"
                                (!type struct 760 
@@ -17034,16 +17034,16 @@
                                   nil )
                                 )
                                 nil 1026 nil nil )
-                               (!srcfileloc  "c/c-decl.cc" 339)
+                               (!srcfileloc  "c/c-decl.cc" 340)
                                nil )
                              )
                             )
                            )
-                           (!srcfileloc  "c/c-decl.cc" 339)
+                           (!srcfileloc  "c/c-decl.cc" 340)
                            nil )
                          )
                          nil 1026 nil nil )
-                        (!srcfileloc  "c/c-decl.cc" 355)
+                        (!srcfileloc  "c/c-decl.cc" 356)
                         (!options 
                          (!option tag string  "2")
                         )
@@ -29335,27 +29335,27 @@
    (!type already_seen 2059)
   )
   gc_pointed_to "c_inline_static"
-  (!srcfileloc  "c/c-decl.cc" 604)
+  (!srcfileloc  "c/c-decl.cc" 605)
   (!fields 5 
    (!pair  "location"
     (!type already_seen 2)
-    (!srcfileloc  "c/c-decl.cc" 591)
+    (!srcfileloc  "c/c-decl.cc" 592)
     nil )
    (!pair  "function"
     (!type already_seen 23)
-    (!srcfileloc  "c/c-decl.cc" 594)
+    (!srcfileloc  "c/c-decl.cc" 595)
     nil )
    (!pair  "static_decl"
     (!type already_seen 23)
-    (!srcfileloc  "c/c-decl.cc" 597)
+    (!srcfileloc  "c/c-decl.cc" 598)
     nil )
    (!pair  "type"
     (!type already_seen 2)
-    (!srcfileloc  "c/c-decl.cc" 600)
+    (!srcfileloc  "c/c-decl.cc" 601)
     nil )
    (!pair  "next"
     (!type already_seen 2060)
-    (!srcfileloc  "c/c-decl.cc" 603)
+    (!srcfileloc  "c/c-decl.cc" 604)
     nil )
   )
   (!options 
@@ -29364,7 +29364,7 @@
   1026 nil nil )
  
  (!type struct 2061 nil  gc_used "c_struct_hasher"
-  (!srcfileloc  "c/c-decl.cc" 674)
+  (!srcfileloc  "c/c-decl.cc" 675)
   (!fields 0 )
   nil 1026 nil nil )
  
@@ -29373,11 +29373,11 @@
    (!type already_seen 2062)
   )
   gc_pointed_to "hash_table<c_struct_hasher>"
-  (!srcfileloc  "c/c-decl.cc" 674)
+  (!srcfileloc  "c/c-decl.cc" 675)
   (!fields 1 
    (!pair  "c_struct_hasher"
     (!type already_seen 2061)
-    (!srcfileloc  "c/c-decl.cc" 674)
+    (!srcfileloc  "c/c-decl.cc" 675)
     nil )
   )
  )
@@ -29932,31 +29932,31 @@
   nil 0 nil nil )
  
  (!type struct 2131 nil  gc_unused "matching_paren_traits"
-  (!srcfileloc  "c/c-parser.cc" 1189)
+  (!srcfileloc  "c/c-parser.cc" 1207)
   (!fields 0 )
   nil 1026 nil nil )
  
  (!type user_struct 2132 nil  gc_unused "token_pair<matching_paren_traits>"
-  (!srcfileloc  "c/c-parser.cc" 1189)
+  (!srcfileloc  "c/c-parser.cc" 1207)
   (!fields 1 
    (!pair  "matching_paren_traits"
     (!type already_seen 2131)
-    (!srcfileloc  "c/c-parser.cc" 1189)
+    (!srcfileloc  "c/c-parser.cc" 1207)
     nil )
   )
  )
  
  (!type struct 2133 nil  gc_unused "matching_brace_traits"
-  (!srcfileloc  "c/c-parser.cc" 1207)
+  (!srcfileloc  "c/c-parser.cc" 1225)
   (!fields 0 )
   nil 1026 nil nil )
  
  (!type user_struct 2134 nil  gc_unused "token_pair<matching_brace_traits>"
-  (!srcfileloc  "c/c-parser.cc" 1207)
+  (!srcfileloc  "c/c-parser.cc" 1225)
   (!fields 1 
    (!pair  "matching_brace_traits"
     (!type already_seen 2133)
-    (!srcfileloc  "c/c-parser.cc" 1207)
+    (!srcfileloc  "c/c-parser.cc" 1225)
     nil )
   )
  )
@@ -29977,7 +29977,7 @@
   (!fields 0 )
   nil 0 nil nil )
  
- (!type struct 2139 nil  gc_unused "anonymous:/__w/gcc_build/gcc_build/gcc/gcc/c/c-parser.cc:10158"nil 
+ (!type struct 2139 nil  gc_unused "anonymous:/__w/gcc_build/gcc_build/gcc/gcc/c/c-parser.cc:10173"nil 
   (!fields 0 )
   nil 0 nil nil )
  
@@ -31267,19 +31267,19 @@
   (!fields 4 
    (!pair  "decl"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 9014)
+    (!srcfileloc  "cp/cp-tree.h" 9015)
     nil )
    (!pair  "body"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 9015)
+    (!srcfileloc  "cp/cp-tree.h" 9016)
     nil )
    (!pair  "parms"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 9016)
+    (!srcfileloc  "cp/cp-tree.h" 9017)
     nil )
    (!pair  "result"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 9017)
+    (!srcfileloc  "cp/cp-tree.h" 9018)
     nil )
   )
   (!options 
@@ -32970,15 +32970,15 @@
   nil 0 nil nil )
  
  (!type struct 2415 nil  gc_used "macro_export"
-  (!srcfileloc  "cp/module.cc" 19143)
+  (!srcfileloc  "cp/module.cc" 19148)
   (!fields 2 
    (!pair  "def"
     (!type already_seen 19)
-    (!srcfileloc  "cp/module.cc" 19136)
+    (!srcfileloc  "cp/module.cc" 19141)
     nil )
    (!pair  "undef_loc"
     (!type already_seen 2)
-    (!srcfileloc  "cp/module.cc" 19137)
+    (!srcfileloc  "cp/module.cc" 19142)
     nil )
   )
   nil 2056 nil nil )
@@ -32992,15 +32992,15 @@
    (!type already_seen 2417)
   )
   gc_pointed_to "vec<macro_export,va_gc>"
-  (!srcfileloc  "cp/module.cc" 19300)
+  (!srcfileloc  "cp/module.cc" 19305)
   (!fields 2 
    (!pair  "va_gc"
     (!type already_seen 80)
-    (!srcfileloc  "cp/module.cc" 19300)
+    (!srcfileloc  "cp/module.cc" 19305)
     nil )
    (!pair  "macro_export"
     (!type already_seen 2415)
-    (!srcfileloc  "cp/module.cc" 19300)
+    (!srcfileloc  "cp/module.cc" 19305)
     nil )
   )
  )
@@ -35154,11 +35154,11 @@
   nil )
  (!pair  "vec<macro_export,va_gc>"
   (!type already_seen 2417)
-  (!srcfileloc  "cp/module.cc" 19300)
+  (!srcfileloc  "cp/module.cc" 19305)
   nil )
  (!pair  "macro_export"
   (!type already_seen 2415)
-  (!srcfileloc  "cp/module.cc" 19139)
+  (!srcfileloc  "cp/module.cc" 19144)
   nil )
  (!pair  "note_defs_table_t"
   (!type already_seen 2411)
@@ -35728,27 +35728,27 @@
   nil )
  (!pair  "matching_braces"
   (!type already_seen 2134)
-  (!srcfileloc  "c/c-parser.cc" 1207)
+  (!srcfileloc  "c/c-parser.cc" 1225)
   nil )
  (!pair  "matching_brace_traits"
   (!type already_seen 2133)
-  (!srcfileloc  "c/c-parser.cc" 1207)
+  (!srcfileloc  "c/c-parser.cc" 1225)
   nil )
  (!pair  "token_pair<matching_brace_traits>"
   (!type already_seen 2134)
-  (!srcfileloc  "c/c-parser.cc" 1207)
+  (!srcfileloc  "c/c-parser.cc" 1225)
   nil )
  (!pair  "matching_parens"
   (!type already_seen 2132)
-  (!srcfileloc  "c/c-parser.cc" 1189)
+  (!srcfileloc  "c/c-parser.cc" 1207)
   nil )
  (!pair  "matching_paren_traits"
   (!type already_seen 2131)
-  (!srcfileloc  "c/c-parser.cc" 1189)
+  (!srcfileloc  "c/c-parser.cc" 1207)
   nil )
  (!pair  "token_pair<matching_paren_traits>"
   (!type already_seen 2132)
-  (!srcfileloc  "c/c-parser.cc" 1189)
+  (!srcfileloc  "c/c-parser.cc" 1207)
   nil )
  (!pair  "c_parser"
   (!type already_seen 2121)
@@ -35852,31 +35852,31 @@
   nil )
  (!pair  "c_struct_hasher"
   (!type already_seen 2061)
-  (!srcfileloc  "c/c-decl.cc" 674)
+  (!srcfileloc  "c/c-decl.cc" 675)
   nil )
  (!pair  "hash_table<c_struct_hasher>"
   (!type already_seen 2062)
-  (!srcfileloc  "c/c-decl.cc" 674)
+  (!srcfileloc  "c/c-decl.cc" 675)
   nil )
  (!pair  "c_binding_ptr"
   (!type already_seen 702)
-  (!srcfileloc  "c/c-decl.cc" 622)
+  (!srcfileloc  "c/c-decl.cc" 623)
   nil )
  (!pair  "vec<c_goto_bindings_p,va_gc>"
   (!type already_seen 711)
-  (!srcfileloc  "c/c-decl.cc" 432)
+  (!srcfileloc  "c/c-decl.cc" 433)
   nil )
  (!pair  "c_goto_bindings_p"
   (!type already_seen 712)
-  (!srcfileloc  "c/c-decl.cc" 413)
+  (!srcfileloc  "c/c-decl.cc" 414)
   nil )
  (!pair  "c_token"
   (!type already_seen 760)
-  (!srcfileloc  "c/c-decl.cc" 339)
+  (!srcfileloc  "c/c-decl.cc" 340)
   nil )
  (!pair  "vec<c_token,va_gc>"
   (!type already_seen 759)
-  (!srcfileloc  "c/c-decl.cc" 339)
+  (!srcfileloc  "c/c-decl.cc" 340)
   nil )
  (!pair  "c_expr_t"
   (!type already_seen 2049)
@@ -40495,7 +40495,7 @@
   nil )
  (!pair  "generic_parm_count"
   (!type already_seen 2)
-  (!srcfileloc  "cp/parser.cc" 55294)
+  (!srcfileloc  "cp/parser.cc" 55319)
   nil )
  (!pair  "cp_parser_decl_specs_attrs"
   (!type already_seen 86)
@@ -40539,11 +40539,11 @@
  )
  (!pair  "headers"
   (!type already_seen 417)
-  (!srcfileloc  "cp/module.cc" 19304)
+  (!srcfileloc  "cp/module.cc" 19309)
   nil )
  (!pair  "macro_exports"
   (!type already_seen 2418)
-  (!srcfileloc  "cp/module.cc" 19300)
+  (!srcfileloc  "cp/module.cc" 19305)
   nil )
  (!pair  "note_defs"
   (!type already_seen 2412)
@@ -41134,59 +41134,59 @@
   nil )
  (!pair  "ext_block"
   (!type already_seen 23)
-  (!srcfileloc  "c/c-decl.cc" 13600)
+  (!srcfileloc  "c/c-decl.cc" 13626)
   nil )
  (!pair  "last_structptr_types"
   (!type array 2666 nil  gc_used "builtin_structptr_type_count" 
    (!type already_seen 23)
   )
-  (!srcfileloc  "c/c-decl.cc" 1798)
+  (!srcfileloc  "c/c-decl.cc" 1799)
   nil )
  (!pair  "c_struct_htab"
   (!type already_seen 2063)
-  (!srcfileloc  "c/c-decl.cc" 674)
+  (!srcfileloc  "c/c-decl.cc" 675)
   nil )
  (!pair  "c_inline_statics"
   (!type already_seen 2060)
-  (!srcfileloc  "c/c-decl.cc" 608)
+  (!srcfileloc  "c/c-decl.cc" 609)
   nil )
  (!pair  "binding_freelist"
   (!type already_seen 702)
-  (!srcfileloc  "c/c-decl.cc" 560)
+  (!srcfileloc  "c/c-decl.cc" 561)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "scope_freelist"
   (!type already_seen 708)
-  (!srcfileloc  "c/c-decl.cc" 556)
+  (!srcfileloc  "c/c-decl.cc" 557)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "external_scope"
   (!type already_seen 708)
-  (!srcfileloc  "c/c-decl.cc" 552)
+  (!srcfileloc  "c/c-decl.cc" 553)
   nil )
  (!pair  "file_scope"
   (!type already_seen 708)
-  (!srcfileloc  "c/c-decl.cc" 547)
+  (!srcfileloc  "c/c-decl.cc" 548)
   nil )
  (!pair  "current_function_scope"
   (!type already_seen 708)
-  (!srcfileloc  "c/c-decl.cc" 543)
+  (!srcfileloc  "c/c-decl.cc" 544)
   nil )
  (!pair  "current_scope"
   (!type already_seen 708)
-  (!srcfileloc  "c/c-decl.cc" 537)
+  (!srcfileloc  "c/c-decl.cc" 538)
   nil )
  (!pair  "visible_builtins"
   (!type already_seen 23)
-  (!srcfileloc  "c/c-decl.cc" 130)
+  (!srcfileloc  "c/c-decl.cc" 131)
   nil )
  (!pair  "c_stmt_tree"
   (!type already_seen 469)
-  (!srcfileloc  "c/c-decl.cc" 123)
+  (!srcfileloc  "c/c-decl.cc" 124)
   nil )
  (!pair  "gnat_eh_personality_decl"
   (!type already_seen 23)
@@ -41576,7 +41576,7 @@
   nil )
  (!pair  "critical_name_mutexes"
   (!type already_seen 424)
-  (!srcfileloc  "omp-low.cc" 10363)
+  (!srcfileloc  "omp-low.cc" 10365)
   nil )
  (!pair  "omp_requires_mask"
   (!type already_seen 2)
@@ -41742,7 +41742,7 @@
   nil )
  (!pair  "gcc_eh_personality_decl"
   (!type already_seen 23)
-  (!srcfileloc  "tree.cc" 12463)
+  (!srcfileloc  "tree.cc" 12470)
   nil )
  (!pair  "anon_cnt"
   (!type already_seen 2)

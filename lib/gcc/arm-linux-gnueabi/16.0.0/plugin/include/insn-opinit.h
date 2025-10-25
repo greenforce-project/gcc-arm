@@ -35,6 +35,8 @@ enum optab_tag {
   umsub_widen_optab,
   ssmsub_widen_optab,
   usmsub_widen_optab,
+  ssum_widen_optab,
+  usum_widen_optab,
   crc_optab,
   crc_rev_optab,
   vec_load_lanes_optab,
@@ -313,6 +315,9 @@ enum optab_tag {
   reduc_and_scal_optab,
   reduc_ior_scal_optab,
   reduc_xor_scal_optab,
+  reduc_sbool_and_scal_optab,
+  reduc_sbool_ior_scal_optab,
+  reduc_sbool_xor_scal_optab,
   fold_left_plus_optab,
   mask_fold_left_plus_optab,
   mask_len_fold_left_plus_optab,
@@ -325,8 +330,6 @@ enum optab_tag {
   uavg_floor_optab,
   savg_ceil_optab,
   uavg_ceil_optab,
-  ssum_widen_optab,
-  usum_widen_optab,
   usad_optab,
   ssad_optab,
   smulhs_optab,
@@ -466,7 +469,7 @@ enum optab_tag {
   LAST_NORM_OPTAB = iorn_optab
 };
 
-#define NUM_OPTABS          454
+#define NUM_OPTABS          457
 #define NUM_CONVLIB_OPTABS  17
 #define NUM_NORMLIB_OPTABS  80
 #define NUM_OPTAB_PATTERNS  942

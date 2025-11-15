@@ -2583,6 +2583,42 @@ gen_mve_vld4q (machine_mode arg0, rtx x0, rtx x1)
   return res;
 }
 
+extern insn_code maybe_code_for_mve_uqrshll_sat_di (int);
+inline insn_code
+code_for_mve_uqrshll_sat_di (int arg0)
+{
+  insn_code code = maybe_code_for_mve_uqrshll_sat_di (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_uqrshll_sat_di (int, rtx, rtx, rtx);
+inline rtx
+gen_mve_uqrshll_sat_di (int arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_uqrshll_sat_di (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
+extern insn_code maybe_code_for_mve_sqrshrl_sat_di (int);
+inline insn_code
+code_for_mve_sqrshrl_sat_di (int arg0)
+{
+  insn_code code = maybe_code_for_mve_sqrshrl_sat_di (arg0);
+  gcc_assert (code != CODE_FOR_nothing);
+  return code;
+}
+
+extern rtx maybe_gen_mve_sqrshrl_sat_di (int, rtx, rtx, rtx);
+inline rtx
+gen_mve_sqrshrl_sat_di (int arg0, rtx x0, rtx x1, rtx x2)
+{
+  rtx res = maybe_gen_mve_sqrshrl_sat_di (arg0, x0, x1, x2);
+  gcc_assert (res);
+  return res;
+}
+
 extern insn_code maybe_code_for_mve_vshlcq_m (int, machine_mode);
 inline insn_code
 code_for_mve_vshlcq_m (int arg0, machine_mode arg1)

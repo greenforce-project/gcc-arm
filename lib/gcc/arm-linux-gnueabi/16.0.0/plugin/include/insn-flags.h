@@ -361,9 +361,6 @@
 #define HAVE_thumb2_zero_extendqisi2_v6 (TARGET_THUMB2 && arm_arch6)
 #define HAVE_thumb2_eh_return (TARGET_THUMB2)
 #define HAVE_thumb2_addsi3_compare0 (TARGET_THUMB2)
-#define HAVE_thumb2_asrl (TARGET_HAVE_MVE)
-#define HAVE_thumb2_lsll (TARGET_HAVE_MVE)
-#define HAVE_thumb2_lsrl (TARGET_HAVE_MVE)
 #define HAVE_dls_insn (TARGET_32BIT && TARGET_HAVE_LOB)
 #define HAVE_unaligned_storev8qi (TARGET_NEON)
 #define HAVE_vec_setv8qi_internal (TARGET_NEON \
@@ -4370,6 +4367,11 @@
 #define HAVE_dlstp16_insn (TARGET_HAVE_MVE)
 #define HAVE_dlstp32_insn (TARGET_HAVE_MVE)
 #define HAVE_dlstp64_insn (TARGET_HAVE_MVE)
+#define HAVE_mve_asrl_imm (TARGET_HAVE_MVE)
+#define HAVE_mve_asrl_internal (TARGET_HAVE_MVE)
+#define HAVE_mve_lsll_imm (TARGET_HAVE_MVE)
+#define HAVE_mve_lsll_internal (TARGET_HAVE_MVE)
+#define HAVE_mve_lsrl (TARGET_HAVE_MVE)
 #define HAVE_adddi3 1
 #define HAVE_addvsi4 (TARGET_32BIT)
 #define HAVE_addvdi4 (TARGET_32BIT)
@@ -5791,6 +5793,8 @@
     || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V8HFmode)))
 #define HAVE_arm_mve_reinterpretv4sf ((TARGET_HAVE_MVE && VALID_MVE_SI_MODE (V4SFmode)) \
     || (TARGET_HAVE_MVE_FLOAT && VALID_MVE_SF_MODE (V4SFmode)))
+#define HAVE_mve_asrl (TARGET_HAVE_MVE)
+#define HAVE_mve_lsll (TARGET_HAVE_MVE)
 extern rtx        gen_addsi3_compareV_reg                              (rtx, rtx, rtx);
 extern rtx        gen_subvsi3_intmin                                   (rtx, rtx);
 extern rtx        gen_addsi3_compareV_imm                              (rtx, rtx, rtx);
@@ -6135,9 +6139,6 @@ extern rtx        gen_tls_load_dot_plus_four                           (rtx, rtx
 extern rtx        gen_thumb2_zero_extendqisi2_v6                       (rtx, rtx);
 extern rtx        gen_thumb2_eh_return                                 (rtx);
 extern rtx        gen_thumb2_addsi3_compare0                           (rtx, rtx, rtx);
-extern rtx        gen_thumb2_asrl                                      (rtx, rtx);
-extern rtx        gen_thumb2_lsll                                      (rtx, rtx);
-extern rtx        gen_thumb2_lsrl                                      (rtx, rtx);
 extern rtx        gen_dls_insn                                         (rtx);
 extern rtx        gen_unaligned_storev8qi                              (rtx, rtx);
 extern rtx        gen_vec_setv8qi_internal                             (rtx, rtx, rtx, rtx);
@@ -9920,6 +9921,11 @@ extern rtx        gen_dlstp8_insn                                      (rtx);
 extern rtx        gen_dlstp16_insn                                     (rtx);
 extern rtx        gen_dlstp32_insn                                     (rtx);
 extern rtx        gen_dlstp64_insn                                     (rtx);
+extern rtx        gen_mve_asrl_imm                                     (rtx, rtx, rtx);
+extern rtx        gen_mve_asrl_internal                                (rtx, rtx, rtx);
+extern rtx        gen_mve_lsll_imm                                     (rtx, rtx, rtx);
+extern rtx        gen_mve_lsll_internal                                (rtx, rtx, rtx);
+extern rtx        gen_mve_lsrl                                         (rtx, rtx, rtx);
 extern rtx        gen_adddi3                                           (rtx, rtx, rtx);
 extern rtx        gen_addvsi4                                          (rtx, rtx, rtx, rtx);
 extern rtx        gen_addvdi4                                          (rtx, rtx, rtx, rtx);
@@ -11235,5 +11241,7 @@ extern rtx        gen_arm_mve_reinterpretv4si                          (rtx, rtx
 extern rtx        gen_arm_mve_reinterpretv2di                          (rtx, rtx);
 extern rtx        gen_arm_mve_reinterpretv8hf                          (rtx, rtx);
 extern rtx        gen_arm_mve_reinterpretv4sf                          (rtx, rtx);
+extern rtx        gen_mve_asrl                                         (rtx, rtx, rtx);
+extern rtx        gen_mve_lsll                                         (rtx, rtx, rtx);
 
 #endif /* GCC_INSN_FLAGS_H */

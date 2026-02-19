@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "16.0.1 20260217 (Gf's C/C++ Compiler, GNU-compatible)")
+(!version  "16.0.1 20260218 (Gf's C/C++ Compiler, GNU-compatible)")
 (!srcdir  "/tmp/cirrus-ci-build/gcc/gcc")
 (!languages 14 ada algol68 c cobol cp d fortran go jit lto m2 objc objcp rust)
 (!fileslist 263 0
@@ -32635,7 +32635,7 @@
   nil 0 nil nil )
  
  (!type struct 2295 nil  gc_used "decl_location_traits"
-  (!srcfileloc  "cp/cp-tree.h" 7702)
+  (!srcfileloc  "cp/cp-tree.h" 7703)
   (!fields 0 )
   nil 4112 nil nil )
  
@@ -32644,19 +32644,19 @@
    (!type already_seen 2296)
   )
   gc_pointed_to "hash_map<tree,location_t,decl_location_traits>"
-  (!srcfileloc  "cp/cp-tree.h" 7702)
+  (!srcfileloc  "cp/cp-tree.h" 7703)
   (!fields 3 
    (!pair  "decl_location_traits"
     (!type already_seen 2295)
-    (!srcfileloc  "cp/cp-tree.h" 7702)
+    (!srcfileloc  "cp/cp-tree.h" 7703)
     nil )
    (!pair  "location_t"
     (!type already_seen 2)
-    (!srcfileloc  "cp/cp-tree.h" 7702)
+    (!srcfileloc  "cp/cp-tree.h" 7703)
     nil )
    (!pair  "tree"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 7702)
+    (!srcfileloc  "cp/cp-tree.h" 7703)
     nil )
   )
  )
@@ -32929,19 +32929,19 @@
   (!fields 4 
    (!pair  "decl"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 9250)
+    (!srcfileloc  "cp/cp-tree.h" 9251)
     nil )
    (!pair  "body"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 9251)
+    (!srcfileloc  "cp/cp-tree.h" 9252)
     nil )
    (!pair  "parms"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 9252)
+    (!srcfileloc  "cp/cp-tree.h" 9253)
     nil )
    (!pair  "result"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 9253)
+    (!srcfileloc  "cp/cp-tree.h" 9254)
     nil )
   )
   (!options 
@@ -33877,7 +33877,7 @@
   nil 0 nil nil )
  
  (!type lang_struct 2408 nil  gc_pointed_to "source_location_table_entry"
-  (!srcfileloc  "cp/cp-gimplify.cc" 4213)
+  (!srcfileloc  "cp/cp-gimplify.cc" 4216)
   (!fields 0 )
   (!options 
    (!option for_user string  "")
@@ -33908,19 +33908,19 @@
     nil )
    
    (!type struct 2410 nil  gc_pointed_to "source_location_table_entry"
-    (!srcfileloc  "cp/cp-gimplify.cc" 4213)
+    (!srcfileloc  "cp/cp-gimplify.cc" 4216)
     (!fields 3 
      (!pair  "loc"
       (!type already_seen 2)
-      (!srcfileloc  "cp/cp-gimplify.cc" 4210)
+      (!srcfileloc  "cp/cp-gimplify.cc" 4213)
       nil )
      (!pair  "uid"
       (!type already_seen 2)
-      (!srcfileloc  "cp/cp-gimplify.cc" 4211)
+      (!srcfileloc  "cp/cp-gimplify.cc" 4214)
       nil )
      (!pair  "var"
       (!type already_seen 23)
-      (!srcfileloc  "cp/cp-gimplify.cc" 4212)
+      (!srcfileloc  "cp/cp-gimplify.cc" 4215)
       nil )
     )
     (!options 
@@ -33933,7 +33933,7 @@
  )
  
  (!type struct 2411 nil  gc_used "source_location_table_entry_hash"
-  (!srcfileloc  "cp/cp-gimplify.cc" 4289)
+  (!srcfileloc  "cp/cp-gimplify.cc" 4292)
   (!fields 0 )
   nil 4112 nil nil )
  
@@ -33942,11 +33942,11 @@
    (!type already_seen 2412)
   )
   gc_pointed_to "hash_table<source_location_table_entry_hash>"
-  (!srcfileloc  "cp/cp-gimplify.cc" 4289)
+  (!srcfileloc  "cp/cp-gimplify.cc" 4292)
   (!fields 1 
    (!pair  "source_location_table_entry_hash"
     (!type already_seen 2411)
-    (!srcfileloc  "cp/cp-gimplify.cc" 4289)
+    (!srcfileloc  "cp/cp-gimplify.cc" 4292)
     nil )
   )
  )
@@ -34929,15 +34929,15 @@
    (!type already_seen 2554)
   )
   gc_pointed_to "hash_map<tree,tree_pair_p>"
-  (!srcfileloc  "cp/pt.cc" 32110)
+  (!srcfileloc  "cp/pt.cc" 32111)
   (!fields 2 
    (!pair  "tree_pair_p"
     (!type already_seen 623)
-    (!srcfileloc  "cp/pt.cc" 32110)
+    (!srcfileloc  "cp/pt.cc" 32111)
     nil )
    (!pair  "tree"
     (!type already_seen 23)
-    (!srcfileloc  "cp/pt.cc" 32110)
+    (!srcfileloc  "cp/pt.cc" 32111)
     nil )
   )
  )
@@ -35061,7 +35061,7 @@
   nil 0 nil nil )
  
  (!type struct 2572 nil  gc_used "cplus_array_hasher"
-  (!srcfileloc  "cp/tree.cc" 1162)
+  (!srcfileloc  "cp/tree.cc" 1163)
   (!fields 0 )
   nil 4112 nil nil )
  
@@ -35070,11 +35070,11 @@
    (!type already_seen 2573)
   )
   gc_pointed_to "hash_table<cplus_array_hasher>"
-  (!srcfileloc  "cp/tree.cc" 1162)
+  (!srcfileloc  "cp/tree.cc" 1163)
   (!fields 1 
    (!pair  "cplus_array_hasher"
     (!type already_seen 2572)
-    (!srcfileloc  "cp/tree.cc" 1162)
+    (!srcfileloc  "cp/tree.cc" 1163)
     nil )
   )
  )
@@ -35084,7 +35084,7 @@
   nil 0 nil nil )
  
  (!type struct 2576 nil  gc_used "list_hasher"
-  (!srcfileloc  "cp/tree.cc" 2302)
+  (!srcfileloc  "cp/tree.cc" 2303)
   (!fields 0 )
   nil 4112 nil nil )
  
@@ -35093,11 +35093,11 @@
    (!type already_seen 2577)
   )
   gc_pointed_to "hash_table<list_hasher>"
-  (!srcfileloc  "cp/tree.cc" 2302)
+  (!srcfileloc  "cp/tree.cc" 2303)
   (!fields 1 
    (!pair  "list_hasher"
     (!type already_seen 2576)
-    (!srcfileloc  "cp/tree.cc" 2302)
+    (!srcfileloc  "cp/tree.cc" 2303)
     nil )
   )
  )
@@ -35235,7 +35235,7 @@
   nil 0 nil nil )
  
  (!type struct 2605 nil  gc_used "module_hasher"
-  (!srcfileloc  "fortran/trans-decl.cc" 5536)
+  (!srcfileloc  "fortran/trans-decl.cc" 5526)
   (!fields 0 )
   nil 64 nil nil )
  
@@ -35244,11 +35244,11 @@
    (!type already_seen 2606)
   )
   gc_pointed_to "hash_table<module_hasher>"
-  (!srcfileloc  "fortran/trans-decl.cc" 5536)
+  (!srcfileloc  "fortran/trans-decl.cc" 5526)
   (!fields 1 
    (!pair  "module_hasher"
     (!type already_seen 2605)
-    (!srcfileloc  "fortran/trans-decl.cc" 5536)
+    (!srcfileloc  "fortran/trans-decl.cc" 5526)
     nil )
   )
  )
@@ -36714,11 +36714,11 @@
   nil )
  (!pair  "module_hasher"
   (!type already_seen 2605)
-  (!srcfileloc  "fortran/trans-decl.cc" 5536)
+  (!srcfileloc  "fortran/trans-decl.cc" 5526)
   nil )
  (!pair  "hash_table<module_hasher>"
   (!type already_seen 2606)
-  (!srcfileloc  "fortran/trans-decl.cc" 5536)
+  (!srcfileloc  "fortran/trans-decl.cc" 5526)
   nil )
  (!pair  "tree_frame_info"
   (!type already_seen 753)
@@ -36778,19 +36778,19 @@
   nil )
  (!pair  "list_hasher"
   (!type already_seen 2576)
-  (!srcfileloc  "cp/tree.cc" 2302)
+  (!srcfileloc  "cp/tree.cc" 2303)
   nil )
  (!pair  "hash_table<list_hasher>"
   (!type already_seen 2577)
-  (!srcfileloc  "cp/tree.cc" 2302)
+  (!srcfileloc  "cp/tree.cc" 2303)
   nil )
  (!pair  "cplus_array_hasher"
   (!type already_seen 2572)
-  (!srcfileloc  "cp/tree.cc" 1162)
+  (!srcfileloc  "cp/tree.cc" 1163)
   nil )
  (!pair  "hash_table<cplus_array_hasher>"
   (!type already_seen 2573)
-  (!srcfileloc  "cp/tree.cc" 1162)
+  (!srcfileloc  "cp/tree.cc" 1163)
   nil )
  (!pair  "bool"
   (!type already_seen 2565)
@@ -36818,7 +36818,7 @@
   nil )
  (!pair  "hash_map<tree,tree_pair_p>"
   (!type already_seen 2554)
-  (!srcfileloc  "cp/pt.cc" 32110)
+  (!srcfileloc  "cp/pt.cc" 32111)
   nil )
  (!pair  "pending_template"
   (!type already_seen 2536)
@@ -37154,11 +37154,11 @@
   nil )
  (!pair  "source_location_table_entry_hash"
   (!type already_seen 2411)
-  (!srcfileloc  "cp/cp-gimplify.cc" 4289)
+  (!srcfileloc  "cp/cp-gimplify.cc" 4292)
   nil )
  (!pair  "hash_table<source_location_table_entry_hash>"
   (!type already_seen 2412)
-  (!srcfileloc  "cp/cp-gimplify.cc" 4289)
+  (!srcfileloc  "cp/cp-gimplify.cc" 4292)
   nil )
  (!pair  "coroutine_info_hasher"
   (!type already_seen 2394)
@@ -37298,15 +37298,15 @@
   nil )
  (!pair  "erroneous_templates_t"
   (!type already_seen 2296)
-  (!srcfileloc  "cp/cp-tree.h" 7702)
+  (!srcfileloc  "cp/cp-tree.h" 7703)
   nil )
  (!pair  "decl_location_traits"
   (!type already_seen 2295)
-  (!srcfileloc  "cp/cp-tree.h" 7702)
+  (!srcfileloc  "cp/cp-tree.h" 7703)
   nil )
  (!pair  "hash_map<tree,location_t,decl_location_traits>"
   (!type already_seen 2296)
-  (!srcfileloc  "cp/cp-tree.h" 7702)
+  (!srcfileloc  "cp/cp-tree.h" 7703)
   nil )
  (!pair  "cp_parameter_declarator"
   (!type already_seen 2289)
@@ -42150,7 +42150,7 @@
   nil )
  (!pair  "module_htab"
   (!type already_seen 2607)
-  (!srcfileloc  "fortran/trans-decl.cc" 5536)
+  (!srcfileloc  "fortran/trans-decl.cc" 5526)
   nil )
  (!pair  "saved_local_decls"
   (!type already_seen 23)
@@ -42282,15 +42282,15 @@
   nil )
  (!pair  "deleted_copy_types"
   (!type already_seen 546)
-  (!srcfileloc  "cp/tree.cc" 4729)
+  (!srcfileloc  "cp/tree.cc" 4730)
   nil )
  (!pair  "list_hash_table"
   (!type already_seen 2578)
-  (!srcfileloc  "cp/tree.cc" 2302)
+  (!srcfileloc  "cp/tree.cc" 2303)
   nil )
  (!pair  "cplus_array_htab"
   (!type already_seen 2574)
-  (!srcfileloc  "cp/tree.cc" 1162)
+  (!srcfileloc  "cp/tree.cc" 1163)
   nil )
  (!pair  "boolish_class_type_p_cache"
   (!type already_seen 2564)
@@ -42321,7 +42321,7 @@
   nil )
  (!pair  "dguide_cache"
   (!type already_seen 2555)
-  (!srcfileloc  "cp/pt.cc" 32110)
+  (!srcfileloc  "cp/pt.cc" 32111)
   (!options 
    (!option deletable string  "")
   )
@@ -42591,7 +42591,7 @@
   nil )
  (!pair  "decomp_type_table"
   (!type already_seen 1065)
-  (!srcfileloc  "cp/decl.cc" 10481)
+  (!srcfileloc  "cp/decl.cc" 10490)
   (!options 
    (!option cache string  "")
   )
@@ -42624,13 +42624,13 @@
   nil )
  (!pair  "source_location_table"
   (!type already_seen 2413)
-  (!srcfileloc  "cp/cp-gimplify.cc" 4290)
+  (!srcfileloc  "cp/cp-gimplify.cc" 4293)
   nil )
  (!pair  "fold_caches"
   (!type array 2753 nil  gc_used "3" 
    (!type already_seen 452)
   )
-  (!srcfileloc  "cp/cp-gimplify.cc" 3277)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3280)
   (!options 
    (!option deletable string  "")
   )
@@ -42865,7 +42865,7 @@
   nil )
  (!pair  "cv_cache"
   (!type already_seen 452)
-  (!srcfileloc  "cp/constexpr.cc" 11168)
+  (!srcfileloc  "cp/constexpr.cc" 11309)
   (!options 
    (!option deletable string  "")
   )
@@ -42907,11 +42907,11 @@
   nil )
  (!pair  "unemitted_tinfo_decls"
   (!type already_seen 86)
-  (!srcfileloc  "cp/cp-tree.h" 8253)
+  (!srcfileloc  "cp/cp-tree.h" 8254)
   nil )
  (!pair  "erroneous_templates"
   (!type already_seen 2297)
-  (!srcfileloc  "cp/cp-tree.h" 7703)
+  (!srcfileloc  "cp/cp-tree.h" 7704)
   (!options 
    (!option cache string  "")
   )
@@ -43092,7 +43092,7 @@
   nil )
  (!pair  "ext_block"
   (!type already_seen 23)
-  (!srcfileloc  "c/c-decl.cc" 13713)
+  (!srcfileloc  "c/c-decl.cc" 13714)
   nil )
  (!pair  "last_structptr_types"
   (!type array 2762 nil  gc_used "builtin_structptr_type_count" 

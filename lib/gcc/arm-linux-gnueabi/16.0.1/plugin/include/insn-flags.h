@@ -5,7 +5,7 @@
 #define GCC_INSN_FLAGS_H
 
 #define HAVE_addsi3_compareV_reg (TARGET_32BIT)
-#define HAVE_subvsi3_intmin (TARGET_32BIT)
+#define HAVE_sub_cmpVsi3_intmin (TARGET_32BIT)
 #define HAVE_addsi3_compareV_imm (TARGET_32BIT \
    && INTVAL (operands[2]) == ARM_SIGN_EXTEND (INTVAL (operands[2])))
 #define HAVE_addsi3_compareV_imm_nosum (TARGET_32BIT \
@@ -18,8 +18,8 @@
 #define HAVE_addsi3_carryin (TARGET_32BIT)
 #define HAVE_add0si3_carryin (TARGET_32BIT)
 #define HAVE_subsi3_compare1 (TARGET_32BIT)
-#define HAVE_subvsi3 (TARGET_32BIT)
-#define HAVE_subvsi3_imm1 (TARGET_32BIT)
+#define HAVE_sub_cmpVsi3 (TARGET_32BIT)
+#define HAVE_sub_cmpVsi3_imm1 (TARGET_32BIT)
 #define HAVE_subsi3_carryin (TARGET_32BIT)
 #define HAVE_rsbsi_carryin_reg (TARGET_ARM)
 #define HAVE_add_not_shift_cin (TARGET_ARM)
@@ -35,11 +35,11 @@
 #define HAVE_rsb_imm_compare_scratch (TARGET_32BIT)
 #define HAVE_rscsi3_CC_NVout_scratch (TARGET_ARM)
 #define HAVE_rscsi3_CC_Bout_scratch (TARGET_ARM)
-#define HAVE_usubvsi3_borrow (TARGET_32BIT)
-#define HAVE_usubvsi3_borrow_imm (TARGET_32BIT \
+#define HAVE_usub_cmpVsi3_borrow (TARGET_32BIT)
+#define HAVE_usub_cmpVsi3_borrow_imm (TARGET_32BIT \
    && (UINTVAL (operands[2]) & 0xffffffff) == UINTVAL (operands[3]))
-#define HAVE_subvsi3_borrow (TARGET_32BIT)
-#define HAVE_subvsi3_borrow_imm (TARGET_32BIT \
+#define HAVE_sub_cmpVsi3_borrow (TARGET_32BIT)
+#define HAVE_sub_cmpVsi3_borrow_imm (TARGET_32BIT \
    && INTVAL (operands[2]) == ARM_SIGN_EXTEND (INTVAL (operands[2])))
 #define HAVE_smull (TARGET_32BIT)
 #define HAVE_umull (TARGET_32BIT)
@@ -5796,7 +5796,7 @@
 #define HAVE_mve_asrl (TARGET_HAVE_MVE)
 #define HAVE_mve_lsll (TARGET_HAVE_MVE)
 extern rtx        gen_addsi3_compareV_reg                              (rtx, rtx, rtx);
-extern rtx        gen_subvsi3_intmin                                   (rtx, rtx);
+extern rtx        gen_sub_cmpVsi3_intmin                               (rtx, rtx);
 extern rtx        gen_addsi3_compareV_imm                              (rtx, rtx, rtx);
 extern rtx        gen_addsi3_compareV_imm_nosum                        (rtx, rtx);
 extern rtx        gen_addsi3_compare0                                  (rtx, rtx, rtx);
@@ -5805,8 +5805,8 @@ extern rtx        gen_addsi3_compare_op1                               (rtx, rtx
 extern rtx        gen_addsi3_carryin                                   (rtx, rtx, rtx, rtx);
 extern rtx        gen_add0si3_carryin                                  (rtx, rtx, rtx);
 extern rtx        gen_subsi3_compare1                                  (rtx, rtx, rtx);
-extern rtx        gen_subvsi3                                          (rtx, rtx, rtx);
-extern rtx        gen_subvsi3_imm1                                     (rtx, rtx, rtx);
+extern rtx        gen_sub_cmpVsi3                                      (rtx, rtx, rtx);
+extern rtx        gen_sub_cmpVsi3_imm1                                 (rtx, rtx, rtx);
 extern rtx        gen_subsi3_carryin                                   (rtx, rtx, rtx, rtx);
 extern rtx        gen_rsbsi_carryin_reg                                (rtx, rtx, rtx);
 extern rtx        gen_add_not_shift_cin                                (rtx, rtx, rtx, rtx, rtx, rtx);
@@ -5822,10 +5822,10 @@ extern rtx        gen_rsb_imm_compare                                  (rtx, rtx
 extern rtx        gen_rsb_imm_compare_scratch                          (rtx, rtx, rtx);
 extern rtx        gen_rscsi3_CC_NVout_scratch                          (rtx, rtx, rtx, rtx);
 extern rtx        gen_rscsi3_CC_Bout_scratch                           (rtx, rtx, rtx, rtx);
-extern rtx        gen_usubvsi3_borrow                                  (rtx, rtx, rtx, rtx, rtx);
-extern rtx        gen_usubvsi3_borrow_imm                              (rtx, rtx, rtx, rtx, rtx, rtx);
-extern rtx        gen_subvsi3_borrow                                   (rtx, rtx, rtx, rtx, rtx);
-extern rtx        gen_subvsi3_borrow_imm                               (rtx, rtx, rtx, rtx, rtx);
+extern rtx        gen_usub_cmpVsi3_borrow                              (rtx, rtx, rtx, rtx, rtx);
+extern rtx        gen_usub_cmpVsi3_borrow_imm                          (rtx, rtx, rtx, rtx, rtx, rtx);
+extern rtx        gen_sub_cmpVsi3_borrow                               (rtx, rtx, rtx, rtx, rtx);
+extern rtx        gen_sub_cmpVsi3_borrow_imm                           (rtx, rtx, rtx, rtx, rtx);
 extern rtx        gen_smull                                            (rtx, rtx, rtx, rtx);
 extern rtx        gen_umull                                            (rtx, rtx, rtx, rtx);
 extern rtx        gen_smlal                                            (rtx, rtx, rtx, rtx, rtx, rtx);

@@ -33,6 +33,9 @@ extern enum attr_is_neon_type get_attr_is_neon_type (rtx_insn *);
 #define HAVE_ATTR_is_mve_type 1
 extern enum attr_is_mve_type get_attr_is_mve_type (rtx_insn *);
 
+#define HAVE_ATTR_sve_type 1
+extern enum attr_sve_type get_attr_sve_type (rtx_insn *);
+
 #define HAVE_ATTR_is_thumb 1
 extern enum attr_is_thumb get_attr_is_thumb (void);
 

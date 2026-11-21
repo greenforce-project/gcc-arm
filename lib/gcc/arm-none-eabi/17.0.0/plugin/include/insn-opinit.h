@@ -35,8 +35,8 @@ enum optab_tag {
   umsub_widen_optab,
   ssmsub_widen_optab,
   usmsub_widen_optab,
-  ssum_widen_optab,
-  usum_widen_optab,
+  reduc_widen_ssum_optab,
+  reduc_widen_usum_optab,
   crc_optab,
   crc_rev_optab,
   vec_load_lanes_optab,
@@ -64,6 +64,8 @@ enum optab_tag {
   sdot_prod_optab,
   udot_prod_optab,
   usdot_prod_optab,
+  usad_optab,
+  ssad_optab,
   while_ult_optab,
   select_vl_optab,
   add_optab,
@@ -132,6 +134,8 @@ enum optab_tag {
   le_optab,
   unord_optab,
   powi_optab,
+  bitinttofp_optab,
+  bitintfromfp_optab,
   sqrt_optab,
   sync_old_add_optab,
   sync_old_sub_optab,
@@ -337,7 +341,7 @@ enum optab_tag {
   fold_left_plus_optab,
   mask_fold_left_plus_optab,
   mask_len_fold_left_plus_optab,
-  extract_last_optab,
+  extract_last_active_optab,
   fold_extract_last_optab,
   len_fold_extract_last_optab,
   uabd_optab,
@@ -346,8 +350,6 @@ enum optab_tag {
   uavg_floor_optab,
   savg_ceil_optab,
   uavg_ceil_optab,
-  usad_optab,
-  ssad_optab,
   smulhs_optab,
   smulhrs_optab,
   umulhs_optab,
@@ -478,18 +480,21 @@ enum optab_tag {
   mask_len_strided_store_optab,
   andn_optab,
   iorn_optab,
+  aop_optab,
+  clmul_optab,
+  clmul_widen_optab,
   FIRST_CONV_OPTAB = sext_optab,
   LAST_CONVLIB_OPTAB = sstrunc_optab,
   LAST_CONV_OPTAB = select_vl_optab,
   FIRST_NORM_OPTAB = add_optab,
   LAST_NORMLIB_OPTAB = sync_lock_test_and_set_optab,
-  LAST_NORM_OPTAB = iorn_optab
+  LAST_NORM_OPTAB = clmul_widen_optab
 };
 
-#define NUM_OPTABS          474
+#define NUM_OPTABS          479
 #define NUM_CONVLIB_OPTABS  17
-#define NUM_NORMLIB_OPTABS  81
-#define NUM_OPTAB_PATTERNS  941
+#define NUM_NORMLIB_OPTABS  83
+#define NUM_OPTAB_PATTERNS  942
 typedef enum optab_tag optab;
 typedef enum optab_tag convert_optab;
 typedef enum optab_tag direct_optab;

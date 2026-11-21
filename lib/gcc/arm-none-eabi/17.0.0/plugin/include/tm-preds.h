@@ -1,5 +1,5 @@
 /* Generated automatically by the program 'build/genpreds'
-   from the machine description file '/tmp/cirrus-ci-build/gcc/gcc/config/arm/arm.md'.  */
+   from the machine description file '/root/project/gcc/gcc/config/arm/arm.md'.  */
 
 #ifndef GCC_TM_PREDS_H
 #define GCC_TM_PREDS_H
@@ -456,4 +456,23 @@ get_register_filter_id (constraint_num)
 {
   return -1;
 }
+
+static inline int
+get_dependent_filter_id (constraint_num)
+{
+  return -1;
+}
+
+static inline int
+get_dependent_filter_ref (int id)
+{
+  (void) id;
+  return -1;
+}
+
+extern bool
+eval_dependent_filter (int id, unsigned int regno,
+                       machine_mode mode,
+                       unsigned int ref_regno,
+                       machine_mode ref_mode);
 #endif /* tm-preds.h */
